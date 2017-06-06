@@ -1,3 +1,7 @@
+# Exclude Eclipse
+eclipse/
+workspace/
+
 # Compiled class file
 *.class
 
