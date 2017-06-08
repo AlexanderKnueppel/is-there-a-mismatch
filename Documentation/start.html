@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <title>Software Artifacts: Is There a Mismatch Between Real-World Feature Models and Product-Line Research?</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="body-green">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="../index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            Is There a <span class="text-highlight">Mismatch</span>  Between <span class="text-bold">Real-World Feature Models</span> and <span class="text-bold">Product-Line Research</span>?
+                        </a>
+                    </h1>
+                </div><!--//branding-->
+                <ol class="breadcrumb">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="active">Quick Start</li>
+                </ol>
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Quick Start</h1>
+                    <div class="meta"><i class="fa fa-clock-o"></i> Last updated: Jun 07th, 2017</div>
+                </div><!--//doc-header-->
+                <div class="doc-body">
+                    <div class="doc-content">
+                        <div class="content-inner">
+                            <section id="download-section" class="doc-section">
+                                <h2 class="section-title">Overview of included Software Artifacts</h2>
+                                <div class="section-block">
+                                      <p><code>Models/</code></p>
+                                      <p>Contains 127 large feature models in the FeatureIDE file format.</p>
+                                      <p><code>ExpressivePowerFM/</code></p>
+                                      <p>Java Eclipse project for calculating the number of software product lines that can be represented with <b>n</b> features.</p>
+                                      <p><code>EmpericalEval/</code></p>
+                                      <p>Java Eclipse project for generating all statistics that are presented in the paper.</p>
+                                      <p><code>linux-variability-analysis-tools/</code></p>
+                                      <p>Extended LVAT project by Steven She for converting KConfig (exconfig) files to the FeatureIDe file format.</p>
+                                      <p><code>Output/</code></p>
+                                      <p>Pre-generated evaluation statistics.</p>
+                                      <p><code>Documentation/</code></p>
+                                      <p>Assets and subpages for this documentation.</p>
+                                </div>
+                            </section><!--//doc-section-->
+                            <section id="installation-section" class="doc-section">
+                                <h2 class="section-title">Installation</h2>
+                                <div id="step1"  class="section-block">
+                                    <h3 class="block-title">Eclipse import</h3>
+                                    <p>The installation is fairly straight forward. Make sure that you have installed <b>Java 8</b> on your machine to be able to run the provided Java projects. Moreover, you need at least <b>Eclipse Mars</b>. Then just import <b>EmpericalEval</b> and <b>ExpressivePowerFM</b> into Eclipse via the import wizard. Compile scripts for Linux and Windows will be provided in the near future.
+                                    </p>
+                                    <div class="screenshot-holder">
+                                        <img class="img-responsive" src="assets/images/screenshots/import.png" alt="screenshot" />
+                                    </div>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+                            <section id="code-section" class="doc-section">
+                                <h2 class="section-title">Eclipse Projects</h2>
+                                <div class="section-block">
+                                    <!--[something useful]-->
+                                </div><!--//section-block-->
+                                <div id="epfm" class="section-block">
+
+                                    <div class="callout-block callout-success">
+                                        <div class="icon-holder">
+                                            <i class="fa fa-thumbs-up"></i>
+                                        </div><!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">Libraries included!</h4>
+                                            <p>All necessary Java libraries to compile and run the source code are already included in both projects. The projects are based on FeatureIDE 3.3 (<a href="http://wwwiti.cs.uni-magdeburg.de/iti_db/research/featureide/" target="_blank">http://wwwiti.cs.uni-magdeburg.de/iti_db/research/featureide/</a>)</p>
+                                        </div><!--//content-->
+                                    </div>
+                                    <div class="code-block">
+                                        <h3>Project 1: ExpressivePowerFM</h3>
+                                        <p>This project provides routines for analytically calculating the number of theoretical (non-equivalent) product lines with <b>n</b> features and for generating all possible basic feature models to check how many
+                                           product lines can be expressed. There are two Main-Programs involved:</p>
+                                        <h6>main.ValidModelCounter</h6>
+                                        <p>The model counter counts the number of product lines with <b>n</b> features. Basic usage of the mode counter looks like this (with <b>7</b> being the number of maximal features):</p>
+                                        <p><code>java main.ValidModelCounter 7</code></p>
+                                        <p>Arguments do not need to be provided (default is n = 10). Alternatively, just run the program in the Eclipse IDE. The following output is generated on stdout:</p>
+                                        <pre><code>Std. output for n = 7
+=============================================
+How many non-equivalent product lines with n features do exist? (n = 10)
+1: 2
+2: 10
+3: 218
+4: 64594
+5: 4294642034
+6: 18446744047940725978
+7: 340282366920938463334247399005993378250</code></pre>
+
+<h6>main.Generator</h6>
+<p>The generator generates all basic feature models (including abstract features) for a specific number of features <b>n</b> and then determines their product lines.
+  Basic usage of the generator looks like this (with <b>3</b> being the number of features for which all feature models are calculated and output3.txt the output file resulting in all possible product lines.):</p>
+<p><code>java main.Generator 3 ./output.txt</code></p>
+<p>The number of features includes the root feature as well (n=3 means we have two features, say A and B, together with root R). The following output is generated and written to output3.txt:</p>
+<pre><code>Std. output for n = 3
+=============================================
+{F0 F1}{F0 F2}
+{F0 F1 F2}{F0}
+{F0 F1 F2}
+{F0 F1 F2}{F0 F1}
+{F0 F1 F2}{F0 F2}{F0}
+{F0 F1 F2}{F0 F1}{F0}
+{F0 F1 F2}{F0 F1}{F0 F2}
+{F0 F1 F2}{F0 F2}
+{F0 F1}{F0 F2}{F0}
+{F0 F1 F2}{F0 F1}{F0 F2}{F0}</code></pre>
+
+<p>There are three features with F0 being the root feature. The lines represent product lines. For instance, the first line reveals that there exists
+  a basic feature model representing a product line with the products {F0 F1} and {F0 F2} (e.g., a feature model where the root feature is decomposed into an alternative group).
+  The model counter reveals that for two features (F1 and F2 in this case), there exist 10 non-equivalent product lines. Hence,
+for two features plus the root feature, the expressive power of basic feauture models is enough. For n &gt; 3, this is not the case anymore, as our experiment reveals: </p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+<div style="width:400px;height:250px;margin:0 auto 0 auto"><canvas id="myChart2" width="400" height="250"></canvas></div>
+
+
+<div class="callout-block callout-info">
+    <div class="icon-holder">
+        <i class="fa fa-info-circle"></i>
+    </div><!--//icon-holder-->
+    <div class="content">
+        <h4 class="callout-title">Timing</h4>
+        <p>Be aware that for <b>n&gt;6</b>, this procedure may consume a large amout of time and memory (multiple features map may map to the same product line and with <b>n=6</b>, we are already regarding
+          4294642034 theoretical product lines).</p>
+    </div><!--//content-->
+</div><!--//callout-block-->
+
+<script>
+var ctx = document.getElementById("myChart2");
+var myChart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ["1", "2", "3", "4", "5"],
+    datasets: [{
+        label: 'Expressible',
+        data: [100, 100, 62, 5, 0],
+        backgroundColor: [
+          'rgba(46, 198, 138, 0.2)',
+          'rgba(46, 198, 138, 0.2)',
+          'rgba(46, 198, 138, 0.2)',
+          'rgba(46, 198, 138, 0.2)',
+          'rgba(46, 198, 138, 0.2)'
+        ],
+        borderColor: [
+          'rgba(46, 198, 138, 1)',
+          'rgba(46, 198, 138, 1)',
+          'rgba(46, 198, 138, 1)',
+          'rgba(46, 198, 138, 1)',
+          'rgba(46, 198, 138, 1)'
+        ],
+        borderWidth: 2
+      },
+      {
+        label: 'Not expressible',
+        data: [0, 0, 38, 95, 100],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(255, 99, 132, 0.2)'
+        ],
+        borderColor: [
+          'rgba(255,99,132,1)',
+          'rgba(255,99,132,1)',
+          'rgba(255,99,132,1)',
+          'rgba(255,99,132,1)',
+          'rgba(255,99,132,1)'
+        ],
+        borderWidth: 2
+      }
+    ]
+  },
+  options: {
+    scales: {
+      yAxes: [{
+        stacked: true,
+        ticks: {
+          beginAtZero: true
+        }
+      }],
+      xAxes: [{
+        stacked: true,
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+
+    }
+  }
+});
+</script>
+<h6>Table</h6>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th># Features</th>
+                <th># (theoretical) product lines</th>
+                <th># Expressible product lines</th>
+                <th>Ratio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>2</td>
+                <td>2</td>
+                <td>1.00</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>10</td>
+                <td>10</td>
+                <td>1.00</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>218</td>
+                <td>135</td>
+                <td>0.62</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>64594</td>
+                <td>3580</td>
+                <td>0.05</td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>4294642034</td>
+                <td>202245</td>
+                <td>&lt; 0.005</td>
+            </tr>
+        </tbody>
+    </table>
+</div><!--//table-responsive-->
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="css" class="section-block">
+                                    <div class="code-block">
+                                        <h3 id="ee">Project 2: EmpiricalEval</h3>
+                                        <p>This project generates all statistics used in the submission (e.g., increase in size after elimination of complex constraints or the box plot).</p>
+                                        <p>The main package contains several runnable programs:</p>
+                                        <h6>main.EliminateComplexConstraints</h6>
+                                        <p>This program takes a number of feature models (and folders) in the FeatureIDE file format as input and transforms each of them to a relaxed feature model.
+                                        The result is written to a folder named <code>output/</code> (default). The output path can be changed in the program itself.</p>
+                                        <p>The procedure is based on the <code>ComplexConstraintConverter</code> of FeatureIDE and can be used in the following way:</p>
+                                        <pre><code class="language-java">// fm is an instance of IFeatureModel and might have complex constraints
+ComplexConstraintConverter converter = new ComplexConstraintConverter();
+IFeatureModel resultFM = converter.convert(fm, new CombinedConverter());
+// resultFM has only simple constraints</code></pre>
+      <p>CombinedConverter uses either the CNF or NNF of a complex constraint to create the minimal abstract subtree. </p>
+
+      <div class="callout-block callout-info">
+          <div class="icon-holder">
+              <i class="fa fa-info-circle"></i>
+          </div><!--//icon-holder-->
+          <div class="content">
+              <h4 class="callout-title">FeatureIDE and the ComplexConstraintConverter</h4>
+              <p>Source code of the ComplexConstraintConverter is available in the  <a target="_blank" href="https://github.com/FeatureIDE/FeatureIDE/tree/develop/plugins/de.ovgu.featureide.fm.core/src/de/ovgu/featureide/fm/core/conversion">FeautureIDE-GitHub-Repository.</a></p>
+          </div><!--//content-->
+      </div><!--//callout-block-->
+
+      <h6>main.SanityCheck</h6><p>
+      <p>This program simply takes a feature model (with complex constraints) as input and checks whether its relaxed version with only simple constraints is a refactoring (i.e., both feature models represent the same product line).
+      You can think of it as the algorithmic check that follows from <b><i>Lemma 4.3</i></b> from our submission.  Basic usage of the sanity check looks like this:</p>
+      <p><code>java main.SanityCheck ./path/to/model.xml</code></p>
+      <p>The following output is generated on stdout:</p>
+      <pre><code>Std. output
+=============================================
+Added features: [] //Should be empty!
+Removed features: [] //Should be empty!
+Is the feature model with complex constraints equivalent to its pendant with only simple constraints? Yes.</code></pre>
+
+<h6>main.Evaluation</h6>
+<p>The main.Evaluation generates statistics as used in Section 5 of the submisison (i.e., Table 2 and the BoxPlot in Figure 8).</p>
+<p>Configuration options are not provided via command line arguments, but directly integrated in the source file:</p>
+<pre><code>/**
+* Configuration
+*/
+private static int XLS = 1 << 1;
+private static int CSV = 1 << 2;
+private static int TeX = 1 << 3;
+private static int BoxPlotR = 1 << 4;
+private static int StdOut = 1 << 5;
+
+// Generate all
+private static int Config = XLS | CSV | TeX | BoxPlotR | StdOut;</code></pre>
+<p>This default configuration generates the data of the table in various forms (i.e., Excel, CSV, a latex snippet, console output) and also produces an R script for the box plot.
+Remove the options you don't want to generate from the config field. Output and input folder can also be changed by modifying the corresponding fields.</p>
+
+<h6>main.RemoveRedundantConstraints</h6>
+<p>This program takes a feature model as input and tries to produce a generalized version of it such that the resulting feature models has no redundant constraints and is valid. This is necessary
+for the translation from KConfig models to the FeatureIDE file format, since both languages are not fully compatible (e.g., KConfig relies on a tristate logic: compiled, not integrated, and compiled, but dynamically loaded on demand).</p>
+<p>Hence, the usual workflow for exporting a KConfig model to FeatureIDE is to first use the export script explained below (under Models), and second, to run this program on the model.</p>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                            <section id="models-section" class="doc-section">
+                                <h2 class="section-title">Models</h2>
+                                <div class="section-block">
+                                  <p>CDL is the variability format of the eCos kernel. Each platform using eCos has a slightly different variability model (based on its capabilities).
+                                    KConfig is the variability model of the linux kernel and is nowadays used for other software projects as well. We used the CDL and KConfig models provided by Thorsten Berger on his personal BitBucket repository:
+                                  <a href="https://bitbucket.org/tberger/variability-models/src">https://bitbucket.org/tberger/variability-models/src</a></p>
+                                  <h5>CDL</h5>
+                                  <p>
+                                    To translate models from the CDL format to the FeatureIDE file format, we implemented a FeatureIDE exporter into the CDLTools (copyright by Thorsten Berger). The exporter
+                                    takes a CDL file as input and generates a FeatureIDE feature model. See <a href="https://bitbucket.org/tberger/cdltools/src/bce2f4727a012e526cbad9aab5f087d2710c5e52/src/main/scala/gsd/cdl/FeatureIDEExportMain.scala?at=default&fileviewer=file-view-default">here</a> for the source code.
+                                    CDLTools is based on Scala and was updated lately to a recent version. There is a build.sbt file for the compilation process (you need to install sbt and Scala).
+                                  </p>
+                                  <p>The export script is located in </p>
+                                  <p><code>src/scala/gsd.cdl/FeatureIDEExportMain</code></p>
+                                  <p>The exporter needs an iml file as an input argument (inputs can be found here: <a href="https://bitbucket.org/tberger/variability-models/src">https://bitbucket.org/tberger/variability-models/src</a>) and an xml file as output. For instance, </p>
+                                  <p><code>scala gsd.linux.FeatureIDEExportMain input/XSEngine.iml output/XSEngine.xml</code></p>
+                                    <p>
+                                      <b>Many many thanks to Thorsten Berger!</b> See the repository of the CDLTools ()<a href="https://bitbucket.org/tberger/cdltools/overview" target="_blank">https://bitbucket.org/tberger/cdltools/overview</a>)
+                                      for further information.
+                                    </p>
+
+                                  <h5>KConfig</h5>
+                                  <p>To translate models from the KConfig format to the FeatureIDE file format, we modified and updated the <a href="https://github.com/shshe/linux-variability-analysis-tools">linux-variability-analysis-tools</a> by Steven She and added an exporter script.
+                                    Due to compatibility issues with newer Scala versions, we included the modified project in this repository. Again, there is a build.sbt to compile all scripts. We also included all  third party libraries necessary.
+                                  </p>
+                                  <p>The export script is located in </p>
+                                  <p><code>src/scala/gsd.linux/FeatureIDEExportMain</code></p>
+                                  <p>The exporter needs an exconfig file as an input argument (inputs can be found here: <a href="https://bitbucket.org/tberger/variability-models/src">https://bitbucket.org/tberger/variability-models/src</a>) and an xml file as output. For instance, </p>
+                                  <p><code>scala gsd.linux.FeatureIDEExportMain input/busybox-1.17.2.exconfig output/busybox-1.17.2.xml</code></p>
+                                  <p>
+                                    <b>Again, many many thanks to Thorsten Berger for his help!</b> The original LVAT repository by Steven She can be found here <a href="https://github.com/shshe/linux-variability-analysis-tools">https://github.com/shshe/linux-variability-analysis-tools</a>.
+                                  </p>
+                                </div>
+                            </section><!--//doc-section-->
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar hidden-xs">
+                        <nav id="doc-nav">
+                            <ul id="doc-menu" class="nav doc-menu" data-spy="affix">
+                                <li><a class="scrollto" href="#download-section">Overview</a></li>
+                                <li>
+                                    <a class="scrollto" href="#installation-section">Installation</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class="scrollto" href="#step1">Eclipse import</a></li>
+                                    </ul><!--//nav-->
+                                </li>
+                                <li>
+                                    <a class="scrollto" href="#code-section">Eclipse projects</a>
+                                    <ul class="nav doc-sub-menu">
+                                        <li><a class="scrollto" href="#epfm">ExpressivePowerFM </a></li>
+                                        <li><a class="scrollto" href="#ee">EmpiricalEval </a></li>
+                                    </ul><!--//nav-->
+                                </li>
+                                <li><a class="scrollto" href="#models-section">Models</a></li>
+                            </ul><!--//doc-menu-->
+                        </nav>
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+
+    </div><!--//page-wrapper-->
+
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+
+        </div><!--//container-->
+    </footer><!--//footer-->
+
+
+    <!-- Main Javascript -->
+    <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+</html>
