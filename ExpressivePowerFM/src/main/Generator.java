@@ -54,7 +54,8 @@ import util.Permutations;
 /**
  * Generates all valid feature models for a given number of concrete features.
  * @author Jens Meinicke
- *
+ * @author Alexander Knüppel
+ * @author Niklas Lehnfeld
  */
 public class Generator {
 
@@ -69,9 +70,14 @@ public class Generator {
 	private static final boolean COUNT_ABSTRACT_MODELS = true;
 	
 	/**
-	 * The number of features with root included.
+	 * The number of features with root included (default).
 	 */
 	private static int COUNT_FEATURES = 3;
+	
+	/**
+	 * Output file (default).
+	 */	
+	private static String OUTPUT_FILE = "result"+COUNT_FEATURES+".txt";
 	
 	/**
 	 * The index equals the number of features of the models at this position.<br>
@@ -90,8 +96,21 @@ public class Generator {
 	public ArrayList<LinkedList<FeatureModelCounter>> getSortedModels() {
 		return sortedModels;
 	}
+	
+	
 
 	public static void main(String[] args) {		
+		if(args.length > 0) {
+			if(args.length > 2) {
+				System.err.println("Too many arguments! Usage: Generator [n output]");
+			}
+			
+			COUNT_FEATURES = Integer.parseInt(args[0]);
+			
+			if(args.length == 2) {
+				OUTPUT_FILE = args[2];
+			}
+		}
 		
 		long time = System.currentTimeMillis();	
 		final Generator builder = new Generator(COUNT_FEATURES);
@@ -119,9 +138,6 @@ public class Generator {
 			if (n == COUNT_FEATURES) {
 				builder.validConfigurations = generatePermutations(n, builder.validConfigurations);
 				counter = BigInteger.valueOf(builder.validConfigurations.size());
-				/*for (LinkedList<FeatureModelCounter> list : builder.getSortedModels()) {
-					counter = counter.add(BigInteger.valueOf(list.size()));
-				}*/
 			} else {
 				if (!COUNT_INVALID_MODELS) {
 					counter = (n==2 ? BigInteger.valueOf(2) :
@@ -144,7 +160,7 @@ public class Generator {
 				System.out.print(" RECALCULATED");
 			
 				try {
-		            Files.write(Paths.get("result"+n+".txt"), builder.validConfigurations, Charset.defaultCharset());
+		            Files.write(Paths.get(OUTPUT_FILE), builder.validConfigurations, Charset.defaultCharset());
 		        } catch (IOException e) {
 		            e.printStackTrace();
 		        }
@@ -152,6 +168,10 @@ public class Generator {
 		}
 	}
 
+	/**
+	 * Constructor.
+	 * @param countFeaturesMax
+	 */
 	public Generator(int countFeaturesMax) {
 		for (int j  = 0;j <= countFeaturesMax; j++) {
 			models.add(new LinkedList<IFeatureModel>());

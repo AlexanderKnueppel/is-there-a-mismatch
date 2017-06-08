@@ -24,9 +24,16 @@ import java.math.BigInteger;
 /**
  * Counts possible feature models without dead features.
  * @author Jens Meinicke
- *
+ * @author Alexander Knüppel
+ * @author Niklas Lehnfeld
  */
+
 public class ValidModelCounter {
+	/**
+	 * @param N 
+	 * @param K
+	 * @return numerical value for N over K
+	 */
 	private static BigInteger binomial(final int N, final int K) {
 	    BigInteger ret = BigInteger.ONE;
 	    for (int k = 0; k < K; k++) {
@@ -36,6 +43,11 @@ public class ValidModelCounter {
 	    return ret;
 	}
 	
+	/**
+	 * @param x
+	 * @param y
+	 * @return x^y
+	 */
 	private static BigInteger pow(BigInteger x, BigInteger y) {
 		  if (y.compareTo(BigInteger.ZERO) < 0)
 		    throw new IllegalArgumentException();
@@ -56,6 +68,11 @@ public class ValidModelCounter {
 		  return result;
 		}
 	
+	/**
+	 * Routine for analytically calculating the number of theoretical (non-equivalent) product lines with n features.
+	 * @param n Number of features
+	 * @return number of theoretical (non-equivalent) product lines with n features
+	 */
 	public static BigInteger count(final int n) {
 		BigInteger result = BigInteger.ZERO;
 		for(int k = 0; k <= n; k++) {
@@ -73,8 +90,11 @@ public class ValidModelCounter {
 	}
 	
 	public static void main(String[] args) {
+		int n = 10; //default
 		
-		final int n = 10; 
+		if(args.length > 0) {
+			n = Integer.parseInt(args[0]);
+		}
 		
 		System.out.println("How many non-equivalent product lines with <n> features do exist? (n = "+n+")");
 		for (int i = 1; i <= n; i++) {
