@@ -19,19 +19,20 @@ public class StdOut implements ITableWriter {
 			for(int j=0; j<newOut.length; j++)
 				if(newOut[j][i].length() > size) size = newOut[j][i].length();
 			length += size+5;
-			print += "%"+size+"s  |  ";
+			print += ",";
 		}
 		print += "\n";
 		
 		for(int i=0; i<newOut.length; i++){
-			if(i==0 || i==1){
-				String seperator = "";
-				for(int j=0; j<length-2; j++)
-					seperator += "-";
-				System.out.println(seperator);
-			}
 			System.out.format(print, newOut[i]);
 		}		
+		
+		
+		/*
+		 * , names
+		 * 
+		 * 
+		 */
 	}
 	
 	public void close() {}

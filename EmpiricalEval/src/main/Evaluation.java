@@ -1,6 +1,7 @@
 package main;
 
 import util.Utils;
+import util.output.CSVWriter;
 import util.output.ExcelWriter;
 import util.output.ITableWriter;
 import util.output.LatexWriter;
@@ -21,35 +22,57 @@ import statistics.FMStatistics;
 
 public class Evaluation {
 	
-	public static DefaultBoxAndWhiskerCategoryDataset dataset;
+	/**
+	 * Configuration
+	 */
+	private static int XLS = 1 << 1;
+	private static int CSV = 1 << 2;
+	private static int TeX = 1 << 3;
+	private static int BoxPlotR = 1 << 4;
+	private static int StdOut = 1 << 5;
+	
+	// Generate all
+	private static int Config = XLS | CSV | TeX | BoxPlotR | StdOut;
+	
+	private static String outputFolder = "./Output/";
+	private static String modelsFolder = "../Models/";
+	
+	 public static DefaultBoxAndWhiskerCategoryDataset dataset;
 	
 	 public static void main(String[] args) {		
 		long time = System.currentTimeMillis();
        
 		Utils.useCache = false;		
 		
-		File folder = new File("models/");
+		File folder = new File(modelsFolder);
 		File[] listOfFiles = folder.listFiles();
 
-		RBoxplot.generateRCode(listOfFiles, true);	    
-	    
-		//ITableWriter stdOut = new StdOut();	
-		ITableWriter jxl = new ExcelWriter("eval.xls");
-	    //ITableWriter latex = new LatexWriter("eval.tex", listOfFiles.length);
-		
+		if((Config & CSV) == 0)
+			RBoxplot.generateRCode(listOfFiles, true);	    
+	 
 		String[][] output = calcDefaultOutput(listOfFiles);
 
 		float elapsed = Math.round(((System.currentTimeMillis() - time) / 600f))/100f;
 		System.out.println("\nCalculationTime: " + elapsed + " min.");
 		System.out.println("--------------------------------------------------------------------\n\n");
 		
-		
-		jxl.write(output);
-		jxl.close();
-
-		//latex.write(output);
-		//stdOut.write(output);		
-		
+		if((Config & StdOut) == 0) {
+			ITableWriter stdOut = new StdOut();
+			stdOut.write(output);
+		}
+		if((Config & XLS) == 0) {
+			ITableWriter jxl = new ExcelWriter(outputFolder + "eval.xls");
+			jxl.write(output);
+			jxl.close();
+		}
+		if((Config & CSV) == 0) {
+			ITableWriter csv = new CSVWriter(outputFolder + "eval.xls");
+			csv.write(output);
+		}
+		if((Config & TeX) == 0) {
+			ITableWriter latex = new LatexWriter(outputFolder + "eval.tex", listOfFiles.length);
+			latex.write(output);
+		}
 	}
 	
 	 
@@ -78,7 +101,6 @@ public class Evaluation {
 					return null;
 				}
 			}
-			
 			
 			String[] row = new String[8];
 			
@@ -111,8 +133,6 @@ public class Evaluation {
 				row[1] =  ""+fm.getNumberOfFeatures();
 				row[2] =  ""+fm.getConstraintCount();
 			}	
-			
-			
 			
 			//percent of pseudo-, strict-complex & simple constraints
 			System.out.println("... calculating percent of pseudo- and strict-constraints.");
