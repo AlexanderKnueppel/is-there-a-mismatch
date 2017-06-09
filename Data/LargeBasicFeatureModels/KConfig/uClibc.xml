@@ -1,0 +1,5167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel>
+		<properties/>
+		<struct>
+			<and mandatory="true" name="root">
+				<alt abstract="true" mandatory="true" name="CONFIG_386_alt">
+					<feature mandatory="true" name="CONFIG_GENERIC_386"/>
+					<feature mandatory="true" name="CONFIG_386"/>
+					<feature mandatory="true" name="CONFIG_486"/>
+					<feature mandatory="true" name="CONFIG_586"/>
+					<feature mandatory="true" name="CONFIG_586MMX"/>
+					<feature mandatory="true" name="CONFIG_686"/>
+					<feature mandatory="true" name="CONFIG_PENTIUMII"/>
+					<feature mandatory="true" name="CONFIG_PENTIUMIII"/>
+					<feature mandatory="true" name="CONFIG_PENTIUM4"/>
+					<feature mandatory="true" name="CONFIG_K6"/>
+					<feature mandatory="true" name="CONFIG_K7"/>
+					<feature mandatory="true" name="CONFIG_ELAN"/>
+					<feature mandatory="true" name="CONFIG_CRUSOE"/>
+					<feature mandatory="true" name="CONFIG_WINCHIPC6"/>
+					<feature mandatory="true" name="CONFIG_WINCHIP2"/>
+					<feature mandatory="true" name="CONFIG_CYRIXIII"/>
+					<feature mandatory="true" name="CONFIG_NEHEMIAH"/>
+				</alt>
+				<feature name="DOMULTI"/>
+				<alt abstract="true" mandatory="true" name="CONFIG_ARM926T_alt">
+					<feature mandatory="true" name="CONFIG_GENERIC_ARM"/>
+					<feature mandatory="true" name="CONFIG_ARM610"/>
+					<feature mandatory="true" name="CONFIG_ARM710"/>
+					<feature mandatory="true" name="CONFIG_ARM7TDMI"/>
+					<feature mandatory="true" name="CONFIG_ARM720T"/>
+					<feature mandatory="true" name="CONFIG_ARM920T"/>
+					<feature mandatory="true" name="CONFIG_ARM922T"/>
+					<feature mandatory="true" name="CONFIG_ARM926T"/>
+					<feature mandatory="true" name="CONFIG_ARM10T"/>
+					<feature mandatory="true" name="CONFIG_ARM1136JF_S"/>
+					<feature mandatory="true" name="CONFIG_ARM1176JZ_S"/>
+					<feature mandatory="true" name="CONFIG_ARM1176JZF_S"/>
+					<feature mandatory="true" name="CONFIG_ARM_CORTEX_M3"/>
+					<feature mandatory="true" name="CONFIG_ARM_CORTEX_M1"/>
+					<feature mandatory="true" name="CONFIG_ARM_SA110"/>
+					<feature mandatory="true" name="CONFIG_ARM_SA1100"/>
+					<feature mandatory="true" name="CONFIG_ARM_XSCALE"/>
+					<feature mandatory="true" name="CONFIG_ARM_IWMMXT"/>
+				</alt>
+				<feature name="ARCH_LITTLE_ENDIAN"/>
+				<alt abstract="true" mandatory="true" name="UCLIBC_HAS_STDIO_BUFSIZ_512_alt">
+					<feature mandatory="true" name="UCLIBC_HAS_STDIO_BUFSIZ_NONE"/>
+					<feature mandatory="true" name="UCLIBC_HAS_STDIO_BUFSIZ_256"/>
+					<feature mandatory="true" name="UCLIBC_HAS_STDIO_BUFSIZ_512"/>
+					<feature mandatory="true" name="UCLIBC_HAS_STDIO_BUFSIZ_1024"/>
+					<feature mandatory="true" name="UCLIBC_HAS_STDIO_BUFSIZ_2048"/>
+					<feature mandatory="true" name="UCLIBC_HAS_STDIO_BUFSIZ_4096"/>
+					<feature mandatory="true" name="UCLIBC_HAS_STDIO_BUFSIZ_8192"/>
+				</alt>
+				<alt abstract="true" mandatory="true" name="TARGET_i960_alt">
+					<feature mandatory="true" name="TARGET_alpha"/>
+					<feature mandatory="true" name="TARGET_arm"/>
+					<feature mandatory="true" name="TARGET_avr32"/>
+					<feature mandatory="true" name="TARGET_bfin"/>
+					<feature mandatory="true" name="TARGET_cris"/>
+					<feature mandatory="true" name="TARGET_e1"/>
+					<feature mandatory="true" name="TARGET_frv"/>
+					<feature mandatory="true" name="TARGET_h8300"/>
+					<feature mandatory="true" name="TARGET_hppa"/>
+					<feature mandatory="true" name="TARGET_i386"/>
+					<feature mandatory="true" name="TARGET_i960"/>
+					<feature mandatory="true" name="TARGET_ia64"/>
+					<feature mandatory="true" name="TARGET_m68k"/>
+					<feature mandatory="true" name="TARGET_microblaze"/>
+					<feature mandatory="true" name="TARGET_mips"/>
+					<feature mandatory="true" name="TARGET_nios"/>
+					<feature mandatory="true" name="TARGET_nios2"/>
+					<feature mandatory="true" name="TARGET_powerpc"/>
+					<feature mandatory="true" name="TARGET_sh"/>
+					<feature mandatory="true" name="TARGET_sh64"/>
+					<feature mandatory="true" name="TARGET_sparc"/>
+					<feature mandatory="true" name="TARGET_v850"/>
+					<feature mandatory="true" name="TARGET_vax"/>
+					<feature mandatory="true" name="TARGET_x86_64"/>
+					<feature mandatory="true" name="TARGET_xtensa"/>
+				</alt>
+				<alt abstract="true" mandatory="true" name="MALLOC_alt">
+					<feature mandatory="true" name="MALLOC"/>
+					<feature mandatory="true" name="MALLOC_SIMPLE"/>
+					<feature mandatory="true" name="MALLOC_STANDARD"/>
+				</alt>
+				<feature name="COMPAT_ATEXIT"/>
+				<feature name="UCLIBC_HAS_OBSOLETE_SYSV_SIGNAL"/>
+				<alt abstract="true" mandatory="true" name="CONFIG_MIPS_ISA_1_alt">
+					<feature mandatory="true" name="CONFIG_MIPS_ISA_1"/>
+					<feature mandatory="true" name="CONFIG_MIPS_ISA_2"/>
+					<feature mandatory="true" name="CONFIG_MIPS_ISA_3"/>
+					<feature mandatory="true" name="CONFIG_MIPS_ISA_4"/>
+					<feature mandatory="true" name="CONFIG_MIPS_ISA_MIPS32"/>
+					<feature mandatory="true" name="CONFIG_MIPS_ISA_MIPS32R2"/>
+					<feature mandatory="true" name="CONFIG_MIPS_ISA_MIPS64"/>
+				</alt>
+				<feature name="UCLIBC_HAS_LONG_DOUBLE_MATH"/>
+				<alt abstract="true" mandatory="true" name="LINUXTHREADS_OLD_alt">
+					<feature mandatory="true" name="HAS_NO_THREADS"/>
+					<feature mandatory="true" name="LINUXTHREADS_OLD"/>
+					<feature mandatory="true" name="LINUXTHREADS_NEW"/>
+					<feature mandatory="true" name="UCLIBC_HAS_THREADS_NATIVE"/>
+				</alt>
+				<alt abstract="true" mandatory="true" name="ARCH_WANTS_LITTLE_ENDIAN_alt">
+					<feature mandatory="true" name="ARCH_WANTS_BIG_ENDIAN"/>
+					<feature mandatory="true" name="ARCH_WANTS_LITTLE_ENDIAN"/>
+				</alt>
+				<feature name="UCLIBC_SV4_DEPRECATED"/>
+				<feature name="UCLIBC_HAS_STRING_ARCH_OPT"/>
+				<feature mandatory="true" name="DESIRED_TARGET_ARCH"/>
+				<feature name="ARCH_BIG_ENDIAN"/>
+				<alt abstract="true" mandatory="true" name="UCLIBC_FORMAT_FLAT_SEP_DATA_alt">
+					<feature mandatory="true" name="UCLIBC_FORMAT_ELF"/>
+					<feature mandatory="true" name="UCLIBC_FORMAT_FDPIC_ELF"/>
+					<feature mandatory="true" name="UCLIBC_FORMAT_FLAT"/>
+					<feature mandatory="true" name="UCLIBC_FORMAT_FLAT_SEP_DATA"/>
+					<feature mandatory="true" name="UCLIBC_FORMAT_SHARED_FLAT"/>
+				</alt>
+				<feature mandatory="true" name="KERNEL_HEADERS"/>
+				<and name="UCLIBC_HAS_NETWORK_SUPPORT">
+					<feature name="UCLIBC_HAS_LIBNSL_STUB"/>
+					<feature name="UCLIBC_HAS_EXTRA_COMPAT_RES_STATE"/>
+					<feature name="UCLIBC_HAS_IPV4"/>
+					<feature name="UCLIBC_HAS_LIBRESOLV_STUB"/>
+					<feature name="UCLIBC_HAS_COMPAT_RES_STATE"/>
+					<feature name="UCLIBC_HAS_BSD_RES_CLOSE"/>
+					<and name="UCLIBC_USE_NETLINK">
+						<feature name="UCLIBC_SUPPORT_AI_ADDRCONFIG"/>
+					</and>
+					<feature name="UCLIBC_HAS_SOCKET"/>
+					<and name="UCLIBC_HAS_IPV6">
+						<and name="UCLIBC_HAS_RPC">
+							<feature name="UCLIBC_HAS_REENTRANT_RPC"/>
+							<feature name="UCLIBC_HAS_FULL_RPC"/>
+						</and>
+					</and>
+				</and>
+				<feature name="UCLIBC_HAS_GNU_GETSUBOPT"/>
+				<feature name="UCLIBC_HAS_GETOPT_LONG"/>
+				<and name="UCLIBC_HAS_REALTIME">
+					<feature name="UCLIBC_HAS_ADVANCED_REALTIME"/>
+				</and>
+				<feature name="UCLIBC_HAS_SCANF_GLIBC_A_FLAG"/>
+				<feature mandatory="true" name="DEVEL_PREFIX"/>
+				<feature mandatory="true" name="WARNINGS"/>
+				<feature name="UCLIBC_HAS_GNU_GETOPT"/>
+				<feature name="PTHREADS_DEBUG_SUPPORT"/>
+				<alt abstract="true" mandatory="true" name="CONFIG_SH4_alt">
+					<feature mandatory="true" name="CONFIG_SH2A"/>
+					<feature mandatory="true" name="CONFIG_SH2"/>
+					<feature mandatory="true" name="CONFIG_SH3"/>
+					<feature mandatory="true" name="CONFIG_SH4"/>
+				</alt>
+				<and name="UCLIBC_HAS_PROGRAM_INVOCATION_NAME">
+					<feature name="UCLIBC_HAS___PROGNAME"/>
+				</and>
+				<feature name="ARCH_ANY_ENDIAN"/>
+				<feature name="ARCH_HAS_NO_SHARED"/>
+				<and name="UCLIBC_HAS_PTY">
+					<feature name="UNIX98PTY_ONLY"/>
+					<feature name="ASSUME_DEVPTS"/>
+				</and>
+				<feature name="UCLIBC_HAS_TLS"/>
+				<alt abstract="true" mandatory="true" name="CONFIG_SPARC_V9_alt">
+					<feature mandatory="true" name="CONFIG_SPARC_V7"/>
+					<feature mandatory="true" name="CONFIG_SPARC_V8"/>
+					<feature mandatory="true" name="CONFIG_SPARC_V9"/>
+					<feature mandatory="true" name="CONFIG_SPARC_V9B"/>
+				</alt>
+				<feature name="UCLIBC_HAS_STDIO_GETC_MACRO"/>
+				<feature name="SUPPORT_LD_DEBUG"/>
+				<and name="UCLIBC_HAS_GLIBC_DIGIT_GROUPING">
+					<feature name="UCLIBC_HAS_SCANF_LENIENT_DIGIT_GROUPING"/>
+				</and>
+				<alt abstract="true" mandatory="true" name="CONFIG_H8S_alt">
+					<feature mandatory="true" name="CONFIG_H8300H"/>
+					<feature mandatory="true" name="CONFIG_H8S"/>
+				</alt>
+				<feature name="UCLIBC_SUSV3_LEGACY"/>
+				<feature name="UCLIBC_HAS_PROFILING"/>
+				<and name="HAVE_SHARED">
+					<feature name="LDSO_LDD_SUPPORT"/>
+					<feature name="UCLIBC_STATIC_LDCONFIG"/>
+					<feature name="LDSO_PRELOAD_ENV_SUPPORT"/>
+					<and name="LDSO_PRELOAD_FILE_SUPPORT">
+						<feature mandatory="true" name="LDSO_BASE_FILENAME"/>
+					</and>
+					<feature name="FORCE_SHAREABLE_TEXT_SEGMENTS"/>
+					<feature name="LDSO_CACHE_SUPPORT"/>
+					<feature name="LDSO_RUNPATH"/>
+					<feature name="LDSO_SEARCH_INTERP_PATH"/>
+				</and>
+				<alt abstract="true" mandatory="true" name="UCLIBC_HAS_STDIO_BUILTIN_BUFFER_4_alt">
+					<feature mandatory="true" name="UCLIBC_HAS_STDIO_BUILTIN_BUFFER_NONE"/>
+					<feature mandatory="true" name="UCLIBC_HAS_STDIO_BUILTIN_BUFFER_4"/>
+					<feature mandatory="true" name="UCLIBC_HAS_STDIO_BUILTIN_BUFFER_8"/>
+				</alt>
+				<feature name="UCLIBC_NTP_LEGACY"/>
+				<feature name="UCLIBC_HAS_STDIO_PUTC_MACRO"/>
+				<feature name="UCLIBC_HAS_STDIO_AUTO_RW_TRANSITION"/>
+				<feature name="UCLIBC_MALLOC_DEBUGGING"/>
+				<alt abstract="true" mandatory="true" name="CONFIG_CRISV32_alt">
+					<feature mandatory="true" name="CONFIG_CRIS"/>
+					<feature mandatory="true" name="CONFIG_CRISV32"/>
+				</alt>
+				<feature name="UCLIBC_HAS_PRINTF_M_SPEC"/>
+				<feature name="UCLIBC_HAS_FOPEN_EXCLUSIVE_MODE"/>
+				<feature name="UCLIBC_HAS_HEXADECIMAL_FLOATS"/>
+				<feature name="UCLIBC_HAS_LIBUTIL"/>
+				<feature name="LINKRELAX"/>
+				<feature name="HAVE_DOT_CONFIG"/>
+				<feature name="UCLIBC_DOWNLOAD_PREGENERATED_LOCALE_DATA"/>
+				<feature name="UCLIBC_HAS_SYSLOG"/>
+				<and name="UCLIBC_HAS_REGEX">
+					<feature name="UCLIBC_HAS_REGEX_OLD"/>
+				</and>
+				<feature name="USE_BX"/>
+				<feature name="DOASSERTS"/>
+				<and name="UCLIBC_HAS_LOCALE">
+					<alt abstract="true" mandatory="true" name="UCLIBC_BUILD_ALL_LOCALE_alt">
+						<feature mandatory="true" name="UCLIBC_BUILD_ALL_LOCALE"/>
+						<feature mandatory="true" name="UCLIBC_BUILD_MINIMAL_LOCALE"/>
+						<feature mandatory="true" name="UCLIBC_PREGENERATED_LOCALE_DATA"/>
+					</alt>
+				</and>
+				<feature mandatory="true" name="UCLIBC_GRP_BUFFER_SIZE"/>
+				<feature name="UCLIBC_HAS_GLIBC_CUSTOM_STREAMS"/>
+				<feature name="MALLOC_GLIBC_COMPAT"/>
+				<feature name="ARCH_HAS_NO_LDSO"/>
+				<feature name="DODEBUG"/>
+				<alt abstract="true" mandatory="true" name="CONFIG_MIPS_O32_ABI_alt">
+					<feature mandatory="true" name="CONFIG_MIPS_O32_ABI"/>
+					<feature mandatory="true" name="CONFIG_MIPS_N32_ABI"/>
+					<feature mandatory="true" name="CONFIG_MIPS_N64_ABI"/>
+				</alt>
+				<feature name="UCLIBC_HAS_TM_EXTENSIONS"/>
+				<feature name="UCLIBC_BUILD_RELRO"/>
+				<and name="UCLIBC_HAS_GLOB">
+					<feature name="UCLIBC_HAS_GNU_GLOB"/>
+				</and>
+				<feature name="UCLIBC_HAS_WORDEXP"/>
+				<feature name="UCLIBC_BUILD_NOW"/>
+				<feature name="UCLIBC_HAS_STRING_GENERIC_OPT"/>
+				<feature name="LDSO_GNU_HASH_SUPPORT"/>
+				<feature name="UCLIBC_HAS_FTW"/>
+				<feature mandatory="true" name="TARGET_ARCH"/>
+				<feature name="UCLIBC_BUILD_PIE"/>
+				<feature name="UCLIBC_SUSV4_LEGACY"/>
+				<and name="UCLIBC_HAS_FNMATCH">
+					<feature name="UCLIBC_HAS_FNMATCH_OLD"/>
+				</and>
+				<feature name="ARCH_HAS_BWD_MEMCPY"/>
+				<feature name="UCLIBC_HAS_OBSOLETE_BSD_SIGNAL"/>
+				<alt abstract="true" mandatory="true" name="CONFIG_CLASSIC_alt">
+					<feature mandatory="true" name="CONFIG_CLASSIC"/>
+					<feature mandatory="true" name="CONFIG_E500"/>
+				</alt>
+				<feature name="UCLIBC_LINUX_SPECIFIC"/>
+				<feature name="UCLIBC_HAS_GETTEXT_AWARENESS"/>
+				<feature name="USE_OLD_VFPRINTF"/>
+				<feature name="UCLIBC_UCLINUX_BROKEN_MUNMAP"/>
+				<feature name="UCLIBC_HAS_BSD_ERR"/>
+				<feature name="UCLIBC_CTOR_DTOR"/>
+				<alt abstract="true" mandatory="true" name="CONFIG_AVR32_AP7_alt">
+					<feature mandatory="true" name="CONFIG_AVR32_AP7"/>
+				</alt>
+				<feature mandatory="true" name="TARGET_SUBARCH"/>
+				<feature name="UCLIBC_HAS_STDIO_FUTEXES"/>
+				<feature mandatory="true" name="UCLIBC_PRINTF_SCANF_POSITIONAL_ARGS"/>
+				<feature name="UCLIBC_BSD_SPECIFIC"/>
+				<feature name="UCLIBC_HAS_ARC4RANDOM"/>
+				<feature name="UCLIBC_HAS_FOPEN_LARGEFILE_MODE"/>
+				<and name="UCLIBC_HAS_CRYPT_IMPL">
+					<feature name="UCLIBC_HAS_CRYPT"/>
+					<feature name="UCLIBC_HAS_CRYPT_STUB"/>
+				</and>
+				<feature mandatory="true" name="UCLIBC_EXTRA_CFLAGS"/>
+				<feature name="UCLIBC_LINUX_MODULE_24"/>
+				<and name="UCLIBC_HAS_TZ_FILE">
+					<feature mandatory="true" name="UCLIBC_TZ_FILE_PATH"/>
+					<feature name="UCLIBC_HAS_TZ_FILE_READ_MANY"/>
+					<feature name="UCLIBC_FALLBACK_TO_ETC_LOCALTIME"/>
+				</and>
+				<feature name="HAVE_NO_SSP"/>
+				<feature mandatory="true" name="CROSS_COMPILER_PREFIX"/>
+				<and name="UCLIBC_HAS_FLOATS">
+					<and name="UCLIBC_HAS_FPU">
+						<feature name="UCLIBC_HAS_SOFT_FLOAT"/>
+					</and>
+					<feature name="DO_C99_MATH"/>
+					<feature name="UCLIBC_HAS_FENV"/>
+					<feature name="DO_XSI_MATH"/>
+				</and>
+				<feature name="UCLIBC_HAS_XATTR"/>
+				<and name="UCLIBC_HAS_SSP">
+					<alt abstract="true" mandatory="true" name="PROPOLICE_BLOCK_SEGV_alt">
+						<feature mandatory="true" name="PROPOLICE_BLOCK_ABRT"/>
+						<feature mandatory="true" name="PROPOLICE_BLOCK_SEGV"/>
+					</alt>
+					<feature name="SSP_QUICK_CANARY"/>
+					<feature name="UCLIBC_HAS_SSP_COMPAT"/>
+					<feature name="UCLIBC_BUILD_SSP"/>
+				</and>
+				<feature mandatory="true" name="UCLIBC_PWD_BUFFER_SIZE"/>
+				<feature name="UCLIBC_SUSV3_LEGACY_MACROS"/>
+				<feature mandatory="true" name="MULTILIB_DIR"/>
+				<feature name="EXTRA_WARNINGS"/>
+				<feature name="DODEBUG_PT"/>
+				<alt abstract="true" mandatory="true" name="CONFIG_ARM_EABI_alt">
+					<feature mandatory="true" name="CONFIG_ARM_OABI"/>
+					<feature mandatory="true" name="CONFIG_ARM_EABI"/>
+				</alt>
+				<feature name="UCLIBC_HAS_WCHAR"/>
+				<and name="UCLIBC_HAS_CTYPE_TABLES">
+					<alt abstract="true" mandatory="true" name="UCLIBC_HAS_CTYPE_ENFORCED_alt">
+						<feature mandatory="true" name="UCLIBC_HAS_CTYPE_UNSAFE"/>
+						<feature mandatory="true" name="UCLIBC_HAS_CTYPE_CHECKED"/>
+						<feature mandatory="true" name="UCLIBC_HAS_CTYPE_ENFORCED"/>
+					</alt>
+					<feature name="UCLIBC_HAS_CTYPE_SIGNED"/>
+				</and>
+				<feature name="HAVE_NO_PIC"/>
+				<feature name="UCLIBC_HAS_NFTW"/>
+				<feature name="UCLIBC_HAS_LFS"/>
+				<feature name="ARCH_HAS_NO_MMU"/>
+				<feature name="UCLIBC_HAS_STUBS"/>
+				<feature name="UCLIBC_HAS_BACKTRACE"/>
+				<feature name="DOSTRIP"/>
+				<feature name="FORCE_OPTIONS_FOR_ARCH"/>
+				<and name="UCLIBC_HAS_SIGNUM_MESSAGES">
+					<feature name="UCLIBC_HAS_SYS_SIGLIST"/>
+				</and>
+				<feature mandatory="true" name="UCLIBC_BUILD_MINIMAL_LOCALES"/>
+				<and name="UCLIBC_HAS_ERRNO_MESSAGES">
+					<feature name="UCLIBC_HAS_SYS_ERRLIST"/>
+				</and>
+				<feature name="UCLIBC_HAS_XLOCALE"/>
+				<feature name="UCLIBC_HAS_EPOLL"/>
+				<feature name="UCLIBC_BUILD_NOEXECSTACK"/>
+				<feature name="UCLIBC_HAS_GETPT"/>
+				<feature name="UCLIBC_HAS_STDIO_SHUTDOWN_ON_ABORT"/>
+				<feature mandatory="true" name="RUNTIME_PREFIX"/>
+				<feature name="UCLIBC_HAS_GNU_ERROR"/>
+				<feature name="SUPPORT_LD_DEBUG_EARLY"/>
+				<alt abstract="true" mandatory="true" name="CONFIG_SH5_alt">
+					<feature mandatory="true" name="CONFIG_SH5"/>
+				</alt>
+				<feature name="UCLIBC_HAS_SHADOW"/>
+				<feature name="UCLIBC_HAS_TZ_CACHING"/>
+				<and name="ARCH_HAS_MMU">
+					<feature name="ARCH_USE_MMU"/>
+				</and>
+				<feature name="UCLIBC_HAS_GLIBC_CUSTOM_PRINTF"/>
+				<feature mandatory="true" name="UCLIBC_SHARED_FLAT_ID"/>
+				<feature name="DOPIC"/>
+				<feature name="UCLIBC_HAS_THREADS"/>
+				<feature name="UCLIBC_MJN3_ONLY"/>
+				<feature name="UCLIBC_DYNAMIC_ATEXIT"/>
+				<feature name="UCLIBC_HAS_UTMPX"/>
+				<feature name="HARDWIRED_ABSPATH"/>
+				<and abstract="true" mandatory="true" name="Subtree">
+					<or abstract="true" mandatory="true" name="OR0_0">
+						<and abstract="true" mandatory="true" name="AND1_1">
+							<feature abstract="true" mandatory="true" name="TARGET_arm_1_2"/>
+							<and abstract="true" mandatory="true" name="AND1_2">
+								<feature abstract="true" mandatory="true" name="NOT_CONFIG_GENERIC_ARM_1_3"/>
+								<and abstract="true" mandatory="true" name="AND1_3">
+									<feature abstract="true" mandatory="true" name="NOT_CONFIG_ARM610_1_4"/>
+									<feature abstract="true" mandatory="true" name="NOT_CONFIG_ARM710_1_4"/>
+								</and>
+							</and>
+						</and>
+						<and abstract="true" mandatory="true" name="AND2_1">
+							<or abstract="true" mandatory="true" name="OR2_2">
+								<and abstract="true" mandatory="true" name="AND2_3">
+									<and abstract="true" mandatory="true" name="AND2_4">
+										<feature abstract="true" mandatory="true" name="NOT_CONFIG_ARM_CORTEX_M1_2_5"/>
+										<feature abstract="true" mandatory="true" name="NOT_CONFIG_ARM_CORTEX_M3_2_5"/>
+									</and>
+									<or abstract="true" mandatory="true" name="OR2_4">
+										<feature abstract="true" mandatory="true" name="NOT_TARGET_arm_2_5"/>
+										<or abstract="true" mandatory="true" name="OR2_5">
+											<feature abstract="true" mandatory="true" name="CONFIG_GENERIC_ARM_2_6"/>
+											<or abstract="true" mandatory="true" name="OR2_6">
+												<feature abstract="true" mandatory="true" name="CONFIG_ARM610_2_7"/>
+												<feature abstract="true" mandatory="true" name="CONFIG_ARM710_2_7"/>
+											</or>
+										</or>
+									</or>
+								</and>
+								<feature abstract="true" mandatory="true" name="USE_BX_2_3"/>
+							</or>
+							<or abstract="true" mandatory="true" name="OR2_2_0">
+								<feature abstract="true" mandatory="true" name="NOT_USE_BX_2_3"/>
+								<or abstract="true" mandatory="true" name="OR2_3">
+									<or abstract="true" mandatory="true" name="OR2_4_0">
+										<feature abstract="true" mandatory="true" name="CONFIG_ARM_CORTEX_M1_2_5"/>
+										<feature abstract="true" mandatory="true" name="CONFIG_ARM_CORTEX_M3_2_5"/>
+									</or>
+									<and abstract="true" mandatory="true" name="AND2_4_0">
+										<feature abstract="true" mandatory="true" name="TARGET_arm_2_5"/>
+										<and abstract="true" mandatory="true" name="AND2_5">
+											<feature abstract="true" mandatory="true" name="NOT_CONFIG_GENERIC_ARM_2_6"/>
+											<and abstract="true" mandatory="true" name="AND2_6">
+												<feature abstract="true" mandatory="true" name="NOT_CONFIG_ARM610_2_7"/>
+												<feature abstract="true" mandatory="true" name="NOT_CONFIG_ARM710_2_7"/>
+											</and>
+										</and>
+									</and>
+								</or>
+							</or>
+						</and>
+					</or>
+					<or abstract="true" mandatory="true" name="OR2_0">
+						<feature abstract="true" mandatory="true" name="TARGET_avr32_3_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_avr32_4_1"/>
+						<feature abstract="true" mandatory="true" name="LINKRELAX_5_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR5_0">
+						<feature abstract="true" mandatory="true" name="TARGET_sh_6_1"/>
+						<feature abstract="true" mandatory="true" name="CONFIG_SH4_7_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_HAS_BWD_MEMCPY_8_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR8_0">
+						<feature abstract="true" mandatory="true" name="UCLIBC_FORMAT_SHARED_FLAT_9_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_FORMAT_SHARED_FLAT_10_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_SHARED_FLAT_ID_11_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR11_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_12_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_mips_13_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_ANY_ENDIAN_14_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR14_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_15_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_sh_16_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_ANY_ENDIAN_17_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR17_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_18_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_sh64_19_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_ANY_ENDIAN_20_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR20_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_21_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_h8300_22_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_ANY_ENDIAN_23_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR23_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_24_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_arm_25_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_ANY_ENDIAN_26_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR26_0">
+						<feature abstract="true" mandatory="true" name="ARCH_ANY_ENDIAN_27_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_mips_28_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_sh_29_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_sh64_30_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_h8300_31_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_arm_32_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR32_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_33_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_e1_34_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_BIG_ENDIAN_35_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR35_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_36_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_sparc_37_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_BIG_ENDIAN_38_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR38_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_39_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_powerpc_40_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_BIG_ENDIAN_41_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR41_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_42_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_microblaze_43_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_BIG_ENDIAN_44_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR44_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_45_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_frv_46_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_BIG_ENDIAN_47_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR47_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_48_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_hppa_49_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_BIG_ENDIAN_50_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR50_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_51_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_m68k_52_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_BIG_ENDIAN_53_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR53_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_54_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_avr32_55_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_BIG_ENDIAN_56_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR56_0">
+						<feature abstract="true" mandatory="true" name="ARCH_BIG_ENDIAN_57_1"/>
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_58_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_WANTS_BIG_ENDIAN_59_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR59_0">
+						<feature abstract="true" mandatory="true" name="ARCH_BIG_ENDIAN_60_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_e1_61_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_sparc_62_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_powerpc_63_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_microblaze_64_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_frv_65_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_hppa_66_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_m68k_67_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_avr32_68_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_WANTS_BIG_ENDIAN_69_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR69_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_70_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_i960_71_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_LITTLE_ENDIAN_72_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR72_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_73_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_vax_74_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_LITTLE_ENDIAN_75_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR75_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_76_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_nios2_77_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_LITTLE_ENDIAN_78_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR78_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_79_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_bfin_80_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_LITTLE_ENDIAN_81_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR81_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_82_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_x86_64_83_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_LITTLE_ENDIAN_84_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR84_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_85_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_alpha_86_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_LITTLE_ENDIAN_87_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR87_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_88_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_i386_89_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_LITTLE_ENDIAN_90_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR90_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_91_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_nios_92_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_LITTLE_ENDIAN_93_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR93_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_94_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_ia64_95_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_LITTLE_ENDIAN_96_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR96_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_97_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_cris_98_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_LITTLE_ENDIAN_99_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR99_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_100_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_v850_101_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_LITTLE_ENDIAN_102_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR102_0">
+						<feature abstract="true" mandatory="true" name="ARCH_LITTLE_ENDIAN_103_1"/>
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_104_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_WANTS_LITTLE_ENDIAN_105_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR105_0">
+						<feature abstract="true" mandatory="true" name="ARCH_LITTLE_ENDIAN_106_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_i960_107_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_vax_108_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_nios2_109_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_bfin_110_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_x86_64_111_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_WANTS_LITTLE_ENDIAN_112_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_alpha_113_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_i386_114_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_nios_115_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_ia64_116_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_cris_117_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_v850_118_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR118_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_119_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_i960_120_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_HAS_NO_MMU_121_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR121_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_122_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_e1_123_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_HAS_NO_MMU_124_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR124_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_125_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_nios2_126_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_HAS_NO_MMU_127_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR127_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_128_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_microblaze_129_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_HAS_NO_MMU_130_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR130_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_131_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_frv_132_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_HAS_NO_MMU_133_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR133_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_134_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_bfin_135_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_HAS_NO_MMU_136_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR136_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_137_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_h8300_138_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_HAS_NO_MMU_139_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR139_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_140_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_nios_141_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_HAS_NO_MMU_142_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR142_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_143_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_v850_144_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_HAS_NO_MMU_145_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR145_0">
+						<feature abstract="true" mandatory="true" name="ARCH_HAS_NO_MMU_146_1"/>
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_147_1"/>
+						<feature abstract="true" mandatory="true" name="CONFIG_ARM7TDMI_148_1"/>
+						<feature abstract="true" mandatory="true" name="CONFIG_SH2_149_1"/>
+						<feature abstract="true" mandatory="true" name="CONFIG_ARM_CORTEX_M1_150_1"/>
+						<feature abstract="true" mandatory="true" name="CONFIG_SH2A_151_1"/>
+						<feature abstract="true" mandatory="true" name="CONFIG_ARM_CORTEX_M3_152_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR152_0">
+						<feature abstract="true" mandatory="true" name="ARCH_HAS_NO_MMU_153_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_i960_154_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_e1_155_1"/>
+						<feature abstract="true" mandatory="true" name="CONFIG_ARM7TDMI_156_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_nios2_157_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_microblaze_158_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_frv_159_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_bfin_160_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_h8300_161_1"/>
+						<feature abstract="true" mandatory="true" name="CONFIG_SH2_162_1"/>
+						<feature abstract="true" mandatory="true" name="CONFIG_ARM_CORTEX_M1_163_1"/>
+						<feature abstract="true" mandatory="true" name="CONFIG_SH2A_164_1"/>
+						<feature abstract="true" mandatory="true" name="CONFIG_ARM_CORTEX_M3_165_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_nios_166_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_v850_167_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR167_0">
+						<feature abstract="true" mandatory="true" name="NOT_ARCH_HAS_NO_MMU_168_1"/>
+						<and abstract="true" mandatory="true" name="AND169_1">
+							<or abstract="true" mandatory="true" name="OR169_2">
+								<and abstract="true" mandatory="true" name="AND169_3">
+									<and abstract="true" mandatory="true" name="AND169_4">
+										<and abstract="true" mandatory="true" name="AND169_5">
+											<and abstract="true" mandatory="true" name="AND169_6">
+												<and abstract="true" mandatory="true" name="AND169_7">
+													<and abstract="true" mandatory="true" name="AND169_8">
+														<and abstract="true" mandatory="true" name="AND169_9">
+															<and abstract="true" mandatory="true" name="AND169_10">
+																<and abstract="true" mandatory="true" name="AND169_11">
+																	<and abstract="true" mandatory="true" name="AND169_12">
+																		<and abstract="true" mandatory="true" name="AND169_13">
+																			<and abstract="true" mandatory="true" name="AND169_14">
+																				<and abstract="true" mandatory="true" name="AND169_15">
+																					<and abstract="true" mandatory="true" name="AND169_16">
+																						<and abstract="true" mandatory="true" name="AND169_17">
+																							<and abstract="true" mandatory="true" name="AND169_18">
+																								<and abstract="true" mandatory="true" name="AND169_19">
+																									<and abstract="true" mandatory="true" name="AND169_20">
+																										<and abstract="true" mandatory="true" name="AND169_21">
+																											<and abstract="true" mandatory="true" name="AND169_22">
+																												<and abstract="true" mandatory="true" name="AND169_23">
+																													<and abstract="true" mandatory="true" name="AND169_24">
+																														<and abstract="true" mandatory="true" name="AND169_25">
+																															<and abstract="true" mandatory="true" name="AND169_26">
+																																<and abstract="true" mandatory="true" name="AND169_27">
+																																	<feature abstract="true" mandatory="true" name="NOT_CONFIG_ARM922T_169_28"/>
+																																	<feature abstract="true" mandatory="true" name="NOT_CONFIG_ARM1176JZ_S_169_28"/>
+																																</and>
+																																<or abstract="true" mandatory="true" name="OR169_27">
+																																	<feature abstract="true" mandatory="true" name="NOT_FORCE_OPTIONS_FOR_ARCH_169_28"/>
+																																	<feature abstract="true" mandatory="true" name="NOT_TARGET_powerpc_169_28"/>
+																																</or>
+																															</and>
+																															<feature abstract="true" mandatory="true" name="NOT_CONFIG_ARM920T_169_26"/>
+																														</and>
+																														<feature abstract="true" mandatory="true" name="NOT_CONFIG_ARM720T_169_25"/>
+																													</and>
+																													<feature abstract="true" mandatory="true" name="NOT_CONFIG_CRISV32_169_24"/>
+																												</and>
+																												<feature abstract="true" mandatory="true" name="NOT_CONFIG_ARM610_169_23"/>
+																											</and>
+																											<or abstract="true" mandatory="true" name="OR169_22">
+																												<feature abstract="true" mandatory="true" name="NOT_FORCE_OPTIONS_FOR_ARCH_169_23"/>
+																												<feature abstract="true" mandatory="true" name="NOT_TARGET_hppa_169_23"/>
+																											</or>
+																										</and>
+																										<feature abstract="true" mandatory="true" name="NOT_CONFIG_ARM_SA110_169_21"/>
+																									</and>
+																									<feature abstract="true" mandatory="true" name="NOT_CONFIG_AVR32_AP7_169_20"/>
+																								</and>
+																								<or abstract="true" mandatory="true" name="OR169_19">
+																									<feature abstract="true" mandatory="true" name="NOT_FORCE_OPTIONS_FOR_ARCH_169_20"/>
+																									<feature abstract="true" mandatory="true" name="NOT_TARGET_x86_64_169_20"/>
+																								</or>
+																							</and>
+																							<feature abstract="true" mandatory="true" name="NOT_CONFIG_ARM_XSCALE_169_18"/>
+																						</and>
+																						<feature abstract="true" mandatory="true" name="NOT_CONFIG_ARM10T_169_17"/>
+																					</and>
+																					<feature abstract="true" mandatory="true" name="NOT_CONFIG_ARM_SA1100_169_16"/>
+																				</and>
+																				<feature abstract="true" mandatory="true" name="NOT_CONFIG_CRIS_169_15"/>
+																			</and>
+																			<or abstract="true" mandatory="true" name="OR169_14">
+																				<feature abstract="true" mandatory="true" name="NOT_FORCE_OPTIONS_FOR_ARCH_169_15"/>
+																				<feature abstract="true" mandatory="true" name="NOT_TARGET_alpha_169_15"/>
+																			</or>
+																		</and>
+																		<or abstract="true" mandatory="true" name="OR169_13">
+																			<feature abstract="true" mandatory="true" name="NOT_FORCE_OPTIONS_FOR_ARCH_169_14"/>
+																			<feature abstract="true" mandatory="true" name="NOT_TARGET_i386_169_14"/>
+																		</or>
+																	</and>
+																	<feature abstract="true" mandatory="true" name="NOT_CONFIG_SH5_169_12"/>
+																</and>
+																<feature abstract="true" mandatory="true" name="NOT_CONFIG_ARM710_169_11"/>
+															</and>
+															<feature abstract="true" mandatory="true" name="NOT_CONFIG_ARM926T_169_10"/>
+														</and>
+														<or abstract="true" mandatory="true" name="OR169_9">
+															<feature abstract="true" mandatory="true" name="NOT_FORCE_OPTIONS_FOR_ARCH_169_10"/>
+															<feature abstract="true" mandatory="true" name="NOT_TARGET_ia64_169_10"/>
+														</or>
+													</and>
+													<feature abstract="true" mandatory="true" name="NOT_CONFIG_ARM1136JF_S_169_8"/>
+												</and>
+												<feature abstract="true" mandatory="true" name="NOT_CONFIG_ARM1176JZF_S_169_7"/>
+											</and>
+											<feature abstract="true" mandatory="true" name="NOT_CONFIG_SH3_169_6"/>
+										</and>
+										<feature abstract="true" mandatory="true" name="NOT_CONFIG_ARM_IWMMXT_169_5"/>
+									</and>
+									<feature abstract="true" mandatory="true" name="ARCH_HAS_NO_MMU_169_4"/>
+								</and>
+								<feature abstract="true" mandatory="true" name="ARCH_HAS_MMU_169_3"/>
+							</or>
+							<or abstract="true" mandatory="true" name="OR169_2_0">
+								<feature abstract="true" mandatory="true" name="NOT_ARCH_HAS_MMU_169_3"/>
+								<or abstract="true" mandatory="true" name="OR169_3">
+									<or abstract="true" mandatory="true" name="OR169_4">
+										<or abstract="true" mandatory="true" name="OR169_5">
+											<or abstract="true" mandatory="true" name="OR169_6">
+												<or abstract="true" mandatory="true" name="OR169_7">
+													<or abstract="true" mandatory="true" name="OR169_8">
+														<or abstract="true" mandatory="true" name="OR169_9_0">
+															<or abstract="true" mandatory="true" name="OR169_10">
+																<or abstract="true" mandatory="true" name="OR169_11">
+																	<or abstract="true" mandatory="true" name="OR169_12">
+																		<or abstract="true" mandatory="true" name="OR169_13_0">
+																			<or abstract="true" mandatory="true" name="OR169_14_0">
+																				<or abstract="true" mandatory="true" name="OR169_15">
+																					<or abstract="true" mandatory="true" name="OR169_16">
+																						<or abstract="true" mandatory="true" name="OR169_17">
+																							<or abstract="true" mandatory="true" name="OR169_18">
+																								<or abstract="true" mandatory="true" name="OR169_19_0">
+																									<or abstract="true" mandatory="true" name="OR169_20">
+																										<or abstract="true" mandatory="true" name="OR169_21">
+																											<or abstract="true" mandatory="true" name="OR169_22_0">
+																												<or abstract="true" mandatory="true" name="OR169_23">
+																													<or abstract="true" mandatory="true" name="OR169_24">
+																														<or abstract="true" mandatory="true" name="OR169_25">
+																															<or abstract="true" mandatory="true" name="OR169_26">
+																																<or abstract="true" mandatory="true" name="OR169_27_0">
+																																	<feature abstract="true" mandatory="true" name="CONFIG_ARM922T_169_28"/>
+																																	<feature abstract="true" mandatory="true" name="CONFIG_ARM1176JZ_S_169_28"/>
+																																</or>
+																																<and abstract="true" mandatory="true" name="AND169_27_0">
+																																	<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_169_28"/>
+																																	<feature abstract="true" mandatory="true" name="TARGET_powerpc_169_28"/>
+																																</and>
+																															</or>
+																															<feature abstract="true" mandatory="true" name="CONFIG_ARM920T_169_26"/>
+																														</or>
+																														<feature abstract="true" mandatory="true" name="CONFIG_ARM720T_169_25"/>
+																													</or>
+																													<feature abstract="true" mandatory="true" name="CONFIG_CRISV32_169_24"/>
+																												</or>
+																												<feature abstract="true" mandatory="true" name="CONFIG_ARM610_169_23"/>
+																											</or>
+																											<and abstract="true" mandatory="true" name="AND169_22_0">
+																												<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_169_23"/>
+																												<feature abstract="true" mandatory="true" name="TARGET_hppa_169_23"/>
+																											</and>
+																										</or>
+																										<feature abstract="true" mandatory="true" name="CONFIG_ARM_SA110_169_21"/>
+																									</or>
+																									<feature abstract="true" mandatory="true" name="CONFIG_AVR32_AP7_169_20"/>
+																								</or>
+																								<and abstract="true" mandatory="true" name="AND169_19_0">
+																									<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_169_20"/>
+																									<feature abstract="true" mandatory="true" name="TARGET_x86_64_169_20"/>
+																								</and>
+																							</or>
+																							<feature abstract="true" mandatory="true" name="CONFIG_ARM_XSCALE_169_18"/>
+																						</or>
+																						<feature abstract="true" mandatory="true" name="CONFIG_ARM10T_169_17"/>
+																					</or>
+																					<feature abstract="true" mandatory="true" name="CONFIG_ARM_SA1100_169_16"/>
+																				</or>
+																				<feature abstract="true" mandatory="true" name="CONFIG_CRIS_169_15"/>
+																			</or>
+																			<and abstract="true" mandatory="true" name="AND169_14_0">
+																				<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_169_15"/>
+																				<feature abstract="true" mandatory="true" name="TARGET_alpha_169_15"/>
+																			</and>
+																		</or>
+																		<and abstract="true" mandatory="true" name="AND169_13_0">
+																			<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_169_14"/>
+																			<feature abstract="true" mandatory="true" name="TARGET_i386_169_14"/>
+																		</and>
+																	</or>
+																	<feature abstract="true" mandatory="true" name="CONFIG_SH5_169_12"/>
+																</or>
+																<feature abstract="true" mandatory="true" name="CONFIG_ARM710_169_11"/>
+															</or>
+															<feature abstract="true" mandatory="true" name="CONFIG_ARM926T_169_10"/>
+														</or>
+														<and abstract="true" mandatory="true" name="AND169_9_0">
+															<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_169_10"/>
+															<feature abstract="true" mandatory="true" name="TARGET_ia64_169_10"/>
+														</and>
+													</or>
+													<feature abstract="true" mandatory="true" name="CONFIG_ARM1136JF_S_169_8"/>
+												</or>
+												<feature abstract="true" mandatory="true" name="CONFIG_ARM1176JZF_S_169_7"/>
+											</or>
+											<feature abstract="true" mandatory="true" name="CONFIG_SH3_169_6"/>
+										</or>
+										<feature abstract="true" mandatory="true" name="CONFIG_ARM_IWMMXT_169_5"/>
+									</or>
+									<feature abstract="true" mandatory="true" name="NOT_ARCH_HAS_NO_MMU_169_4"/>
+								</or>
+							</or>
+						</and>
+					</or>
+					<or abstract="true" mandatory="true" name="OR169_0">
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_FLOATS_170_1"/>
+						<and abstract="true" mandatory="true" name="AND171_1">
+							<or abstract="true" mandatory="true" name="OR171_2">
+								<and abstract="true" mandatory="true" name="AND171_3">
+									<or abstract="true" mandatory="true" name="OR171_4">
+										<feature abstract="true" mandatory="true" name="NOT_FORCE_OPTIONS_FOR_ARCH_171_5"/>
+										<feature abstract="true" mandatory="true" name="NOT_TARGET_frv_171_5"/>
+									</or>
+									<feature abstract="true" mandatory="true" name="NOT_UCLIBC_HAS_FLOATS_171_4"/>
+								</and>
+								<feature abstract="true" mandatory="true" name="UCLIBC_HAS_FPU_171_3"/>
+							</or>
+							<or abstract="true" mandatory="true" name="OR171_2_0">
+								<feature abstract="true" mandatory="true" name="NOT_UCLIBC_HAS_FPU_171_3"/>
+								<or abstract="true" mandatory="true" name="OR171_3">
+									<and abstract="true" mandatory="true" name="AND171_4">
+										<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_171_5"/>
+										<feature abstract="true" mandatory="true" name="TARGET_frv_171_5"/>
+									</and>
+									<feature abstract="true" mandatory="true" name="UCLIBC_HAS_FLOATS_171_4"/>
+								</or>
+							</or>
+						</and>
+					</or>
+					<or abstract="true" mandatory="true" name="OR171_0">
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_FLOATS_172_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_FPU_173_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_SOFT_FLOAT_174_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR174_0">
+						<and abstract="true" mandatory="true" name="AND175_1">
+							<feature abstract="true" mandatory="true" name="DO_C99_MATH_175_2"/>
+							<or abstract="true" mandatory="true" name="OR175_2">
+								<feature abstract="true" mandatory="true" name="TARGET_i386_175_3"/>
+								<or abstract="true" mandatory="true" name="OR175_3">
+									<feature abstract="true" mandatory="true" name="TARGET_m68k_175_4"/>
+									<or abstract="true" mandatory="true" name="OR175_4">
+										<feature abstract="true" mandatory="true" name="TARGET_sparc_175_5"/>
+										<or abstract="true" mandatory="true" name="OR175_5">
+											<feature abstract="true" mandatory="true" name="TARGET_x86_64_175_6"/>
+											<or abstract="true" mandatory="true" name="OR175_6">
+												<feature abstract="true" mandatory="true" name="TARGET_powerpc_175_7"/>
+												<feature abstract="true" mandatory="true" name="TARGET_sh_175_7"/>
+											</or>
+										</or>
+									</or>
+								</or>
+							</or>
+						</and>
+						<and abstract="true" mandatory="true" name="AND176_1">
+							<or abstract="true" mandatory="true" name="OR176_2">
+								<or abstract="true" mandatory="true" name="OR176_3">
+									<feature abstract="true" mandatory="true" name="NOT_DO_C99_MATH_176_4"/>
+									<and abstract="true" mandatory="true" name="AND176_4">
+										<feature abstract="true" mandatory="true" name="NOT_TARGET_i386_176_5"/>
+										<and abstract="true" mandatory="true" name="AND176_5">
+											<feature abstract="true" mandatory="true" name="NOT_TARGET_m68k_176_6"/>
+											<and abstract="true" mandatory="true" name="AND176_6">
+												<feature abstract="true" mandatory="true" name="NOT_TARGET_sparc_176_7"/>
+												<and abstract="true" mandatory="true" name="AND176_7">
+													<feature abstract="true" mandatory="true" name="NOT_TARGET_x86_64_176_8"/>
+													<and abstract="true" mandatory="true" name="AND176_8">
+														<feature abstract="true" mandatory="true" name="NOT_TARGET_powerpc_176_9"/>
+														<feature abstract="true" mandatory="true" name="NOT_TARGET_sh_176_9"/>
+													</and>
+												</and>
+											</and>
+										</and>
+									</and>
+								</or>
+								<feature abstract="true" mandatory="true" name="UCLIBC_HAS_LONG_DOUBLE_MATH_176_3"/>
+							</or>
+							<or abstract="true" mandatory="true" name="OR176_2_0">
+								<feature abstract="true" mandatory="true" name="NOT_UCLIBC_HAS_LONG_DOUBLE_MATH_176_3"/>
+								<and abstract="true" mandatory="true" name="AND176_3">
+									<feature abstract="true" mandatory="true" name="DO_C99_MATH_176_4"/>
+									<or abstract="true" mandatory="true" name="OR176_4">
+										<feature abstract="true" mandatory="true" name="TARGET_i386_176_5"/>
+										<or abstract="true" mandatory="true" name="OR176_5">
+											<feature abstract="true" mandatory="true" name="TARGET_m68k_176_6"/>
+											<or abstract="true" mandatory="true" name="OR176_6">
+												<feature abstract="true" mandatory="true" name="TARGET_sparc_176_7"/>
+												<or abstract="true" mandatory="true" name="OR176_7">
+													<feature abstract="true" mandatory="true" name="TARGET_x86_64_176_8"/>
+													<or abstract="true" mandatory="true" name="OR176_8">
+														<feature abstract="true" mandatory="true" name="TARGET_powerpc_176_9"/>
+														<feature abstract="true" mandatory="true" name="TARGET_sh_176_9"/>
+													</or>
+												</or>
+											</or>
+										</or>
+									</or>
+								</and>
+							</or>
+						</and>
+					</or>
+					<or abstract="true" mandatory="true" name="OR176_0">
+						<feature abstract="true" mandatory="true" name="ARCH_USE_MMU_177_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_UCLINUX_BROKEN_MUNMAP_178_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR178_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_179_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_v850_180_1"/>
+						<feature abstract="true" mandatory="true" name="HAVE_NO_PIC_181_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR181_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_182_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_nios_183_1"/>
+						<feature abstract="true" mandatory="true" name="HAVE_NO_PIC_184_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR184_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_185_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_nios2_186_1"/>
+						<feature abstract="true" mandatory="true" name="HAVE_NO_PIC_187_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR187_0">
+						<feature abstract="true" mandatory="true" name="HAVE_NO_PIC_188_1"/>
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_189_1"/>
+						<feature abstract="true" mandatory="true" name="CONFIG_SH2A_190_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR190_0">
+						<feature abstract="true" mandatory="true" name="HAVE_NO_PIC_191_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_v850_192_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_nios_193_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_nios2_194_1"/>
+						<feature abstract="true" mandatory="true" name="CONFIG_SH2A_195_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR195_0">
+						<feature abstract="true" mandatory="true" name="NOT_HAVE_NO_PIC_196_1"/>
+						<and abstract="true" mandatory="true" name="AND197_1">
+							<or abstract="true" mandatory="true" name="OR197_2">
+								<and abstract="true" mandatory="true" name="AND197_3">
+									<and abstract="true" mandatory="true" name="AND197_4">
+										<or abstract="true" mandatory="true" name="OR197_5">
+											<feature abstract="true" mandatory="true" name="NOT_FORCE_SHAREABLE_TEXT_SEGMENTS_197_6"/>
+											<feature abstract="true" mandatory="true" name="NOT_HAVE_SHARED_197_6"/>
+										</or>
+										<or abstract="true" mandatory="true" name="OR197_5_0">
+											<feature abstract="true" mandatory="true" name="NOT_UCLIBC_FORMAT_FDPIC_ELF_197_6"/>
+											<feature abstract="true" mandatory="true" name="ARCH_USE_MMU_197_6"/>
+										</or>
+									</and>
+									<feature abstract="true" mandatory="true" name="HAVE_NO_PIC_197_4"/>
+								</and>
+								<feature abstract="true" mandatory="true" name="DOPIC_197_3"/>
+							</or>
+							<or abstract="true" mandatory="true" name="OR197_2_0">
+								<feature abstract="true" mandatory="true" name="NOT_DOPIC_197_3"/>
+								<or abstract="true" mandatory="true" name="OR197_3">
+									<or abstract="true" mandatory="true" name="OR197_4">
+										<and abstract="true" mandatory="true" name="AND197_5">
+											<feature abstract="true" mandatory="true" name="FORCE_SHAREABLE_TEXT_SEGMENTS_197_6"/>
+											<feature abstract="true" mandatory="true" name="HAVE_SHARED_197_6"/>
+										</and>
+										<and abstract="true" mandatory="true" name="AND197_5_0">
+											<feature abstract="true" mandatory="true" name="UCLIBC_FORMAT_FDPIC_ELF_197_6"/>
+											<and abstract="true" mandatory="true" name="AND197_6">
+												<feature abstract="true" mandatory="true" name="NOT_ARCH_USE_MMU_197_7"/>
+											</and>
+										</and>
+									</or>
+									<feature abstract="true" mandatory="true" name="NOT_HAVE_NO_PIC_197_4"/>
+								</or>
+							</or>
+						</and>
+					</or>
+					<or abstract="true" mandatory="true" name="OR197_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_198_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_e1_199_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_HAS_NO_SHARED_200_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR200_0">
+						<feature abstract="true" mandatory="true" name="ARCH_HAS_NO_SHARED_201_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_HAS_NO_LDSO_202_1"/>
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_203_1"/>
+						<feature abstract="true" mandatory="true" name="CONFIG_SPARC_V7_204_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR204_0">
+						<feature abstract="true" mandatory="true" name="ARCH_HAS_NO_SHARED_205_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_HAS_NO_LDSO_206_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_e1_207_1"/>
+						<feature abstract="true" mandatory="true" name="CONFIG_SPARC_V7_208_1"/>
+					</or>
+					<and abstract="true" mandatory="true" name="AND208_0">
+						<or abstract="true" mandatory="true" name="OR209_1">
+							<and abstract="true" mandatory="true" name="AND209_2">
+								<and abstract="true" mandatory="true" name="AND209_3">
+									<and abstract="true" mandatory="true" name="AND209_4">
+										<and abstract="true" mandatory="true" name="AND209_5">
+											<and abstract="true" mandatory="true" name="AND209_6">
+												<and abstract="true" mandatory="true" name="AND209_7">
+													<and abstract="true" mandatory="true" name="AND209_8">
+														<and abstract="true" mandatory="true" name="AND209_9">
+															<or abstract="true" mandatory="true" name="OR209_10">
+																<feature abstract="true" mandatory="true" name="NOT_UCLIBC_FORMAT_FLAT_SEP_DATA_209_11"/>
+																<feature abstract="true" mandatory="true" name="ARCH_USE_MMU_209_11"/>
+															</or>
+															<or abstract="true" mandatory="true" name="OR209_10_0">
+																<feature abstract="true" mandatory="true" name="NOT_FORCE_OPTIONS_FOR_ARCH_209_11"/>
+																<feature abstract="true" mandatory="true" name="NOT_TARGET_vax_209_11"/>
+															</or>
+														</and>
+														<or abstract="true" mandatory="true" name="OR209_9">
+															<feature abstract="true" mandatory="true" name="NOT_FORCE_OPTIONS_FOR_ARCH_209_10"/>
+															<feature abstract="true" mandatory="true" name="NOT_TARGET_nios2_209_10"/>
+														</or>
+													</and>
+													<or abstract="true" mandatory="true" name="OR209_8">
+														<feature abstract="true" mandatory="true" name="NOT_UCLIBC_FORMAT_SHARED_FLAT_209_9"/>
+														<feature abstract="true" mandatory="true" name="ARCH_USE_MMU_209_9"/>
+													</or>
+												</and>
+												<or abstract="true" mandatory="true" name="OR209_7">
+													<feature abstract="true" mandatory="true" name="NOT_FORCE_OPTIONS_FOR_ARCH_209_8"/>
+													<feature abstract="true" mandatory="true" name="NOT_TARGET_hppa_209_8"/>
+												</or>
+											</and>
+											<or abstract="true" mandatory="true" name="OR209_6">
+												<feature abstract="true" mandatory="true" name="NOT_UCLIBC_FORMAT_FLAT_209_7"/>
+												<feature abstract="true" mandatory="true" name="ARCH_USE_MMU_209_7"/>
+											</or>
+										</and>
+										<or abstract="true" mandatory="true" name="OR209_5">
+											<feature abstract="true" mandatory="true" name="NOT_FORCE_OPTIONS_FOR_ARCH_209_6"/>
+											<feature abstract="true" mandatory="true" name="NOT_TARGET_alpha_209_6"/>
+										</or>
+									</and>
+									<or abstract="true" mandatory="true" name="OR209_4">
+										<feature abstract="true" mandatory="true" name="NOT_FORCE_OPTIONS_FOR_ARCH_209_5"/>
+										<feature abstract="true" mandatory="true" name="NOT_TARGET_nios_209_5"/>
+									</or>
+								</and>
+								<or abstract="true" mandatory="true" name="OR209_3">
+									<feature abstract="true" mandatory="true" name="NOT_FORCE_OPTIONS_FOR_ARCH_209_4"/>
+									<feature abstract="true" mandatory="true" name="NOT_TARGET_ia64_209_4"/>
+								</or>
+							</and>
+							<feature abstract="true" mandatory="true" name="ARCH_HAS_NO_LDSO_209_2"/>
+						</or>
+					</and>
+					<and abstract="true" mandatory="true" name="AND209_0">
+						<or abstract="true" mandatory="true" name="OR210_1">
+							<and abstract="true" mandatory="true" name="AND210_2">
+								<and abstract="true" mandatory="true" name="AND210_3">
+									<and abstract="true" mandatory="true" name="AND210_4">
+										<and abstract="true" mandatory="true" name="AND210_5">
+											<and abstract="true" mandatory="true" name="AND210_6">
+												<and abstract="true" mandatory="true" name="AND210_7">
+													<and abstract="true" mandatory="true" name="AND210_8">
+														<and abstract="true" mandatory="true" name="AND210_9">
+															<or abstract="true" mandatory="true" name="OR210_10">
+																<feature abstract="true" mandatory="true" name="NOT_UCLIBC_FORMAT_FLAT_SEP_DATA_210_11"/>
+																<feature abstract="true" mandatory="true" name="ARCH_USE_MMU_210_11"/>
+															</or>
+															<or abstract="true" mandatory="true" name="OR210_10_0">
+																<feature abstract="true" mandatory="true" name="NOT_FORCE_OPTIONS_FOR_ARCH_210_11"/>
+																<feature abstract="true" mandatory="true" name="NOT_TARGET_vax_210_11"/>
+															</or>
+														</and>
+														<or abstract="true" mandatory="true" name="OR210_9">
+															<feature abstract="true" mandatory="true" name="NOT_FORCE_OPTIONS_FOR_ARCH_210_10"/>
+															<feature abstract="true" mandatory="true" name="NOT_TARGET_nios2_210_10"/>
+														</or>
+													</and>
+													<or abstract="true" mandatory="true" name="OR210_8">
+														<feature abstract="true" mandatory="true" name="NOT_UCLIBC_FORMAT_SHARED_FLAT_210_9"/>
+														<feature abstract="true" mandatory="true" name="ARCH_USE_MMU_210_9"/>
+													</or>
+												</and>
+												<or abstract="true" mandatory="true" name="OR210_7">
+													<feature abstract="true" mandatory="true" name="NOT_FORCE_OPTIONS_FOR_ARCH_210_8"/>
+													<feature abstract="true" mandatory="true" name="NOT_TARGET_hppa_210_8"/>
+												</or>
+											</and>
+											<or abstract="true" mandatory="true" name="OR210_6">
+												<feature abstract="true" mandatory="true" name="NOT_UCLIBC_FORMAT_FLAT_210_7"/>
+												<feature abstract="true" mandatory="true" name="ARCH_USE_MMU_210_7"/>
+											</or>
+										</and>
+										<or abstract="true" mandatory="true" name="OR210_5">
+											<feature abstract="true" mandatory="true" name="NOT_FORCE_OPTIONS_FOR_ARCH_210_6"/>
+											<feature abstract="true" mandatory="true" name="NOT_TARGET_alpha_210_6"/>
+										</or>
+									</and>
+									<or abstract="true" mandatory="true" name="OR210_4">
+										<feature abstract="true" mandatory="true" name="NOT_FORCE_OPTIONS_FOR_ARCH_210_5"/>
+										<feature abstract="true" mandatory="true" name="NOT_TARGET_nios_210_5"/>
+									</or>
+								</and>
+								<or abstract="true" mandatory="true" name="OR210_3">
+									<feature abstract="true" mandatory="true" name="NOT_FORCE_OPTIONS_FOR_ARCH_210_4"/>
+									<feature abstract="true" mandatory="true" name="NOT_TARGET_ia64_210_4"/>
+								</or>
+							</and>
+							<feature abstract="true" mandatory="true" name="ARCH_HAS_NO_LDSO_210_2"/>
+						</or>
+						<or abstract="true" mandatory="true" name="OR211_1">
+							<feature abstract="true" mandatory="true" name="NOT_ARCH_HAS_NO_LDSO_211_2"/>
+							<or abstract="true" mandatory="true" name="OR211_2">
+								<or abstract="true" mandatory="true" name="OR211_3">
+									<or abstract="true" mandatory="true" name="OR211_4">
+										<or abstract="true" mandatory="true" name="OR211_5">
+											<or abstract="true" mandatory="true" name="OR211_6">
+												<or abstract="true" mandatory="true" name="OR211_7">
+													<or abstract="true" mandatory="true" name="OR211_8">
+														<or abstract="true" mandatory="true" name="OR211_9">
+															<and abstract="true" mandatory="true" name="AND211_10">
+																<feature abstract="true" mandatory="true" name="UCLIBC_FORMAT_FLAT_SEP_DATA_211_11"/>
+																<and abstract="true" mandatory="true" name="AND211_11">
+																	<feature abstract="true" mandatory="true" name="NOT_ARCH_USE_MMU_211_12"/>
+																</and>
+															</and>
+															<and abstract="true" mandatory="true" name="AND211_10_0">
+																<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_211_11"/>
+																<feature abstract="true" mandatory="true" name="TARGET_vax_211_11"/>
+															</and>
+														</or>
+														<and abstract="true" mandatory="true" name="AND211_9">
+															<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_211_10"/>
+															<feature abstract="true" mandatory="true" name="TARGET_nios2_211_10"/>
+														</and>
+													</or>
+													<and abstract="true" mandatory="true" name="AND211_8">
+														<feature abstract="true" mandatory="true" name="UCLIBC_FORMAT_SHARED_FLAT_211_9"/>
+														<and abstract="true" mandatory="true" name="AND211_9_0">
+															<feature abstract="true" mandatory="true" name="NOT_ARCH_USE_MMU_211_10"/>
+														</and>
+													</and>
+												</or>
+												<and abstract="true" mandatory="true" name="AND211_7">
+													<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_211_8"/>
+													<feature abstract="true" mandatory="true" name="TARGET_hppa_211_8"/>
+												</and>
+											</or>
+											<and abstract="true" mandatory="true" name="AND211_6">
+												<feature abstract="true" mandatory="true" name="UCLIBC_FORMAT_FLAT_211_7"/>
+												<and abstract="true" mandatory="true" name="AND211_7_0">
+													<feature abstract="true" mandatory="true" name="NOT_ARCH_USE_MMU_211_8"/>
+												</and>
+											</and>
+										</or>
+										<and abstract="true" mandatory="true" name="AND211_5">
+											<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_211_6"/>
+											<feature abstract="true" mandatory="true" name="TARGET_alpha_211_6"/>
+										</and>
+									</or>
+									<and abstract="true" mandatory="true" name="AND211_4">
+										<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_211_5"/>
+										<feature abstract="true" mandatory="true" name="TARGET_nios_211_5"/>
+									</and>
+								</or>
+								<and abstract="true" mandatory="true" name="AND211_3">
+									<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_211_4"/>
+									<feature abstract="true" mandatory="true" name="TARGET_ia64_211_4"/>
+								</and>
+							</or>
+						</or>
+					</and>
+					<or abstract="true" mandatory="true" name="OR211_0">
+						<feature abstract="true" mandatory="true" name="ARCH_HAS_NO_SHARED_212_1"/>
+						<feature abstract="true" mandatory="true" name="ARCH_HAS_NO_SHARED_213_1"/>
+						<feature abstract="true" mandatory="true" name="HAVE_SHARED_214_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR214_0">
+						<feature abstract="true" mandatory="true" name="HAVE_SHARED_215_1"/>
+						<and abstract="true" mandatory="true" name="AND216_1">
+							<or abstract="true" mandatory="true" name="OR216_2">
+								<and abstract="true" mandatory="true" name="AND216_3">
+									<and abstract="true" mandatory="true" name="AND216_4">
+										<or abstract="true" mandatory="true" name="OR216_5">
+											<feature abstract="true" mandatory="true" name="NOT_FORCE_OPTIONS_FOR_ARCH_216_6"/>
+											<feature abstract="true" mandatory="true" name="NOT_TARGET_avr32_216_6"/>
+										</or>
+										<or abstract="true" mandatory="true" name="OR216_5_0">
+											<feature abstract="true" mandatory="true" name="NOT_UCLIBC_BUILD_PIE_216_6"/>
+											<or abstract="true" mandatory="true" name="OR216_6">
+												<feature abstract="true" mandatory="true" name="NOT_HAVE_SHARED_216_7"/>
+												<and abstract="true" mandatory="true" name="AND216_7">
+													<feature abstract="true" mandatory="true" name="NOT_TARGET_arm_216_8"/>
+													<and abstract="true" mandatory="true" name="AND216_8">
+														<feature abstract="true" mandatory="true" name="NOT_TARGET_frv_216_9"/>
+														<and abstract="true" mandatory="true" name="AND216_9">
+															<feature abstract="true" mandatory="true" name="NOT_TARGET_i386_216_10"/>
+															<and abstract="true" mandatory="true" name="AND216_10">
+																<feature abstract="true" mandatory="true" name="NOT_TARGET_mips_216_11"/>
+																<feature abstract="true" mandatory="true" name="NOT_TARGET_powerpc_216_11"/>
+															</and>
+														</and>
+													</and>
+												</and>
+											</or>
+										</or>
+									</and>
+									<feature abstract="true" mandatory="true" name="NOT_CONFIG_SH4_216_4"/>
+								</and>
+								<feature abstract="true" mandatory="true" name="FORCE_SHAREABLE_TEXT_SEGMENTS_216_3"/>
+							</or>
+							<or abstract="true" mandatory="true" name="OR216_2_0">
+								<feature abstract="true" mandatory="true" name="NOT_FORCE_SHAREABLE_TEXT_SEGMENTS_216_3"/>
+								<or abstract="true" mandatory="true" name="OR216_3">
+									<or abstract="true" mandatory="true" name="OR216_4">
+										<and abstract="true" mandatory="true" name="AND216_5">
+											<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_216_6"/>
+											<feature abstract="true" mandatory="true" name="TARGET_avr32_216_6"/>
+										</and>
+										<and abstract="true" mandatory="true" name="AND216_5_0">
+											<feature abstract="true" mandatory="true" name="UCLIBC_BUILD_PIE_216_6"/>
+											<and abstract="true" mandatory="true" name="AND216_6">
+												<feature abstract="true" mandatory="true" name="HAVE_SHARED_216_7"/>
+												<or abstract="true" mandatory="true" name="OR216_7">
+													<feature abstract="true" mandatory="true" name="TARGET_arm_216_8"/>
+													<or abstract="true" mandatory="true" name="OR216_8">
+														<feature abstract="true" mandatory="true" name="TARGET_frv_216_9"/>
+														<or abstract="true" mandatory="true" name="OR216_9">
+															<feature abstract="true" mandatory="true" name="TARGET_i386_216_10"/>
+															<or abstract="true" mandatory="true" name="OR216_10">
+																<feature abstract="true" mandatory="true" name="TARGET_mips_216_11"/>
+																<feature abstract="true" mandatory="true" name="TARGET_powerpc_216_11"/>
+															</or>
+														</or>
+													</or>
+												</or>
+											</and>
+										</and>
+									</or>
+									<feature abstract="true" mandatory="true" name="CONFIG_SH4_216_4"/>
+								</or>
+							</or>
+						</and>
+					</or>
+					<or abstract="true" mandatory="true" name="OR216_0">
+						<feature abstract="true" mandatory="true" name="HAS_NO_THREADS_217_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_THREADS_218_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR218_0">
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_THREADS_NATIVE_219_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_THREADS_NATIVE_220_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_TLS_221_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR221_0">
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_NETWORK_SUPPORT_222_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_NETWORK_SUPPORT_223_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_SYSLOG_224_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR224_0">
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_CRYPT_IMPL_225_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_CRYPT_IMPL_226_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_CRYPT_STUB_227_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR227_0">
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_CRYPT_228_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_CRYPT_IMPL_229_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_CRYPT_STUB_230_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR230_0">
+						<feature abstract="true" mandatory="true" name="UCLIBC_BUILD_MINIMAL_LOCALE_231_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_BUILD_MINIMAL_LOCALE_232_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_BUILD_MINIMAL_LOCALES_233_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR233_0">
+						<feature abstract="true" mandatory="true" name="USE_OLD_VFPRINTF_234_1"/>
+						<feature abstract="true" mandatory="true" name="USE_OLD_VFPRINTF_235_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_PRINTF_SCANF_POSITIONAL_ARGS_236_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR236_0">
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_STDIO_BUFSIZ_NONE_237_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_STDIO_BUFSIZ_NONE_238_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_STDIO_GETC_MACRO_239_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR239_0">
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_STDIO_BUFSIZ_NONE_240_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_STDIO_BUFSIZ_NONE_241_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_STDIO_PUTC_MACRO_242_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR242_0">
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_THREADS_NATIVE_243_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_THREADS_NATIVE_244_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_STDIO_FUTEXES_245_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR245_0">
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_GNU_GETOPT_246_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_GNU_GETOPT_247_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_GETOPT_LONG_248_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR248_0">
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_FNMATCH_249_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_FNMATCH_250_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_HAS_GLOB_251_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR251_0">
+						<feature abstract="true" mandatory="true" name="TARGET_arm_252_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_frv_253_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_i386_254_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_mips_255_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_powerpc_256_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_BUILD_PIE_257_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR257_0">
+						<feature abstract="true" mandatory="true" name="FORCE_OPTIONS_FOR_ARCH_258_1"/>
+						<feature abstract="true" mandatory="true" name="TARGET_hppa_259_1"/>
+						<feature abstract="true" mandatory="true" name="HAVE_NO_SSP_260_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR260_0">
+						<feature abstract="true" mandatory="true" name="HAVE_SHARED_261_1"/>
+						<feature abstract="true" mandatory="true" name="HAVE_SHARED_262_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_BUILD_RELRO_263_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR263_0">
+						<feature abstract="true" mandatory="true" name="DODEBUG_264_1"/>
+						<feature abstract="true" mandatory="true" name="DODEBUG_265_1"/>
+						<feature abstract="true" mandatory="true" name="DOSTRIP_266_1"/>
+					</or>
+					<or abstract="true" mandatory="true" name="OR266_0">
+						<feature abstract="true" mandatory="true" name="MALLOC_267_1"/>
+						<feature abstract="true" mandatory="true" name="MALLOC_STANDARD_268_1"/>
+						<feature abstract="true" mandatory="true" name="UCLIBC_MALLOC_DEBUGGING_269_1"/>
+					</or>
+				</and>
+			</and>
+		</struct>
+		<constraints>
+			<rule>
+				<disj>
+					<not>
+						<var>ARCH_USE_MMU</var>
+					</not>
+					<not>
+						<var>UCLIBC_FORMAT_SHARED_FLAT</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>HAVE_SHARED</var>
+					<not>
+						<var>LDSO_GNU_HASH_SUPPORT</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>UCLIBC_HAS_THREADS</var>
+					<not>
+						<var>PTHREADS_DEBUG_SUPPORT</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>ARCH_USE_MMU</var>
+					<not>
+						<var>MALLOC_STANDARD</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>UCLIBC_HAS_PTY</var>
+					<not>
+						<var>UCLIBC_HAS_LIBUTIL</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>UCLIBC_HAS_NETWORK_SUPPORT</var>
+					<not>
+						<var>UCLIBC_USE_NETLINK</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>UCLIBC_HAS_SOCKET</var>
+					<not>
+						<var>UCLIBC_USE_NETLINK</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>UCLIBC_PREGENERATED_LOCALE_DATA</var>
+					<not>
+						<var>UCLIBC_DOWNLOAD_PREGENERATED_LOCALE_DATA</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>UCLIBC_HAS_CTYPE_TABLES</var>
+					<not>
+						<var>UCLIBC_HAS_HEXADECIMAL_FLOATS</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>UCLIBC_HAS_FLOATS</var>
+					<not>
+						<var>UCLIBC_HAS_HEXADECIMAL_FLOATS</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>UCLIBC_HAS_LOCALE</var>
+					<not>
+						<var>UCLIBC_HAS_GLIBC_DIGIT_GROUPING</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>UCLIBC_HAS_FLOATS</var>
+					<not>
+						<var>UCLIBC_HAS_GLIBC_DIGIT_GROUPING</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>UCLIBC_HAS_WCHAR</var>
+					</not>
+					<not>
+						<var>UCLIBC_HAS_STDIO_BUFSIZ_NONE</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>UCLIBC_HAS_LFS</var>
+					<not>
+						<var>UCLIBC_HAS_FOPEN_LARGEFILE_MODE</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>UCLIBC_HAS_LOCALE</var>
+					<not>
+						<var>UCLIBC_HAS_GETTEXT_AWARENESS</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>UCLIBC_MJN3_ONLY</var>
+					<not>
+						<var>UCLIBC_HAS_GETTEXT_AWARENESS</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>UCLIBC_HAS_GLOB</var>
+					<not>
+						<var>UCLIBC_HAS_WORDEXP</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>UCLIBC_SUSV4_LEGACY</var>
+					<not>
+						<var>UCLIBC_HAS_FTW</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>HAVE_NO_SSP</var>
+					</not>
+					<not>
+						<var>UCLIBC_HAS_SSP</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>HAVE_SHARED</var>
+					<not>
+						<var>UCLIBC_BUILD_NOW</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>UCLIBC_HAS_THREADS</var>
+					<not>
+						<var>DODEBUG_PT</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>LINUXTHREADS_OLD</var>
+					<not>
+						<var>DODEBUG_PT</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>HAVE_SHARED</var>
+					<not>
+						<var>SUPPORT_LD_DEBUG</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>HAVE_SHARED</var>
+					<not>
+						<var>SUPPORT_LD_DEBUG_EARLY</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>HAVE_SHARED</var>
+					<not>
+						<var>UCLIBC_HAS_BACKTRACE</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>TARGET_sh</var>
+					<not>
+						<var>UCLIBC_HAS_BACKTRACE</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>TARGET_avr32</var>
+					<not>
+						<var>LINKRELAX</var>
+					</not>
+					<var>TARGET_avr32</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>ARCH_HAS_BWD_MEMCPY</var>
+					</not>
+					<var>TARGET_sh</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>ARCH_HAS_BWD_MEMCPY</var>
+					</not>
+					<var>CONFIG_SH4</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>UCLIBC_FORMAT_SHARED_FLAT</var>
+					<not>
+						<var>UCLIBC_SHARED_FLAT_ID</var>
+					</not>
+					<var>UCLIBC_FORMAT_SHARED_FLAT</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>ARCH_ANY_ENDIAN</var>
+					</not>
+					<var>FORCE_OPTIONS_FOR_ARCH</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>ARCH_WANTS_BIG_ENDIAN</var>
+					</not>
+					<var>ARCH_BIG_ENDIAN</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>ARCH_WANTS_LITTLE_ENDIAN</var>
+					</not>
+					<var>ARCH_LITTLE_ENDIAN</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>CONFIG_ARM7TDMI</var>
+					</not>
+					<var>ARCH_HAS_NO_MMU</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>CONFIG_SH2</var>
+					</not>
+					<var>ARCH_HAS_NO_MMU</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>CONFIG_ARM_CORTEX_M1</var>
+					</not>
+					<var>ARCH_HAS_NO_MMU</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>CONFIG_SH2A</var>
+					</not>
+					<var>ARCH_HAS_NO_MMU</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>CONFIG_ARM_CORTEX_M3</var>
+					</not>
+					<var>ARCH_HAS_NO_MMU</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>UCLIBC_HAS_SOFT_FLOAT</var>
+					</not>
+					<var>UCLIBC_HAS_FLOATS</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>UCLIBC_HAS_SOFT_FLOAT</var>
+					</not>
+					<not>
+						<var>UCLIBC_HAS_FPU</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>UCLIBC_UCLINUX_BROKEN_MUNMAP</var>
+					</not>
+					<not>
+						<var>ARCH_USE_MMU</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>CONFIG_SH2A</var>
+					</not>
+					<var>HAVE_NO_PIC</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>ARCH_HAS_NO_LDSO</var>
+					</not>
+					<var>ARCH_HAS_NO_SHARED</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>CONFIG_SPARC_V7</var>
+					</not>
+					<var>ARCH_HAS_NO_SHARED</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>ARCH_HAS_NO_SHARED</var>
+					</not>
+					<not>
+						<var>HAVE_SHARED</var>
+					</not>
+					<not>
+						<var>ARCH_HAS_NO_SHARED</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>UCLIBC_HAS_THREADS</var>
+					</not>
+					<not>
+						<var>HAS_NO_THREADS</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>UCLIBC_HAS_THREADS_NATIVE</var>
+					<not>
+						<var>UCLIBC_HAS_TLS</var>
+					</not>
+					<var>UCLIBC_HAS_THREADS_NATIVE</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>UCLIBC_HAS_NETWORK_SUPPORT</var>
+					<not>
+						<var>UCLIBC_HAS_SYSLOG</var>
+					</not>
+					<var>UCLIBC_HAS_NETWORK_SUPPORT</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>UCLIBC_HAS_CRYPT_IMPL</var>
+					</not>
+					<not>
+						<var>UCLIBC_HAS_CRYPT_STUB</var>
+					</not>
+					<not>
+						<var>UCLIBC_HAS_CRYPT_IMPL</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>UCLIBC_HAS_CRYPT_IMPL</var>
+					</not>
+					<var>UCLIBC_HAS_CRYPT</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>UCLIBC_HAS_CRYPT_STUB</var>
+					</not>
+					<var>UCLIBC_HAS_CRYPT</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>UCLIBC_BUILD_MINIMAL_LOCALE</var>
+					<not>
+						<var>UCLIBC_BUILD_MINIMAL_LOCALES</var>
+					</not>
+					<var>UCLIBC_BUILD_MINIMAL_LOCALE</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>USE_OLD_VFPRINTF</var>
+					</not>
+					<not>
+						<var>UCLIBC_PRINTF_SCANF_POSITIONAL_ARGS</var>
+					</not>
+					<not>
+						<var>USE_OLD_VFPRINTF</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>UCLIBC_HAS_STDIO_BUFSIZ_NONE</var>
+					</not>
+					<not>
+						<var>UCLIBC_HAS_STDIO_GETC_MACRO</var>
+					</not>
+					<not>
+						<var>UCLIBC_HAS_STDIO_BUFSIZ_NONE</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>UCLIBC_HAS_STDIO_BUFSIZ_NONE</var>
+					</not>
+					<not>
+						<var>UCLIBC_HAS_STDIO_PUTC_MACRO</var>
+					</not>
+					<not>
+						<var>UCLIBC_HAS_STDIO_BUFSIZ_NONE</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>UCLIBC_HAS_THREADS_NATIVE</var>
+					<not>
+						<var>UCLIBC_HAS_STDIO_FUTEXES</var>
+					</not>
+					<var>UCLIBC_HAS_THREADS_NATIVE</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>UCLIBC_HAS_GNU_GETOPT</var>
+					</not>
+					<not>
+						<var>UCLIBC_HAS_GETOPT_LONG</var>
+					</not>
+					<not>
+						<var>UCLIBC_HAS_GNU_GETOPT</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>UCLIBC_HAS_FNMATCH</var>
+					<not>
+						<var>UCLIBC_HAS_GLOB</var>
+					</not>
+					<var>UCLIBC_HAS_FNMATCH</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>HAVE_SHARED</var>
+					<not>
+						<var>UCLIBC_BUILD_PIE</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>HAVE_NO_SSP</var>
+					</not>
+					<var>FORCE_OPTIONS_FOR_ARCH</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>HAVE_NO_SSP</var>
+					</not>
+					<var>TARGET_hppa</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<var>HAVE_SHARED</var>
+					<not>
+						<var>UCLIBC_BUILD_RELRO</var>
+					</not>
+					<var>HAVE_SHARED</var>
+				</disj>
+			</rule>
+			<rule>
+				<disj>
+					<not>
+						<var>DODEBUG</var>
+					</not>
+					<not>
+						<var>DOSTRIP</var>
+					</not>
+					<not>
+						<var>DODEBUG</var>
+					</not>
+				</disj>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_arm_1_2</var>
+					<var>TARGET_arm</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_GENERIC_ARM_1_3</var>
+					<not>
+						<var>CONFIG_GENERIC_ARM</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_ARM610_1_4</var>
+					<not>
+						<var>CONFIG_ARM610</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_ARM710_1_4</var>
+					<not>
+						<var>CONFIG_ARM710</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_ARM_CORTEX_M1_2_5</var>
+					<not>
+						<var>CONFIG_ARM_CORTEX_M1</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_ARM_CORTEX_M3_2_5</var>
+					<not>
+						<var>CONFIG_ARM_CORTEX_M3</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_arm_2_5</var>
+					<not>
+						<var>TARGET_arm</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_GENERIC_ARM_2_6</var>
+					<var>CONFIG_GENERIC_ARM</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM610_2_7</var>
+					<var>CONFIG_ARM610</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM710_2_7</var>
+					<var>CONFIG_ARM710</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>USE_BX_2_3</var>
+					<var>USE_BX</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_USE_BX_2_3</var>
+					<not>
+						<var>USE_BX</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM_CORTEX_M1_2_5</var>
+					<var>CONFIG_ARM_CORTEX_M1</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM_CORTEX_M3_2_5</var>
+					<var>CONFIG_ARM_CORTEX_M3</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_arm_2_5</var>
+					<var>TARGET_arm</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_GENERIC_ARM_2_6</var>
+					<not>
+						<var>CONFIG_GENERIC_ARM</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_ARM610_2_7</var>
+					<not>
+						<var>CONFIG_ARM610</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_ARM710_2_7</var>
+					<not>
+						<var>CONFIG_ARM710</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_avr32_3_1</var>
+					<var>TARGET_avr32</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_avr32_4_1</var>
+					<not>
+						<var>TARGET_avr32</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>LINKRELAX_5_1</var>
+					<var>LINKRELAX</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_sh_6_1</var>
+					<not>
+						<var>TARGET_sh</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_SH4_7_1</var>
+					<not>
+						<var>CONFIG_SH4</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_BWD_MEMCPY_8_1</var>
+					<var>ARCH_HAS_BWD_MEMCPY</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_FORMAT_SHARED_FLAT_9_1</var>
+					<var>UCLIBC_FORMAT_SHARED_FLAT</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_FORMAT_SHARED_FLAT_10_1</var>
+					<not>
+						<var>UCLIBC_FORMAT_SHARED_FLAT</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_SHARED_FLAT_ID_11_1</var>
+					<var>UCLIBC_SHARED_FLAT_ID</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_12_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_mips_13_1</var>
+					<not>
+						<var>TARGET_mips</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_ANY_ENDIAN_14_1</var>
+					<var>ARCH_ANY_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_15_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_sh_16_1</var>
+					<not>
+						<var>TARGET_sh</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_ANY_ENDIAN_17_1</var>
+					<var>ARCH_ANY_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_18_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_sh64_19_1</var>
+					<not>
+						<var>TARGET_sh64</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_ANY_ENDIAN_20_1</var>
+					<var>ARCH_ANY_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_21_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_h8300_22_1</var>
+					<not>
+						<var>TARGET_h8300</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_ANY_ENDIAN_23_1</var>
+					<var>ARCH_ANY_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_24_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_arm_25_1</var>
+					<not>
+						<var>TARGET_arm</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_ANY_ENDIAN_26_1</var>
+					<var>ARCH_ANY_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_ANY_ENDIAN_27_1</var>
+					<not>
+						<var>ARCH_ANY_ENDIAN</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_mips_28_1</var>
+					<var>TARGET_mips</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_sh_29_1</var>
+					<var>TARGET_sh</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_sh64_30_1</var>
+					<var>TARGET_sh64</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_h8300_31_1</var>
+					<var>TARGET_h8300</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_arm_32_1</var>
+					<var>TARGET_arm</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_33_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_e1_34_1</var>
+					<not>
+						<var>TARGET_e1</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_BIG_ENDIAN_35_1</var>
+					<var>ARCH_BIG_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_36_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_sparc_37_1</var>
+					<not>
+						<var>TARGET_sparc</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_BIG_ENDIAN_38_1</var>
+					<var>ARCH_BIG_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_39_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_powerpc_40_1</var>
+					<not>
+						<var>TARGET_powerpc</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_BIG_ENDIAN_41_1</var>
+					<var>ARCH_BIG_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_42_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_microblaze_43_1</var>
+					<not>
+						<var>TARGET_microblaze</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_BIG_ENDIAN_44_1</var>
+					<var>ARCH_BIG_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_45_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_frv_46_1</var>
+					<not>
+						<var>TARGET_frv</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_BIG_ENDIAN_47_1</var>
+					<var>ARCH_BIG_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_48_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_hppa_49_1</var>
+					<not>
+						<var>TARGET_hppa</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_BIG_ENDIAN_50_1</var>
+					<var>ARCH_BIG_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_51_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_m68k_52_1</var>
+					<not>
+						<var>TARGET_m68k</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_BIG_ENDIAN_53_1</var>
+					<var>ARCH_BIG_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_54_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_avr32_55_1</var>
+					<not>
+						<var>TARGET_avr32</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_BIG_ENDIAN_56_1</var>
+					<var>ARCH_BIG_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_BIG_ENDIAN_57_1</var>
+					<not>
+						<var>ARCH_BIG_ENDIAN</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_58_1</var>
+					<var>FORCE_OPTIONS_FOR_ARCH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_WANTS_BIG_ENDIAN_59_1</var>
+					<var>ARCH_WANTS_BIG_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_BIG_ENDIAN_60_1</var>
+					<not>
+						<var>ARCH_BIG_ENDIAN</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_e1_61_1</var>
+					<var>TARGET_e1</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_sparc_62_1</var>
+					<var>TARGET_sparc</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_powerpc_63_1</var>
+					<var>TARGET_powerpc</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_microblaze_64_1</var>
+					<var>TARGET_microblaze</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_frv_65_1</var>
+					<var>TARGET_frv</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_hppa_66_1</var>
+					<var>TARGET_hppa</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_m68k_67_1</var>
+					<var>TARGET_m68k</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_avr32_68_1</var>
+					<var>TARGET_avr32</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_WANTS_BIG_ENDIAN_69_1</var>
+					<var>ARCH_WANTS_BIG_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_70_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_i960_71_1</var>
+					<not>
+						<var>TARGET_i960</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_LITTLE_ENDIAN_72_1</var>
+					<var>ARCH_LITTLE_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_73_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_vax_74_1</var>
+					<not>
+						<var>TARGET_vax</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_LITTLE_ENDIAN_75_1</var>
+					<var>ARCH_LITTLE_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_76_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_nios2_77_1</var>
+					<not>
+						<var>TARGET_nios2</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_LITTLE_ENDIAN_78_1</var>
+					<var>ARCH_LITTLE_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_79_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_bfin_80_1</var>
+					<not>
+						<var>TARGET_bfin</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_LITTLE_ENDIAN_81_1</var>
+					<var>ARCH_LITTLE_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_82_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_x86_64_83_1</var>
+					<not>
+						<var>TARGET_x86_64</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_LITTLE_ENDIAN_84_1</var>
+					<var>ARCH_LITTLE_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_85_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_alpha_86_1</var>
+					<not>
+						<var>TARGET_alpha</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_LITTLE_ENDIAN_87_1</var>
+					<var>ARCH_LITTLE_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_88_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_i386_89_1</var>
+					<not>
+						<var>TARGET_i386</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_LITTLE_ENDIAN_90_1</var>
+					<var>ARCH_LITTLE_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_91_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_nios_92_1</var>
+					<not>
+						<var>TARGET_nios</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_LITTLE_ENDIAN_93_1</var>
+					<var>ARCH_LITTLE_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_94_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_ia64_95_1</var>
+					<not>
+						<var>TARGET_ia64</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_LITTLE_ENDIAN_96_1</var>
+					<var>ARCH_LITTLE_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_97_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_cris_98_1</var>
+					<not>
+						<var>TARGET_cris</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_LITTLE_ENDIAN_99_1</var>
+					<var>ARCH_LITTLE_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_100_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_v850_101_1</var>
+					<not>
+						<var>TARGET_v850</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_LITTLE_ENDIAN_102_1</var>
+					<var>ARCH_LITTLE_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_LITTLE_ENDIAN_103_1</var>
+					<not>
+						<var>ARCH_LITTLE_ENDIAN</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_104_1</var>
+					<var>FORCE_OPTIONS_FOR_ARCH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_WANTS_LITTLE_ENDIAN_105_1</var>
+					<var>ARCH_WANTS_LITTLE_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_LITTLE_ENDIAN_106_1</var>
+					<not>
+						<var>ARCH_LITTLE_ENDIAN</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_i960_107_1</var>
+					<var>TARGET_i960</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_vax_108_1</var>
+					<var>TARGET_vax</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_nios2_109_1</var>
+					<var>TARGET_nios2</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_bfin_110_1</var>
+					<var>TARGET_bfin</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_x86_64_111_1</var>
+					<var>TARGET_x86_64</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_WANTS_LITTLE_ENDIAN_112_1</var>
+					<var>ARCH_WANTS_LITTLE_ENDIAN</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_alpha_113_1</var>
+					<var>TARGET_alpha</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_i386_114_1</var>
+					<var>TARGET_i386</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_nios_115_1</var>
+					<var>TARGET_nios</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_ia64_116_1</var>
+					<var>TARGET_ia64</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_cris_117_1</var>
+					<var>TARGET_cris</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_v850_118_1</var>
+					<var>TARGET_v850</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_119_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_i960_120_1</var>
+					<not>
+						<var>TARGET_i960</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_NO_MMU_121_1</var>
+					<var>ARCH_HAS_NO_MMU</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_122_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_e1_123_1</var>
+					<not>
+						<var>TARGET_e1</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_NO_MMU_124_1</var>
+					<var>ARCH_HAS_NO_MMU</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_125_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_nios2_126_1</var>
+					<not>
+						<var>TARGET_nios2</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_NO_MMU_127_1</var>
+					<var>ARCH_HAS_NO_MMU</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_128_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_microblaze_129_1</var>
+					<not>
+						<var>TARGET_microblaze</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_NO_MMU_130_1</var>
+					<var>ARCH_HAS_NO_MMU</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_131_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_frv_132_1</var>
+					<not>
+						<var>TARGET_frv</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_NO_MMU_133_1</var>
+					<var>ARCH_HAS_NO_MMU</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_134_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_bfin_135_1</var>
+					<not>
+						<var>TARGET_bfin</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_NO_MMU_136_1</var>
+					<var>ARCH_HAS_NO_MMU</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_137_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_h8300_138_1</var>
+					<not>
+						<var>TARGET_h8300</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_NO_MMU_139_1</var>
+					<var>ARCH_HAS_NO_MMU</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_140_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_nios_141_1</var>
+					<not>
+						<var>TARGET_nios</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_NO_MMU_142_1</var>
+					<var>ARCH_HAS_NO_MMU</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_143_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_v850_144_1</var>
+					<not>
+						<var>TARGET_v850</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_NO_MMU_145_1</var>
+					<var>ARCH_HAS_NO_MMU</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_NO_MMU_146_1</var>
+					<not>
+						<var>ARCH_HAS_NO_MMU</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_147_1</var>
+					<var>FORCE_OPTIONS_FOR_ARCH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM7TDMI_148_1</var>
+					<var>CONFIG_ARM7TDMI</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_SH2_149_1</var>
+					<var>CONFIG_SH2</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM_CORTEX_M1_150_1</var>
+					<var>CONFIG_ARM_CORTEX_M1</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_SH2A_151_1</var>
+					<var>CONFIG_SH2A</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM_CORTEX_M3_152_1</var>
+					<var>CONFIG_ARM_CORTEX_M3</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_NO_MMU_153_1</var>
+					<not>
+						<var>ARCH_HAS_NO_MMU</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_i960_154_1</var>
+					<var>TARGET_i960</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_e1_155_1</var>
+					<var>TARGET_e1</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM7TDMI_156_1</var>
+					<var>CONFIG_ARM7TDMI</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_nios2_157_1</var>
+					<var>TARGET_nios2</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_microblaze_158_1</var>
+					<var>TARGET_microblaze</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_frv_159_1</var>
+					<var>TARGET_frv</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_bfin_160_1</var>
+					<var>TARGET_bfin</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_h8300_161_1</var>
+					<var>TARGET_h8300</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_SH2_162_1</var>
+					<var>CONFIG_SH2</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM_CORTEX_M1_163_1</var>
+					<var>CONFIG_ARM_CORTEX_M1</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_SH2A_164_1</var>
+					<var>CONFIG_SH2A</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM_CORTEX_M3_165_1</var>
+					<var>CONFIG_ARM_CORTEX_M3</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_nios_166_1</var>
+					<var>TARGET_nios</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_v850_167_1</var>
+					<var>TARGET_v850</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_ARCH_HAS_NO_MMU_168_1</var>
+					<not>
+						<var>ARCH_HAS_NO_MMU</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_ARM922T_169_28</var>
+					<not>
+						<var>CONFIG_ARM922T</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_ARM1176JZ_S_169_28</var>
+					<not>
+						<var>CONFIG_ARM1176JZ_S</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_OPTIONS_FOR_ARCH_169_28</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_powerpc_169_28</var>
+					<not>
+						<var>TARGET_powerpc</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_ARM920T_169_26</var>
+					<not>
+						<var>CONFIG_ARM920T</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_ARM720T_169_25</var>
+					<not>
+						<var>CONFIG_ARM720T</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_CRISV32_169_24</var>
+					<not>
+						<var>CONFIG_CRISV32</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_ARM610_169_23</var>
+					<not>
+						<var>CONFIG_ARM610</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_OPTIONS_FOR_ARCH_169_23</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_hppa_169_23</var>
+					<not>
+						<var>TARGET_hppa</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_ARM_SA110_169_21</var>
+					<not>
+						<var>CONFIG_ARM_SA110</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_AVR32_AP7_169_20</var>
+					<not>
+						<var>CONFIG_AVR32_AP7</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_OPTIONS_FOR_ARCH_169_20</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_x86_64_169_20</var>
+					<not>
+						<var>TARGET_x86_64</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_ARM_XSCALE_169_18</var>
+					<not>
+						<var>CONFIG_ARM_XSCALE</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_ARM10T_169_17</var>
+					<not>
+						<var>CONFIG_ARM10T</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_ARM_SA1100_169_16</var>
+					<not>
+						<var>CONFIG_ARM_SA1100</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_CRIS_169_15</var>
+					<not>
+						<var>CONFIG_CRIS</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_OPTIONS_FOR_ARCH_169_15</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_alpha_169_15</var>
+					<not>
+						<var>TARGET_alpha</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_OPTIONS_FOR_ARCH_169_14</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_i386_169_14</var>
+					<not>
+						<var>TARGET_i386</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_SH5_169_12</var>
+					<not>
+						<var>CONFIG_SH5</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_ARM710_169_11</var>
+					<not>
+						<var>CONFIG_ARM710</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_ARM926T_169_10</var>
+					<not>
+						<var>CONFIG_ARM926T</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_OPTIONS_FOR_ARCH_169_10</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_ia64_169_10</var>
+					<not>
+						<var>TARGET_ia64</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_ARM1136JF_S_169_8</var>
+					<not>
+						<var>CONFIG_ARM1136JF_S</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_ARM1176JZF_S_169_7</var>
+					<not>
+						<var>CONFIG_ARM1176JZF_S</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_SH3_169_6</var>
+					<not>
+						<var>CONFIG_SH3</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_ARM_IWMMXT_169_5</var>
+					<not>
+						<var>CONFIG_ARM_IWMMXT</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_NO_MMU_169_4</var>
+					<var>ARCH_HAS_NO_MMU</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_MMU_169_3</var>
+					<var>ARCH_HAS_MMU</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_ARCH_HAS_MMU_169_3</var>
+					<not>
+						<var>ARCH_HAS_MMU</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM922T_169_28</var>
+					<var>CONFIG_ARM922T</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM1176JZ_S_169_28</var>
+					<var>CONFIG_ARM1176JZ_S</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_169_28</var>
+					<var>FORCE_OPTIONS_FOR_ARCH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_powerpc_169_28</var>
+					<var>TARGET_powerpc</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM920T_169_26</var>
+					<var>CONFIG_ARM920T</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM720T_169_25</var>
+					<var>CONFIG_ARM720T</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_CRISV32_169_24</var>
+					<var>CONFIG_CRISV32</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM610_169_23</var>
+					<var>CONFIG_ARM610</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_169_23</var>
+					<var>FORCE_OPTIONS_FOR_ARCH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_hppa_169_23</var>
+					<var>TARGET_hppa</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM_SA110_169_21</var>
+					<var>CONFIG_ARM_SA110</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_AVR32_AP7_169_20</var>
+					<var>CONFIG_AVR32_AP7</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_169_20</var>
+					<var>FORCE_OPTIONS_FOR_ARCH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_x86_64_169_20</var>
+					<var>TARGET_x86_64</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM_XSCALE_169_18</var>
+					<var>CONFIG_ARM_XSCALE</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM10T_169_17</var>
+					<var>CONFIG_ARM10T</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM_SA1100_169_16</var>
+					<var>CONFIG_ARM_SA1100</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_CRIS_169_15</var>
+					<var>CONFIG_CRIS</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_169_15</var>
+					<var>FORCE_OPTIONS_FOR_ARCH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_alpha_169_15</var>
+					<var>TARGET_alpha</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_169_14</var>
+					<var>FORCE_OPTIONS_FOR_ARCH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_i386_169_14</var>
+					<var>TARGET_i386</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_SH5_169_12</var>
+					<var>CONFIG_SH5</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM710_169_11</var>
+					<var>CONFIG_ARM710</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM926T_169_10</var>
+					<var>CONFIG_ARM926T</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_169_10</var>
+					<var>FORCE_OPTIONS_FOR_ARCH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_ia64_169_10</var>
+					<var>TARGET_ia64</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM1136JF_S_169_8</var>
+					<var>CONFIG_ARM1136JF_S</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM1176JZF_S_169_7</var>
+					<var>CONFIG_ARM1176JZF_S</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_SH3_169_6</var>
+					<var>CONFIG_SH3</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_ARM_IWMMXT_169_5</var>
+					<var>CONFIG_ARM_IWMMXT</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_ARCH_HAS_NO_MMU_169_4</var>
+					<not>
+						<var>ARCH_HAS_NO_MMU</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_FLOATS_170_1</var>
+					<var>UCLIBC_HAS_FLOATS</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_OPTIONS_FOR_ARCH_171_5</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_frv_171_5</var>
+					<not>
+						<var>TARGET_frv</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_UCLIBC_HAS_FLOATS_171_4</var>
+					<not>
+						<var>UCLIBC_HAS_FLOATS</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_FPU_171_3</var>
+					<var>UCLIBC_HAS_FPU</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_UCLIBC_HAS_FPU_171_3</var>
+					<not>
+						<var>UCLIBC_HAS_FPU</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_171_5</var>
+					<var>FORCE_OPTIONS_FOR_ARCH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_frv_171_5</var>
+					<var>TARGET_frv</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_FLOATS_171_4</var>
+					<var>UCLIBC_HAS_FLOATS</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_FLOATS_172_1</var>
+					<not>
+						<var>UCLIBC_HAS_FLOATS</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_FPU_173_1</var>
+					<var>UCLIBC_HAS_FPU</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_SOFT_FLOAT_174_1</var>
+					<var>UCLIBC_HAS_SOFT_FLOAT</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>DO_C99_MATH_175_2</var>
+					<var>DO_C99_MATH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_i386_175_3</var>
+					<var>TARGET_i386</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_m68k_175_4</var>
+					<var>TARGET_m68k</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_sparc_175_5</var>
+					<var>TARGET_sparc</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_x86_64_175_6</var>
+					<var>TARGET_x86_64</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_powerpc_175_7</var>
+					<var>TARGET_powerpc</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_sh_175_7</var>
+					<var>TARGET_sh</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_DO_C99_MATH_176_4</var>
+					<not>
+						<var>DO_C99_MATH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_i386_176_5</var>
+					<not>
+						<var>TARGET_i386</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_m68k_176_6</var>
+					<not>
+						<var>TARGET_m68k</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_sparc_176_7</var>
+					<not>
+						<var>TARGET_sparc</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_x86_64_176_8</var>
+					<not>
+						<var>TARGET_x86_64</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_powerpc_176_9</var>
+					<not>
+						<var>TARGET_powerpc</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_sh_176_9</var>
+					<not>
+						<var>TARGET_sh</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_LONG_DOUBLE_MATH_176_3</var>
+					<var>UCLIBC_HAS_LONG_DOUBLE_MATH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_UCLIBC_HAS_LONG_DOUBLE_MATH_176_3</var>
+					<not>
+						<var>UCLIBC_HAS_LONG_DOUBLE_MATH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>DO_C99_MATH_176_4</var>
+					<var>DO_C99_MATH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_i386_176_5</var>
+					<var>TARGET_i386</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_m68k_176_6</var>
+					<var>TARGET_m68k</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_sparc_176_7</var>
+					<var>TARGET_sparc</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_x86_64_176_8</var>
+					<var>TARGET_x86_64</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_powerpc_176_9</var>
+					<var>TARGET_powerpc</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_sh_176_9</var>
+					<var>TARGET_sh</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_USE_MMU_177_1</var>
+					<var>ARCH_USE_MMU</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_UCLINUX_BROKEN_MUNMAP_178_1</var>
+					<var>UCLIBC_UCLINUX_BROKEN_MUNMAP</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_179_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_v850_180_1</var>
+					<not>
+						<var>TARGET_v850</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>HAVE_NO_PIC_181_1</var>
+					<var>HAVE_NO_PIC</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_182_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_nios_183_1</var>
+					<not>
+						<var>TARGET_nios</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>HAVE_NO_PIC_184_1</var>
+					<var>HAVE_NO_PIC</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_185_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_nios2_186_1</var>
+					<not>
+						<var>TARGET_nios2</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>HAVE_NO_PIC_187_1</var>
+					<var>HAVE_NO_PIC</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>HAVE_NO_PIC_188_1</var>
+					<not>
+						<var>HAVE_NO_PIC</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_189_1</var>
+					<var>FORCE_OPTIONS_FOR_ARCH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_SH2A_190_1</var>
+					<var>CONFIG_SH2A</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>HAVE_NO_PIC_191_1</var>
+					<not>
+						<var>HAVE_NO_PIC</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_v850_192_1</var>
+					<var>TARGET_v850</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_nios_193_1</var>
+					<var>TARGET_nios</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_nios2_194_1</var>
+					<var>TARGET_nios2</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_SH2A_195_1</var>
+					<var>CONFIG_SH2A</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_HAVE_NO_PIC_196_1</var>
+					<not>
+						<var>HAVE_NO_PIC</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_SHAREABLE_TEXT_SEGMENTS_197_6</var>
+					<not>
+						<var>FORCE_SHAREABLE_TEXT_SEGMENTS</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_HAVE_SHARED_197_6</var>
+					<not>
+						<var>HAVE_SHARED</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_UCLIBC_FORMAT_FDPIC_ELF_197_6</var>
+					<not>
+						<var>UCLIBC_FORMAT_FDPIC_ELF</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_USE_MMU_197_6</var>
+					<var>ARCH_USE_MMU</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>HAVE_NO_PIC_197_4</var>
+					<var>HAVE_NO_PIC</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>DOPIC_197_3</var>
+					<var>DOPIC</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_DOPIC_197_3</var>
+					<not>
+						<var>DOPIC</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_SHAREABLE_TEXT_SEGMENTS_197_6</var>
+					<var>FORCE_SHAREABLE_TEXT_SEGMENTS</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>HAVE_SHARED_197_6</var>
+					<var>HAVE_SHARED</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_FORMAT_FDPIC_ELF_197_6</var>
+					<var>UCLIBC_FORMAT_FDPIC_ELF</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_ARCH_USE_MMU_197_7</var>
+					<not>
+						<var>ARCH_USE_MMU</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_HAVE_NO_PIC_197_4</var>
+					<not>
+						<var>HAVE_NO_PIC</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_198_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_e1_199_1</var>
+					<not>
+						<var>TARGET_e1</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_NO_SHARED_200_1</var>
+					<var>ARCH_HAS_NO_SHARED</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_NO_SHARED_201_1</var>
+					<not>
+						<var>ARCH_HAS_NO_SHARED</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_NO_LDSO_202_1</var>
+					<var>ARCH_HAS_NO_LDSO</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_203_1</var>
+					<var>FORCE_OPTIONS_FOR_ARCH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_SPARC_V7_204_1</var>
+					<var>CONFIG_SPARC_V7</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_NO_SHARED_205_1</var>
+					<not>
+						<var>ARCH_HAS_NO_SHARED</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_NO_LDSO_206_1</var>
+					<var>ARCH_HAS_NO_LDSO</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_e1_207_1</var>
+					<var>TARGET_e1</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_SPARC_V7_208_1</var>
+					<var>CONFIG_SPARC_V7</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_UCLIBC_FORMAT_FLAT_SEP_DATA_209_11</var>
+					<not>
+						<var>UCLIBC_FORMAT_FLAT_SEP_DATA</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_USE_MMU_209_11</var>
+					<var>ARCH_USE_MMU</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_OPTIONS_FOR_ARCH_209_11</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_vax_209_11</var>
+					<not>
+						<var>TARGET_vax</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_OPTIONS_FOR_ARCH_209_10</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_nios2_209_10</var>
+					<not>
+						<var>TARGET_nios2</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_UCLIBC_FORMAT_SHARED_FLAT_209_9</var>
+					<not>
+						<var>UCLIBC_FORMAT_SHARED_FLAT</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_USE_MMU_209_9</var>
+					<var>ARCH_USE_MMU</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_OPTIONS_FOR_ARCH_209_8</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_hppa_209_8</var>
+					<not>
+						<var>TARGET_hppa</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_UCLIBC_FORMAT_FLAT_209_7</var>
+					<not>
+						<var>UCLIBC_FORMAT_FLAT</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_USE_MMU_209_7</var>
+					<var>ARCH_USE_MMU</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_OPTIONS_FOR_ARCH_209_6</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_alpha_209_6</var>
+					<not>
+						<var>TARGET_alpha</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_OPTIONS_FOR_ARCH_209_5</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_nios_209_5</var>
+					<not>
+						<var>TARGET_nios</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_OPTIONS_FOR_ARCH_209_4</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_ia64_209_4</var>
+					<not>
+						<var>TARGET_ia64</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_NO_LDSO_209_2</var>
+					<var>ARCH_HAS_NO_LDSO</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_UCLIBC_FORMAT_FLAT_SEP_DATA_210_11</var>
+					<not>
+						<var>UCLIBC_FORMAT_FLAT_SEP_DATA</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_USE_MMU_210_11</var>
+					<var>ARCH_USE_MMU</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_OPTIONS_FOR_ARCH_210_11</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_vax_210_11</var>
+					<not>
+						<var>TARGET_vax</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_OPTIONS_FOR_ARCH_210_10</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_nios2_210_10</var>
+					<not>
+						<var>TARGET_nios2</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_UCLIBC_FORMAT_SHARED_FLAT_210_9</var>
+					<not>
+						<var>UCLIBC_FORMAT_SHARED_FLAT</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_USE_MMU_210_9</var>
+					<var>ARCH_USE_MMU</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_OPTIONS_FOR_ARCH_210_8</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_hppa_210_8</var>
+					<not>
+						<var>TARGET_hppa</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_UCLIBC_FORMAT_FLAT_210_7</var>
+					<not>
+						<var>UCLIBC_FORMAT_FLAT</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_USE_MMU_210_7</var>
+					<var>ARCH_USE_MMU</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_OPTIONS_FOR_ARCH_210_6</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_alpha_210_6</var>
+					<not>
+						<var>TARGET_alpha</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_OPTIONS_FOR_ARCH_210_5</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_nios_210_5</var>
+					<not>
+						<var>TARGET_nios</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_OPTIONS_FOR_ARCH_210_4</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_ia64_210_4</var>
+					<not>
+						<var>TARGET_ia64</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_NO_LDSO_210_2</var>
+					<var>ARCH_HAS_NO_LDSO</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_ARCH_HAS_NO_LDSO_211_2</var>
+					<not>
+						<var>ARCH_HAS_NO_LDSO</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_FORMAT_FLAT_SEP_DATA_211_11</var>
+					<var>UCLIBC_FORMAT_FLAT_SEP_DATA</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_ARCH_USE_MMU_211_12</var>
+					<not>
+						<var>ARCH_USE_MMU</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_211_11</var>
+					<var>FORCE_OPTIONS_FOR_ARCH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_vax_211_11</var>
+					<var>TARGET_vax</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_211_10</var>
+					<var>FORCE_OPTIONS_FOR_ARCH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_nios2_211_10</var>
+					<var>TARGET_nios2</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_FORMAT_SHARED_FLAT_211_9</var>
+					<var>UCLIBC_FORMAT_SHARED_FLAT</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_ARCH_USE_MMU_211_10</var>
+					<not>
+						<var>ARCH_USE_MMU</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_211_8</var>
+					<var>FORCE_OPTIONS_FOR_ARCH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_hppa_211_8</var>
+					<var>TARGET_hppa</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_FORMAT_FLAT_211_7</var>
+					<var>UCLIBC_FORMAT_FLAT</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_ARCH_USE_MMU_211_8</var>
+					<not>
+						<var>ARCH_USE_MMU</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_211_6</var>
+					<var>FORCE_OPTIONS_FOR_ARCH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_alpha_211_6</var>
+					<var>TARGET_alpha</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_211_5</var>
+					<var>FORCE_OPTIONS_FOR_ARCH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_nios_211_5</var>
+					<var>TARGET_nios</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_211_4</var>
+					<var>FORCE_OPTIONS_FOR_ARCH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_ia64_211_4</var>
+					<var>TARGET_ia64</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_NO_SHARED_212_1</var>
+					<not>
+						<var>ARCH_HAS_NO_SHARED</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>ARCH_HAS_NO_SHARED_213_1</var>
+					<var>ARCH_HAS_NO_SHARED</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>HAVE_SHARED_214_1</var>
+					<var>HAVE_SHARED</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>HAVE_SHARED_215_1</var>
+					<var>HAVE_SHARED</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_OPTIONS_FOR_ARCH_216_6</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_avr32_216_6</var>
+					<not>
+						<var>TARGET_avr32</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_UCLIBC_BUILD_PIE_216_6</var>
+					<not>
+						<var>UCLIBC_BUILD_PIE</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_HAVE_SHARED_216_7</var>
+					<not>
+						<var>HAVE_SHARED</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_arm_216_8</var>
+					<not>
+						<var>TARGET_arm</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_frv_216_9</var>
+					<not>
+						<var>TARGET_frv</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_i386_216_10</var>
+					<not>
+						<var>TARGET_i386</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_mips_216_11</var>
+					<not>
+						<var>TARGET_mips</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_TARGET_powerpc_216_11</var>
+					<not>
+						<var>TARGET_powerpc</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_CONFIG_SH4_216_4</var>
+					<not>
+						<var>CONFIG_SH4</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_SHAREABLE_TEXT_SEGMENTS_216_3</var>
+					<var>FORCE_SHAREABLE_TEXT_SEGMENTS</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>NOT_FORCE_SHAREABLE_TEXT_SEGMENTS_216_3</var>
+					<not>
+						<var>FORCE_SHAREABLE_TEXT_SEGMENTS</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_216_6</var>
+					<var>FORCE_OPTIONS_FOR_ARCH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_avr32_216_6</var>
+					<var>TARGET_avr32</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_BUILD_PIE_216_6</var>
+					<var>UCLIBC_BUILD_PIE</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>HAVE_SHARED_216_7</var>
+					<var>HAVE_SHARED</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_arm_216_8</var>
+					<var>TARGET_arm</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_frv_216_9</var>
+					<var>TARGET_frv</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_i386_216_10</var>
+					<var>TARGET_i386</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_mips_216_11</var>
+					<var>TARGET_mips</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_powerpc_216_11</var>
+					<var>TARGET_powerpc</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>CONFIG_SH4_216_4</var>
+					<var>CONFIG_SH4</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>HAS_NO_THREADS_217_1</var>
+					<var>HAS_NO_THREADS</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_THREADS_218_1</var>
+					<var>UCLIBC_HAS_THREADS</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_THREADS_NATIVE_219_1</var>
+					<var>UCLIBC_HAS_THREADS_NATIVE</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_THREADS_NATIVE_220_1</var>
+					<not>
+						<var>UCLIBC_HAS_THREADS_NATIVE</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_TLS_221_1</var>
+					<var>UCLIBC_HAS_TLS</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_NETWORK_SUPPORT_222_1</var>
+					<var>UCLIBC_HAS_NETWORK_SUPPORT</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_NETWORK_SUPPORT_223_1</var>
+					<not>
+						<var>UCLIBC_HAS_NETWORK_SUPPORT</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_SYSLOG_224_1</var>
+					<var>UCLIBC_HAS_SYSLOG</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_CRYPT_IMPL_225_1</var>
+					<not>
+						<var>UCLIBC_HAS_CRYPT_IMPL</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_CRYPT_IMPL_226_1</var>
+					<var>UCLIBC_HAS_CRYPT_IMPL</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_CRYPT_STUB_227_1</var>
+					<var>UCLIBC_HAS_CRYPT_STUB</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_CRYPT_228_1</var>
+					<not>
+						<var>UCLIBC_HAS_CRYPT</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_CRYPT_IMPL_229_1</var>
+					<var>UCLIBC_HAS_CRYPT_IMPL</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_CRYPT_STUB_230_1</var>
+					<var>UCLIBC_HAS_CRYPT_STUB</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_BUILD_MINIMAL_LOCALE_231_1</var>
+					<var>UCLIBC_BUILD_MINIMAL_LOCALE</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_BUILD_MINIMAL_LOCALE_232_1</var>
+					<not>
+						<var>UCLIBC_BUILD_MINIMAL_LOCALE</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_BUILD_MINIMAL_LOCALES_233_1</var>
+					<var>UCLIBC_BUILD_MINIMAL_LOCALES</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>USE_OLD_VFPRINTF_234_1</var>
+					<not>
+						<var>USE_OLD_VFPRINTF</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>USE_OLD_VFPRINTF_235_1</var>
+					<var>USE_OLD_VFPRINTF</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_PRINTF_SCANF_POSITIONAL_ARGS_236_1</var>
+					<var>UCLIBC_PRINTF_SCANF_POSITIONAL_ARGS</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_STDIO_BUFSIZ_NONE_237_1</var>
+					<not>
+						<var>UCLIBC_HAS_STDIO_BUFSIZ_NONE</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_STDIO_BUFSIZ_NONE_238_1</var>
+					<var>UCLIBC_HAS_STDIO_BUFSIZ_NONE</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_STDIO_GETC_MACRO_239_1</var>
+					<var>UCLIBC_HAS_STDIO_GETC_MACRO</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_STDIO_BUFSIZ_NONE_240_1</var>
+					<not>
+						<var>UCLIBC_HAS_STDIO_BUFSIZ_NONE</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_STDIO_BUFSIZ_NONE_241_1</var>
+					<var>UCLIBC_HAS_STDIO_BUFSIZ_NONE</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_STDIO_PUTC_MACRO_242_1</var>
+					<var>UCLIBC_HAS_STDIO_PUTC_MACRO</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_THREADS_NATIVE_243_1</var>
+					<var>UCLIBC_HAS_THREADS_NATIVE</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_THREADS_NATIVE_244_1</var>
+					<not>
+						<var>UCLIBC_HAS_THREADS_NATIVE</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_STDIO_FUTEXES_245_1</var>
+					<var>UCLIBC_HAS_STDIO_FUTEXES</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_GNU_GETOPT_246_1</var>
+					<not>
+						<var>UCLIBC_HAS_GNU_GETOPT</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_GNU_GETOPT_247_1</var>
+					<var>UCLIBC_HAS_GNU_GETOPT</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_GETOPT_LONG_248_1</var>
+					<var>UCLIBC_HAS_GETOPT_LONG</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_FNMATCH_249_1</var>
+					<var>UCLIBC_HAS_FNMATCH</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_FNMATCH_250_1</var>
+					<not>
+						<var>UCLIBC_HAS_FNMATCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_HAS_GLOB_251_1</var>
+					<var>UCLIBC_HAS_GLOB</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_arm_252_1</var>
+					<var>TARGET_arm</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_frv_253_1</var>
+					<var>TARGET_frv</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_i386_254_1</var>
+					<var>TARGET_i386</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_mips_255_1</var>
+					<var>TARGET_mips</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_powerpc_256_1</var>
+					<var>TARGET_powerpc</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_BUILD_PIE_257_1</var>
+					<not>
+						<var>UCLIBC_BUILD_PIE</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>FORCE_OPTIONS_FOR_ARCH_258_1</var>
+					<not>
+						<var>FORCE_OPTIONS_FOR_ARCH</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>TARGET_hppa_259_1</var>
+					<not>
+						<var>TARGET_hppa</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>HAVE_NO_SSP_260_1</var>
+					<var>HAVE_NO_SSP</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>HAVE_SHARED_261_1</var>
+					<var>HAVE_SHARED</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>HAVE_SHARED_262_1</var>
+					<not>
+						<var>HAVE_SHARED</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_BUILD_RELRO_263_1</var>
+					<var>UCLIBC_BUILD_RELRO</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>DODEBUG_264_1</var>
+					<not>
+						<var>DODEBUG</var>
+					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>DODEBUG_265_1</var>
+					<var>DODEBUG</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>DOSTRIP_266_1</var>
+					<var>DOSTRIP</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>MALLOC_267_1</var>
+					<var>MALLOC</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>MALLOC_STANDARD_268_1</var>
+					<var>MALLOC_STANDARD</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>UCLIBC_MALLOC_DEBUGGING_269_1</var>
+					<not>
+						<var>UCLIBC_MALLOC_DEBUGGING</var>
+					</not>
+				</imp>
+			</rule>
+		</constraints>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>
