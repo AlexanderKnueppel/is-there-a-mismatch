@@ -1,6 +1,5 @@
 package util;
 
-
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -28,16 +27,16 @@ import de.ovgu.featureide.fm.core.io.xml.XmlFeatureModelFormat;
 public class Utils {
 	/** Configuration */
 	public static boolean useCache = true;
-	
+
 	/**
 	 * 
 	 * @author User
 	 *
 	 */
 	public enum ConstraintType {
-	    STRICT_COMPLEX, PSEUDO_COMPLEX, SIMPLE
+		STRICT_COMPLEX, PSEUDO_COMPLEX, SIMPLE
 	}
-	
+
 	/**
 	 * 
 	 * @author User
@@ -46,13 +45,12 @@ public class Utils {
 	public static class Cache {
 		public static List<IConstraint> cachedConstraints = null;
 		public static Map<IConstraint, ConstraintType> cachedClassified = null;
-		public static int cachedSimpleConstraints = 0,
-					      cachedPseudoComplexConstraints = 0,
-					      cachedStrictComplexConstraints = 0;
+		public static int cachedSimpleConstraints = 0, cachedPseudoComplexConstraints = 0,
+				cachedStrictComplexConstraints = 0;
 		public static boolean calculated = false;
-		
+
 		public static int count(Utils.ConstraintType type) {
-			switch(type) {
+			switch (type) {
 			case STRICT_COMPLEX:
 				return cachedStrictComplexConstraints;
 			case PSEUDO_COMPLEX:
@@ -63,110 +61,114 @@ public class Utils {
 				return 0;
 			}
 		}
-		
+
 		public static void fillCount(Map<IConstraint, ConstraintType> classified) {
 			cachedClassified = classified;
-			cachedPseudoComplexConstraints = Collections.frequency(new ArrayList<ConstraintType>(classified.values()), 
+			cachedPseudoComplexConstraints = Collections.frequency(new ArrayList<ConstraintType>(classified.values()),
 					ConstraintType.PSEUDO_COMPLEX);
-			cachedStrictComplexConstraints = Collections.frequency(new ArrayList<ConstraintType>(classified.values()), 
-					 ConstraintType.STRICT_COMPLEX);
-			cachedSimpleConstraints = Collections.frequency(new ArrayList<ConstraintType>(classified.values()), 
-					 ConstraintType.SIMPLE);
+			cachedStrictComplexConstraints = Collections.frequency(new ArrayList<ConstraintType>(classified.values()),
+					ConstraintType.STRICT_COMPLEX);
+			cachedSimpleConstraints = Collections.frequency(new ArrayList<ConstraintType>(classified.values()),
+					ConstraintType.SIMPLE);
 			calculated = true;
 		}
-		
+
 	}
-	
+
 	public static Map<IConstraint, ConstraintType> classify(IFeatureModel fm) {
 		return Utils.classify(fm.getConstraints());
 	}
-	
+
 	public static int minimalNumberOfLiterals(IConstraint c) {
 		int nnf = numberOfLiterals(propagateNegation(c.getNode(), false));
 		int cnf = numberOfLiterals(c.getNode().toCNF());
-		
+
 		return nnf < cnf ? nnf : cnf;
 	}
-	
+
 	public static int numberOfLiterals(Node n) {
-		if(n.getChildren() == null) {
+		if (n.getChildren() == null) {
 			return 0;
 		}
 		int number = 0;
-		for(Node child : n.getChildren()) {
+		for (Node child : n.getChildren()) {
 			int add = (child instanceof Literal) ? 1 : 0;
 			number += add + numberOfLiterals(child);
 		}
 		return number;
 	}
-	
+
 	private static Node propagateNegation(Node node, boolean negated) {
-		if(node instanceof Not) {
+		if (node instanceof Not) {
 			negated = !negated;
 			return propagateNegation(node.getChildren()[0], negated);
-		} else if(node instanceof And || node instanceof Or) {
+		} else if (node instanceof And || node instanceof Or) {
 			List<Node> nodelist = new ArrayList<Node>();
-			for(Node tmp : node.getChildren()) {
+			for (Node tmp : node.getChildren()) {
 				nodelist.add(propagateNegation(tmp, negated));
 			}
-			
-			if(node instanceof And) {
-				if(negated) {
+
+			if (node instanceof And) {
+				if (negated) {
 					return new Or((Object[]) nodelist.toArray());
 				} else {
 					return new And((Object[]) nodelist.toArray());
 				}
 			} else {
-				if(negated) {
+				if (negated) {
 					return new And((Object[]) nodelist.toArray());
 				} else {
 					return new Or((Object[]) nodelist.toArray());
 				}
 			}
 		}
-		
-		//node is an atom
-		if(negated)
+
+		// node is an atom
+		if (negated)
 			return new Not(node);
-		
+
 		return node;
 	}
-	
+
 	public static Map<IConstraint, ConstraintType> classify(List<IConstraint> constraints) {
-		if(useCache && constraints == Utils.Cache.cachedConstraints)
+		if (useCache && constraints == Utils.Cache.cachedConstraints)
 			return Utils.Cache.cachedClassified;
-		
+
 		Map<IConstraint, ConstraintType> result = new HashMap<IConstraint, ConstraintType>();
 		int i = 0;
-		for(IConstraint c : constraints) {
-			if(result.containsKey(c)) {
-				//System.out.println("Multiple constraints?? (id: " + i + ") -> " + c);
+		for (IConstraint c : constraints) {
+			if (result.containsKey(c)) {
+				// System.out.println("Multiple constraints?? (id: " + i + ") ->
+				// " + c);
 				int j = 0;
-				for(IConstraint c2 : result.keySet()) {
-					if(java.util.Objects.equals(c, c2)) {
-						//System.out.println("Found ya! j = " + j);
-						//System.out.println(i + "'s internal id: " + c.getInternalId());
-						//System.out.println(j + "'s internal id: " + c2.getInternalId());
+				for (IConstraint c2 : result.keySet()) {
+					if (java.util.Objects.equals(c, c2)) {
+						// System.out.println("Found ya! j = " + j);
+						// System.out.println(i + "'s internal id: " +
+						// c.getInternalId());
+						// System.out.println(j + "'s internal id: " +
+						// c2.getInternalId());
 					}
 					j++;
 				}
-				
+
 			}
-			if(ComplexConstraintConverter.isSimple(c.getNode()))
+			if (ComplexConstraintConverter.isSimple(c.getNode()))
 				result.put(c, ConstraintType.SIMPLE);
-			else if(ComplexConstraintConverter.isPseudoComplex(c.getNode())) 
+			else if (ComplexConstraintConverter.isPseudoComplex(c.getNode()))
 				result.put(c, ConstraintType.PSEUDO_COMPLEX);
-			else 
+			else
 				result.put(c, ConstraintType.STRICT_COMPLEX);
 			i++;
 		}
-		
-		if(useCache) {
+
+		if (useCache) {
 			Utils.Cache.cachedClassified = result;
 			Utils.Cache.cachedConstraints = constraints;
 		}
 		return result;
 	}
+
 	/**
 	 * 
 	 * @param classified
@@ -174,15 +176,15 @@ public class Utils {
 	 * @return
 	 */
 	public static int countConstraints(Map<IConstraint, ConstraintType> classified, ConstraintType type) {
-		if(useCache) {
-			if(classified != Utils.Cache.cachedClassified || (!Utils.Cache.calculated)) {
+		if (useCache) {
+			if (classified != Utils.Cache.cachedClassified || (!Utils.Cache.calculated)) {
 				Utils.Cache.fillCount(classified);
 			}
 			return Utils.Cache.count(type);
-		} 
+		}
 		return Collections.frequency(new ArrayList<ConstraintType>(classified.values()), type);
 	}
-	
+
 	/**
 	 * 
 	 * @param filename
@@ -192,7 +194,7 @@ public class Utils {
 	public static IFeatureModel loadFeatureModel(String filename) throws Exception {
 		return loadFeatureModel(filename, new XmlFeatureModelFormat());
 	}
-	
+
 	/**
 	 * 
 	 * @param filename
@@ -202,44 +204,45 @@ public class Utils {
 	 */
 	public static IFeatureModel loadFeatureModel(String filename, IFeatureModelFormat format) throws Exception {
 		IFeatureModel fm = null;
-		
+
 		fm = FMFactoryManager.getFactory(filename, format).createFeatureModel();
 
 		final ProblemList errors = FileHandler.load(Paths.get(filename), fm, format).getErrors();
-		
-		if(!errors.isEmpty()) {
-			for(Problem p : errors) {
+
+		if (!errors.isEmpty()) {
+			for (Problem p : errors) {
 				System.err.println(p);
 			}
 		}
-		
+
 		return fm;
 	}
-	
+
 	public static void writeFeatureModel(IFeatureModel fm, String filename) throws NoSuchExtensionException {
 		final ProblemList errors = FileHandler.save(Paths.get(filename), fm, new XmlFeatureModelFormat()).getErrors();
-		
-		if(!errors.isEmpty()) {
-			for(Problem p : errors) {
+
+		if (!errors.isEmpty()) {
+			for (Problem p : errors) {
 				System.err.println(p);
 			}
 		}
 	}
-	
+
 	/**
 	 * 
 	 * @param filename
 	 * @return
 	 * @throws NoSuchExtensionException
 	 */
-	public static void writeFeatureModel(IFeatureModel fm, String filename, IFeatureModelFormat format) throws NoSuchExtensionException {
+	public static void writeFeatureModel(IFeatureModel fm, String filename, IFeatureModelFormat format)
+			throws NoSuchExtensionException {
 		final ProblemList errors = FileHandler.save(Paths.get(filename), fm, format).getErrors();
-		
-		if(!errors.isEmpty()) {
-			for(Problem p : errors) {
+
+		if (!errors.isEmpty()) {
+			for (Problem p : errors) {
 				System.err.println(p);
 			}
 		}
 	}
-	
+
 }

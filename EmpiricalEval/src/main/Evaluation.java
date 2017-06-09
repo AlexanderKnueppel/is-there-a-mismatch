@@ -21,7 +21,7 @@ import de.ovgu.featureide.fm.core.conversion.ComplexConstraintConverter;
 import statistics.FMStatistics;
 
 public class Evaluation {
-	
+
 	/**
 	 * Configuration
 	 */
@@ -30,54 +30,53 @@ public class Evaluation {
 	private static int TeX = 1 << 3;
 	private static int BoxPlotR = 1 << 4;
 	private static int StdOut = 1 << 5;
-	
+
 	// Generate all
 	private static int Config = XLS | CSV | TeX | BoxPlotR | StdOut;
-	
+
 	private static String outputFolder = "./Output/";
 	private static String modelsFolder = "../Models/";
-	
-	 public static DefaultBoxAndWhiskerCategoryDataset dataset;
-	
-	 public static void main(String[] args) {		
+
+	public static DefaultBoxAndWhiskerCategoryDataset dataset;
+
+	public static void main(String[] args) {
 		long time = System.currentTimeMillis();
-       
-		Utils.useCache = false;		
-		
+
+		Utils.useCache = false;
+
 		File folder = new File(modelsFolder);
 		File[] listOfFiles = folder.listFiles();
 
-		if((Config & CSV) == 0)
-			RBoxplot.generateRCode(listOfFiles, true);	    
-	 
+		if ((Config & CSV) == 0)
+			RBoxplot.generateRCode(listOfFiles, true);
+
 		String[][] output = calcDefaultOutput(listOfFiles);
 
-		float elapsed = Math.round(((System.currentTimeMillis() - time) / 600f))/100f;
+		float elapsed = Math.round(((System.currentTimeMillis() - time) / 600f)) / 100f;
 		System.out.println("\nCalculationTime: " + elapsed + " min.");
 		System.out.println("--------------------------------------------------------------------\n\n");
-		
-		if((Config & StdOut) == 0) {
+
+		if ((Config & StdOut) == 0) {
 			ITableWriter stdOut = new StdOut();
 			stdOut.write(output);
 		}
-		if((Config & XLS) == 0) {
+		if ((Config & XLS) == 0) {
 			ITableWriter jxl = new ExcelWriter(outputFolder + "eval.xls");
 			jxl.write(output);
 			jxl.close();
 		}
-		if((Config & CSV) == 0) {
+		if ((Config & CSV) == 0) {
 			ITableWriter csv = new CSVWriter(outputFolder + "eval.xls");
 			csv.write(output);
 		}
-		if((Config & TeX) == 0) {
+		if ((Config & TeX) == 0) {
 			ITableWriter latex = new LatexWriter(outputFolder + "eval.tex", listOfFiles.length);
 			latex.write(output);
 		}
 	}
-	
-	 
-	public static String[][] calcDefaultOutput(File[] listOfFiles){
-		String[][] output = new String[listOfFiles.length+1][8];
+
+	public static String[][] calcDefaultOutput(File[] listOfFiles) {
+		String[][] output = new String[listOfFiles.length + 1][8];
 		output[0][0] = "";
 		output[0][1] = "Features";
 		output[0][2] = "Constraints";
@@ -86,14 +85,14 @@ public class Evaluation {
 		output[0][5] = "Sum";
 		output[0][6] = "Feature-Increase";
 		output[0][7] = "Constraint-Increase";
-				
-		int numOfDirs = 0;		
-		for (int i=0; i<listOfFiles.length; i++) {
+
+		int numOfDirs = 0;
+		for (int i = 0; i < listOfFiles.length; i++) {
 			File file = listOfFiles[i];
-			int index = (file.isDirectory()) ? listOfFiles.length-(numOfDirs++) : i+1-numOfDirs;		
-		
+			int index = (file.isDirectory()) ? listOfFiles.length - (numOfDirs++) : i + 1 - numOfDirs;
+
 			IFeatureModel fm = null;
-			if(!file.isDirectory()){
+			if (!file.isDirectory()) {
 				try {
 					fm = Utils.loadFeatureModel(file.getAbsolutePath());
 				} catch (Exception e) {
@@ -101,20 +100,22 @@ public class Evaluation {
 					return null;
 				}
 			}
-			
+
 			String[] row = new String[8];
-			
-			//name		
-			if(file.isDirectory()) row[0] = file.getName();
-			else row[0] = file.getName().substring(0, file.getName().lastIndexOf('.'));	    
+
+			// name
+			if (file.isDirectory())
+				row[0] = file.getName();
+			else
+				row[0] = file.getName().substring(0, file.getName().lastIndexOf('.'));
 			System.out.println("Calculating statistics for " + row[0]);
-					
-			//number of features and constraints
+
+			// number of features and constraints
 			System.out.println("... calculating number of features and constraints.");
-			if(file.isDirectory()){
+			if (file.isDirectory()) {
 				List<Integer> features = new ArrayList<Integer>();
 				List<Integer> constraints = new ArrayList<Integer>();
-				for(File inFile : file.listFiles()){
+				for (File inFile : file.listFiles()) {
 					IFeatureModel inFm;
 					try {
 						inFm = Utils.loadFeatureModel(inFile.getAbsolutePath());
@@ -127,19 +128,21 @@ public class Evaluation {
 				}
 				Collections.sort(features);
 				Collections.sort(constraints);
-				row[1] = features.get(0) + " < " + features.get(features.size()/2) + " < " + features.get(features.size()-1);
-				row[2] = constraints.get(0) + " < " + constraints.get(constraints.size()/2) + " < " + constraints.get(constraints.size()-1);				
-			}else{
-				row[1] =  ""+fm.getNumberOfFeatures();
-				row[2] =  ""+fm.getConstraintCount();
-			}	
-			
-			//percent of pseudo-, strict-complex & simple constraints
+				row[1] = features.get(0) + " < " + features.get(features.size() / 2) + " < "
+						+ features.get(features.size() - 1);
+				row[2] = constraints.get(0) + " < " + constraints.get(constraints.size() / 2) + " < "
+						+ constraints.get(constraints.size() - 1);
+			} else {
+				row[1] = "" + fm.getNumberOfFeatures();
+				row[2] = "" + fm.getConstraintCount();
+			}
+
+			// percent of pseudo-, strict-complex & simple constraints
 			System.out.println("... calculating percent of pseudo- and strict-constraints.");
-			if(file.isDirectory()){
+			if (file.isDirectory()) {
 				List<Float> pseudo = new ArrayList<Float>();
 				List<Float> strict = new ArrayList<Float>();
-				for(File inFile : file.listFiles()){
+				for (File inFile : file.listFiles()) {
 					IFeatureModel inFm;
 					try {
 						inFm = Utils.loadFeatureModel(inFile.getAbsolutePath());
@@ -148,28 +151,30 @@ public class Evaluation {
 						continue;
 					}
 					FMStatistics stats = new FMStatistics(inFm);
-					pseudo.add(Math.round(stats.numPseudoComplex()*100f)/100f);
-					strict.add(Math.round(stats.numStrictComplex()*100f)/100f);
+					pseudo.add(Math.round(stats.numPseudoComplex() * 100f) / 100f);
+					strict.add(Math.round(stats.numStrictComplex() * 100f) / 100f);
 				}
 				Collections.sort(pseudo);
 				Collections.sort(strict);
-				row[3] = pseudo.get(0) + "% < " + pseudo.get(pseudo.size()/2) + "% < " + pseudo.get(pseudo.size()-1) + "%";
-				row[4] = strict.get(0) + "% < " + strict.get(strict.size()/2) + "% < " + strict.get(strict.size()-1) + "%";
-				row[5] = (strict.get(0)+pseudo.get(0)) + "% < "
-						+ (pseudo.get(pseudo.size()/2) + strict.get(strict.size()/2)) + "% < "
-						+ (strict.get(strict.size()-1) + pseudo.get(pseudo.size()-1)) + "%";	    
+				row[3] = pseudo.get(0) + "% < " + pseudo.get(pseudo.size() / 2) + "% < " + pseudo.get(pseudo.size() - 1)
+						+ "%";
+				row[4] = strict.get(0) + "% < " + strict.get(strict.size() / 2) + "% < " + strict.get(strict.size() - 1)
+						+ "%";
+				row[5] = (strict.get(0) + pseudo.get(0)) + "% < "
+						+ (pseudo.get(pseudo.size() / 2) + strict.get(strict.size() / 2)) + "% < "
+						+ (strict.get(strict.size() - 1) + pseudo.get(pseudo.size() - 1)) + "%";
 			} else {
 				FMStatistics stats = new FMStatistics(fm);
-				row[3] = ""+Math.round(stats.numPseudoComplex()*100f)/100f + "%";
-				row[4] = ""+Math.round(stats.numStrictComplex()*100f)/100f + "%";			    
-				row[5] = ""+Math.round((stats.numPseudoComplex()+stats.numStrictComplex())*100f)/100f + "%";
+				row[3] = "" + Math.round(stats.numPseudoComplex() * 100f) / 100f + "%";
+				row[4] = "" + Math.round(stats.numStrictComplex() * 100f) / 100f + "%";
+				row[5] = "" + Math.round((stats.numPseudoComplex() + stats.numStrictComplex()) * 100f) / 100f + "%";
 			}
-			//increase of features & constraints
+			// increase of features & constraints
 			System.out.println("... calculating percent of feature- & constraint-increase.");
-			if(file.isDirectory()){
+			if (file.isDirectory()) {
 				List<Float> featureInc = new ArrayList<Float>();
 				List<Float> constraintInc = new ArrayList<Float>();
-				for(File inFile : file.listFiles()){
+				for (File inFile : file.listFiles()) {
 					IFeatureModel inFm;
 					try {
 						inFm = Utils.loadFeatureModel(inFile.getAbsolutePath());
@@ -180,23 +185,25 @@ public class Evaluation {
 					FMStatistics stats = new FMStatistics(inFm);
 					ComplexConstraintConverter converter = new ComplexConstraintConverter();
 					IFeatureModel result = converter.convert(inFm, new CombinedConverter());
-					
-					featureInc.add(Math.round(stats.increaseFeature(result)*100f)/100f);
-					constraintInc.add(Math.round(stats.increaseConstraints(result)*100f)/100f);
+
+					featureInc.add(Math.round(stats.increaseFeature(result) * 100f) / 100f);
+					constraintInc.add(Math.round(stats.increaseConstraints(result) * 100f) / 100f);
 				}
 				Collections.sort(featureInc);
 				Collections.sort(constraintInc);
-				row[6] = featureInc.get(0) + "% < " + featureInc.get(featureInc.size()/2) + "% < " + featureInc.get(featureInc.size()-1) + "%";
-				row[7] = constraintInc.get(0) + "% < " + constraintInc.get(constraintInc.size()/2) + "% < " + constraintInc.get(constraintInc.size()-1) + "%";
-			}else{
+				row[6] = featureInc.get(0) + "% < " + featureInc.get(featureInc.size() / 2) + "% < "
+						+ featureInc.get(featureInc.size() - 1) + "%";
+				row[7] = constraintInc.get(0) + "% < " + constraintInc.get(constraintInc.size() / 2) + "% < "
+						+ constraintInc.get(constraintInc.size() - 1) + "%";
+			} else {
 				FMStatistics stats = new FMStatistics(fm);
 				ComplexConstraintConverter converter = new ComplexConstraintConverter();
 				IFeatureModel result = converter.convert(fm, new CombinedConverter());
-				row[6] = ""+Math.round(stats.increaseFeature(result)*100f)/100f + "%";
-				row[7] = ""+Math.round(stats.increaseConstraints(result)*100f)/100f + "%";
-			}			
+				row[6] = "" + Math.round(stats.increaseFeature(result) * 100f) / 100f + "%";
+				row[7] = "" + Math.round(stats.increaseConstraints(result) * 100f) / 100f + "%";
+			}
 			output[index] = row;
 		}
 		return output;
-	 }
+	}
 }

@@ -34,7 +34,7 @@ import de.ovgu.featureide.fm.core.functional.Functional;
 import de.ovgu.featureide.fm.core.io.dimacs.DIMACSFormat;
 
 public class RemoveRedundantConstraints {
-	
+
 	private static Node makeRegular(Node node) {
 		Node regularCNFNode = node.toCNF();
 		if (regularCNFNode instanceof And) {
@@ -52,8 +52,8 @@ public class RemoveRedundantConstraints {
 		}
 		return regularCNFNode;
 	}
-	
-	protected static IFeatureModel removeVoid(IFeatureModel fm)  {
+
+	protected static IFeatureModel removeVoid(IFeatureModel fm) {
 		IFeatureModel clone = fm.clone();
 		AdvancedNodeCreator nodeCreator = new AdvancedNodeCreator(fm);
 		nodeCreator.setCnfType(CNFType.Regular);
@@ -96,10 +96,10 @@ public class RemoveRedundantConstraints {
 		}
 		return clone;
 	}
-	
+
 	protected static IFeatureModel removeRedundant3(IFeatureModel fm) {
 		IFeatureModel clone = fm.clone();
-		while(clone.getConstraintCount() > 0) {
+		while (clone.getConstraintCount() > 0) {
 			clone.removeConstraint(0);
 		}
 		int removed = 0, i = 0;
@@ -110,7 +110,7 @@ public class RemoveRedundantConstraints {
 			SatSolver satsolver = new SatSolver(new Not(check), 10000);
 
 			try {
-				if(!satsolver.isSatisfiable()) {
+				if (!satsolver.isSatisfiable()) {
 					removed++;
 				} else {
 					clone.addConstraint(constraint);
@@ -122,51 +122,51 @@ public class RemoveRedundantConstraints {
 		}
 		return clone;
 	}
-	
+
 	protected static IFeatureModel removeRedundant1(IFeatureModel fm) {
 		FeatureModelAnalyzer analyzer = fm.getAnalyser();
-		
+
 		analyzer.calculateFeatures = true;
 		analyzer.calculateConstraints = false;
 		analyzer.calculateRedundantConstraints = true;
 		analyzer.calculateTautologyConstraints = false;
-		
+
 		analyzer.analyzeFeatureModel(null);
 		List<IConstraint> toRemove = new LinkedList<IConstraint>();
 		int index = 0, i = 0;
 		for (IConstraint c : fm.getConstraints()) {
 			ConstraintAttribute attribute = c.getConstraintAttribute();
-			
+
 			if (attribute == ConstraintAttribute.REDUNDANT || attribute == ConstraintAttribute.TAUTOLOGY) {
 				toRemove.add(c);
-			} 
+			}
 			System.out.println((++i) + "/" + fm.getConstraintCount());
 		}
 
 		for (IConstraint c : toRemove) {
 			fm.removeConstraint(c);
 		}
-		
+
 		System.out.println(toRemove.size() + " removed!");
 		return fm;
 	}
-	
+
 	protected static IFeatureModel removeRedundant2(IFeatureModel fm) {
 		IFeatureModel clone = fm.clone();
 		int removed = 0;
 		int index = 0, i = 0;
-		while(index < fm.getConstraintCount()) {
+		while (index < fm.getConstraintCount()) {
 			IConstraint c = fm.getConstraints().get(index);
 			clone.removeConstraint(c);
 			final AdvancedNodeCreator nodeCreator = new AdvancedNodeCreator(clone);
-			
+
 			Node cnf = c.getNode().toCNF();
 			Node check = new Implies(nodeCreator.createNodes(), cnf);
 
 			SatSolver satsolver = new SatSolver(new Not(check), 10000);
-			
+
 			try {
-				if(!satsolver.isSatisfiable()) {
+				if (!satsolver.isSatisfiable()) {
 					removed++;
 				} else {
 					clone.addConstraint(c, index);
@@ -177,26 +177,26 @@ public class RemoveRedundantConstraints {
 			System.out.println((++i) + "/" + fm.getConstraintCount());
 			index++;
 		}
-		
+
 		System.out.println(removed + " constraints removed.");
 		return fm;
 	}
-	
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String path = "models/";
-		
+
 		File folder = new File(path);
 		File[] listOfFiles = folder.listFiles();
-		
+
 		try {
-			for(File file : listOfFiles) {
+			for (File file : listOfFiles) {
 				System.out.println("Converting " + file.getName());
 				IFeatureModel fm1 = util.Utils.loadFeatureModel(file.getAbsolutePath());
 				IFeatureModel result = removeRedundant1(removeVoid(fm1));
 				util.Utils.writeFeatureModel(result, "models.clean/" + file.getName());
 			}
-				
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			return;
