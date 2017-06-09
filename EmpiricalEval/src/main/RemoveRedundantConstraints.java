@@ -33,8 +33,18 @@ import de.ovgu.featureide.fm.core.editing.AdvancedNodeCreator.ModelType;
 import de.ovgu.featureide.fm.core.functional.Functional;
 import de.ovgu.featureide.fm.core.io.dimacs.DIMACSFormat;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class RemoveRedundantConstraints.
+ */
 public class RemoveRedundantConstraints {
 
+	/**
+	 * Make regular.
+	 *
+	 * @param node the node
+	 * @return the node
+	 */
 	private static Node makeRegular(Node node) {
 		Node regularCNFNode = node.toCNF();
 		if (regularCNFNode instanceof And) {
@@ -53,6 +63,12 @@ public class RemoveRedundantConstraints {
 		return regularCNFNode;
 	}
 
+	/**
+	 * Removes the void.
+	 *
+	 * @param fm the fm
+	 * @return the i feature model
+	 */
 	protected static IFeatureModel removeVoid(IFeatureModel fm) {
 		IFeatureModel clone = fm.clone();
 		AdvancedNodeCreator nodeCreator = new AdvancedNodeCreator(fm);
@@ -97,6 +113,12 @@ public class RemoveRedundantConstraints {
 		return clone;
 	}
 
+	/**
+	 * Removes the redundant 3.
+	 *
+	 * @param fm the fm
+	 * @return the i feature model
+	 */
 	protected static IFeatureModel removeRedundant3(IFeatureModel fm) {
 		IFeatureModel clone = fm.clone();
 		while (clone.getConstraintCount() > 0) {
@@ -123,6 +145,12 @@ public class RemoveRedundantConstraints {
 		return clone;
 	}
 
+	/**
+	 * Removes the redundant 1.
+	 *
+	 * @param fm the fm
+	 * @return the i feature model
+	 */
 	protected static IFeatureModel removeRedundant1(IFeatureModel fm) {
 		FeatureModelAnalyzer analyzer = fm.getAnalyser();
 
@@ -151,6 +179,12 @@ public class RemoveRedundantConstraints {
 		return fm;
 	}
 
+	/**
+	 * Removes the redundant 2.
+	 *
+	 * @param fm the fm
+	 * @return the i feature model
+	 */
 	protected static IFeatureModel removeRedundant2(IFeatureModel fm) {
 		IFeatureModel clone = fm.clone();
 		int removed = 0;
@@ -182,6 +216,11 @@ public class RemoveRedundantConstraints {
 		return fm;
 	}
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String path = "models/";

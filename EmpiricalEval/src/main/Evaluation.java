@@ -20,25 +20,44 @@ import de.ovgu.featureide.fm.core.conversion.CombinedConverter;
 import de.ovgu.featureide.fm.core.conversion.ComplexConstraintConverter;
 import statistics.FMStatistics;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Evaluation.
+ */
 public class Evaluation {
 
-	/**
-	 * Configuration
-	 */
+	/** Configuration. */
 	private static int XLS = 1 << 1;
+	
+	/** The csv. */
 	private static int CSV = 1 << 2;
+	
+	/** The Te X. */
 	private static int TeX = 1 << 3;
+	
+	/** The Box plot R. */
 	private static int BoxPlotR = 1 << 4;
+	
+	/** The Std out. */
 	private static int StdOut = 1 << 5;
 
-	// Generate all
-	private static int Config = XLS | CSV | TeX | BoxPlotR | StdOut;
+	/** The Config. */
+	private static int Config = XLS | CSV | TeX | BoxPlotR | StdOut; 	// Generate everything...
 
+	/** The output folder. */
 	private static String outputFolder = "./Output/";
+	
+	/** The models folder. */
 	private static String modelsFolder = "../Models/";
 
+	/** The dataset. */
 	public static DefaultBoxAndWhiskerCategoryDataset dataset;
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		long time = System.currentTimeMillis();
 
@@ -75,6 +94,12 @@ public class Evaluation {
 		}
 	}
 
+	/**
+	 * Calc default output.
+	 *
+	 * @param listOfFiles the list of files
+	 * @return the string[][]
+	 */
 	public static String[][] calcDefaultOutput(File[] listOfFiles) {
 		String[][] output = new String[listOfFiles.length + 1][8];
 		output[0][0] = "";

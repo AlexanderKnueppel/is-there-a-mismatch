@@ -1,10 +1,20 @@
 package util.output;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class StdOut.
+ */
 public class StdOut implements ITableWriter {
 
+	/**
+	 * Instantiates a new std out.
+	 */
 	public StdOut() {
 	};
 
+	/* (non-Javadoc)
+	 * @see util.output.ITableWriter#write(java.lang.String[][])
+	 */
 	@Override
 	public void write(String[][] output) {
 
@@ -36,6 +46,9 @@ public class StdOut implements ITableWriter {
 		 */
 	}
 
+	/* (non-Javadoc)
+	 * @see util.output.ITableWriter#close()
+	 */
 	public void close() {
 	}
 }

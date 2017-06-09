@@ -4,16 +4,32 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class LatexWriter.
+ */
 public class LatexWriter implements ITableWriter {
 
+	/** The output file. */
 	private String outputFile;
+	
+	/** The number of feature models. */
 	private int numberOfFeatureModels;
 
+	/**
+	 * Instantiates a new latex writer.
+	 *
+	 * @param path the path
+	 * @param numOfFeatureModels the num of feature models
+	 */
 	public LatexWriter(String path, int numOfFeatureModels) {
 		outputFile = path;
 		numberOfFeatureModels = numOfFeatureModels;
 	}
 
+	/* (non-Javadoc)
+	 * @see util.output.ITableWriter#write(java.lang.String[][])
+	 */
 	@Override
 	public void write(String[][] output) {
 
@@ -79,6 +95,9 @@ public class LatexWriter implements ITableWriter {
 		}
 	}
 
+	/**
+	 * Inits the strings.
+	 */
 	/*
 	 * 
 	 */
@@ -128,37 +147,68 @@ public class LatexWriter implements ITableWriter {
 
 	}
 
+	/* (non-Javadoc)
+	 * @see util.output.ITableWriter#close()
+	 */
 	@Override
 	public void close() {
 	}
 
+	/** The name prefix. */
 	private String namePrefix;
+	
+	/** The name suffix. */
 	private String nameSuffix;
 
+	/** The features prefix. */
 	private String featuresPrefix;
+	
+	/** The features suffix. */
 	private String featuresSuffix;
 
+	/** The constraints prefix. */
 	private String constraintsPrefix;
+	
+	/** The constraints suffix. */
 	private String constraintsSuffix;
 
+	/** The pseudo prefix. */
 	private String pseudoPrefix;
+	
+	/** The pseudo suffix. */
 	private String pseudoSuffix;
 
+	/** The strict prefix. */
 	private String strictPrefix;
+	
+	/** The strict suffix. */
 	private String strictSuffix;
 
+	/** The sum prefix. */
 	private String sumPrefix;
+	
+	/** The sum suffix. */
 	private String sumSuffix;
 
+	/** The feature incr prefix. */
 	private String featureIncrPrefix;
+	
+	/** The feature incr suffix. */
 	private String featureIncrSuffix;
 
+	/** The constraint incr prefix. */
 	private String constraintIncrPrefix;
+	
+	/** The constraint incr suffix. */
 	private String constraintIncrSuffix;
 
+	/** The caption name. */
 	private String captionName;
 
+	/** The pre. */
 	private String pre;
+	
+	/** The suf. */
 	private String suf;
 
 }

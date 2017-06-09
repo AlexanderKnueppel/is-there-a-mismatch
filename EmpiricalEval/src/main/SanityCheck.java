@@ -7,8 +7,17 @@ import de.ovgu.featureide.fm.core.editing.Comparison;
 import de.ovgu.featureide.fm.core.editing.ModelComparator;
 import util.Utils;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class SanityCheck.
+ */
 public class SanityCheck {
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		IFeatureModel fm = null;
 		if (args.length != 1) {

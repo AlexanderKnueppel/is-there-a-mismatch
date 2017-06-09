@@ -5,13 +5,27 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class CSVWriter.
+ */
 public class CSVWriter implements ITableWriter {
+	
+	/** The output file. */
 	private String outputFile;
 
+	/**
+	 * Instantiates a new CSV writer.
+	 *
+	 * @param path the path
+	 */
 	public CSVWriter(String path) {
 		outputFile = path;
 	}
 
+	/* (non-Javadoc)
+	 * @see util.output.ITableWriter#write(java.lang.String[][])
+	 */
 	@Override
 	public void write(String[][] output) {
 		String result = "";
@@ -30,6 +44,9 @@ public class CSVWriter implements ITableWriter {
 		}
 	}
 
+	/* (non-Javadoc)
+	 * @see util.output.ITableWriter#close()
+	 */
 	@Override
 	public void close() {
 	}

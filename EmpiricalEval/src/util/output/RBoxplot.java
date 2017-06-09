@@ -9,23 +9,54 @@ import de.ovgu.featureide.fm.core.base.IConstraint;
 import de.ovgu.featureide.fm.core.base.IFeatureModel;
 import util.Utils;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class RBoxplot.
+ */
 public class RBoxplot {
 
+	/** The default path. */
 	private static String _defaultPath = "eval.r";
+	
+	/** The default log axis. */
 	private static boolean _defaultLogAxis = false;
 
+	/**
+	 * Generate R code.
+	 *
+	 * @param listOfFiles the list of files
+	 */
 	public static void generateRCode(File[] listOfFiles) {
 		generateRCode(_defaultPath, listOfFiles);
 	}
 
+	/**
+	 * Generate R code.
+	 *
+	 * @param path the path
+	 * @param listOfFiles the list of files
+	 */
 	public static void generateRCode(String path, File[] listOfFiles) {
 		generateRCode(path, listOfFiles, _defaultLogAxis);
 	}
 
+	/**
+	 * Generate R code.
+	 *
+	 * @param listOfFiles the list of files
+	 * @param logAxis the log axis
+	 */
 	public static void generateRCode(File[] listOfFiles, boolean logAxis) {
 		generateRCode(_defaultPath, listOfFiles, logAxis);
 	}
 
+	/**
+	 * Generate R code.
+	 *
+	 * @param path the path
+	 * @param listOfFiles the list of files
+	 * @param logAxis the log axis
+	 */
 	public static void generateRCode(String path, File[] listOfFiles, boolean logAxis) {
 		String ret = "";
 		String names = "names <- c( ";
@@ -59,6 +90,12 @@ public class RBoxplot {
 		}
 	}
 
+	/**
+	 * Gets the max length.
+	 *
+	 * @param listOfFiles the list of files
+	 * @return the max length
+	 */
 	private static int getMaxLength(File[] listOfFiles) {
 
 		int maxLength = 0;
@@ -81,6 +118,13 @@ public class RBoxplot {
 		return maxLength;
 	}
 
+	/**
+	 * Generate R vector.
+	 *
+	 * @param file the file
+	 * @param length the length
+	 * @return the string
+	 */
 	private static String generateRVector(File file, int length) {
 		String ret = "";
 		if (file.isDirectory())

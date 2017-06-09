@@ -11,9 +11,20 @@ import de.ovgu.featureide.fm.core.conversion.ComplexConstraintConverter;
 import util.Utils;
 import util.Utils.ConstraintType;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class EliminateComplexConstraints.
+ */
 public class EliminateComplexConstraints {
+	
+	/** The Constant OUTPUT_DIR. */
 	final static String OUTPUT_DIR = "output/";
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		long time = System.currentTimeMillis();
 
@@ -51,7 +62,7 @@ public class EliminateComplexConstraints {
 				System.out.println("Number of complex constraints: " + nComplexConstraints + ".");
 
 				ComplexConstraintConverter converter = new ComplexConstraintConverter();
-				/**
+				/*
 				 * You can choose between CNFConverter, NNFConverter, or
 				 * CombinedConverter...
 				 */

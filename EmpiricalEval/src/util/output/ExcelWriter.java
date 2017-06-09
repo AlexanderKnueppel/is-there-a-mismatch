@@ -18,16 +18,35 @@ import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
 import jxl.write.WriteException;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ExcelWriter.
+ */
 public class ExcelWriter implements ITableWriter {
 
+	/** The times column header. */
 	private WritableCellFormat timesColumnHeader;
+	
+	/** The times row header. */
 	private WritableCellFormat timesRowHeader;
+	
+	/** The times. */
 	private WritableCellFormat times;
 
+	/** The input file. */
 	private String inputFile;
+	
+	/** The workbook. */
 	private WritableWorkbook workbook;
+	
+	/** The active sheet. */
 	private WritableSheet activeSheet;
 
+	/**
+	 * Instantiates a new excel writer.
+	 *
+	 * @param outputFilePath the output file path
+	 */
 	public ExcelWriter(String outputFilePath) {
 		this.inputFile = outputFilePath;
 
@@ -62,6 +81,9 @@ public class ExcelWriter implements ITableWriter {
 		}
 	}
 
+	/* (non-Javadoc)
+	 * @see util.output.ITableWriter#write(java.lang.String[][])
+	 */
 	public void write(String[][] output) {
 
 		if (activeSheet == null)
@@ -95,6 +117,9 @@ public class ExcelWriter implements ITableWriter {
 		}
 	}
 
+	/* (non-Javadoc)
+	 * @see util.output.ITableWriter#close()
+	 */
 	public void close() {
 		try {
 			workbook.close();
@@ -105,6 +130,11 @@ public class ExcelWriter implements ITableWriter {
 		}
 	}
 
+	/**
+	 * Creates the sheet.
+	 *
+	 * @param sheetName the sheet name
+	 */
 	public void createSheet(String sheetName) {
 		int lastIndex = workbook.getNumberOfSheets();
 		activeSheet = workbook.createSheet(sheetName, lastIndex);
