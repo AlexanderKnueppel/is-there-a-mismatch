@@ -37,14 +37,14 @@
             <div class="container">
                 <div class="branding">
                     <h1 class="logo">
-                        <a href="index.html">
-                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
-                            <span class="text-highlight">Pretty</span><span class="text-bold">Docs</span>
-                        </a>
+                      <a href="../index.html">
+                          <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                          Is There a <span class="text-highlight">Mismatch</span>  Between <span class="text-bold">Real-World Feature Models</span> and <span class="text-bold">Product-Line Research</span>?
+                      </a>
                     </h1>
                 </div><!--//branding-->
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li class="active">FeatureIDE</li>
                 </ol>
             </div><!--//container-->
@@ -53,7 +53,7 @@
             <div class="container">
                 <div id="doc-header" class="doc-header text-center">
                     <h1 class="doc-title"><span aria-hidden="true" class="icon icon_puzzle_alt"></span> FeatureIDE Integration</h1>
-                    <div class="meta"><i class="fa fa-clock-o"></i> Last updated: Jan 25th, 2016</div>
+                    <div class="meta"><i class="fa fa-clock-o"></i> Last updated: Jun 09th, 2017</div>
                 </div><!--//doc-header-->
                 <div class="doc-body">
                     <div class="doc-content">
@@ -74,7 +74,16 @@
                                     FeatureIDE with Linux or Mac OS, download the source code from <a href="https://github.com/FeatureIDE/FeatureIDE" target="_blank">https://github.com/FeatureIDE/FeatureIDE</a> and import the plug-in projects into your Eclipse (needs EMF).
                                     Then start a new Eclipse instance from the core.fm package.</p>
                                     <h6>Using the algorithm</h6>
-                                    <p>Right-click on your feature model a</p>
+                                    <p>Right-click on your feature model and select FeatureIDE -&gt; product-equivalent model with simple constraints. The following dialog appears: </p>
+                                    <div class="screenshot-holder">
+                                        <img class="img-responsive" src="assets/images/screenshots/dialog.png" alt="screenshot" />
+                                    </div>
+
+                                    The dialog shows how many strict-complex and pseudo-complex constraint a feature model has.
+                                    You can select a refactoring strategy (i.e., CNF, NNF, or a combination of both such that the minimal number of features and constraints are added).
+                                    You can also preserve the number of configurations. In this case, for each additional requires constraint A =&gt; B, the requires constraint B =&gt; A is added.
+                                    This is useful, when the target tool does not know how to handle abstract features and the number of products is important. See the following video for a short demonstration (no voice overlay at the moment).
+
                                    </p>
                                 </div><!--//section-block-->
 
@@ -85,18 +94,11 @@
                                 <div class="section-block">
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <h6>Responsive Video 16:9</h6>
+                                            <h6>Eliminate complex constraints</h6>
                                             <!-- 16:9 aspect ratio -->
                                             <div class="embed-responsive embed-responsive-16by9">
-                                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ejBkOjEG6F0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <h6>Responsive Video 4:3</h6>
-                                            <!-- 4:3 aspect ratio -->
-                                            <div class="embed-responsive embed-responsive-4by3">
-                                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ejBkOjEG6F0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-                                            </div>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/wW_FknnABes" frameborder="0" allowfullscreen></iframe>
+                                                </div>
                                         </div>
                                     </div><!--//row-->
                                 </div><!--//section-block-->
