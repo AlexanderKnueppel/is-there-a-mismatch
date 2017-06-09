@@ -60,16 +60,18 @@
                             <section id="download-section" class="doc-section">
                                 <h2 class="section-title">Overview of included Software Artifacts</h2>
                                 <div class="section-block">
-                                      <p><code>Models/</code></p>
-                                      <p>Contains 127 large feature models in the FeatureIDE file format.</p>
-                                      <p><code>ExpressivePowerFM/</code></p>
-                                      <p>Java Eclipse project for calculating the number of software product lines that can be represented with <b>n</b> features.</p>
-                                      <p><code>EmpericalEval/</code></p>
-                                      <p>Java Eclipse project for generating all statistics that are presented in the paper.</p>
-                                      <p><code>linux-variability-analysis-tools/</code></p>
-                                      <p>Extended LVAT project by Steven She for converting KConfig (exconfig) files to the FeatureIDe file format.</p>
-                                      <p><code>Output/</code></p>
+                                      <p><code>Data/Output/</code></p>
                                       <p>Pre-generated evaluation statistics.</p>
+                                      <p><code>Data/LargeFeatureModels/</code></p>
+                                      <p>Contains 127 large feature models in the FeatureIDE file format.</p>
+                                      <p><code>Data/LargeBasicFeatureModels/</code></p>
+                                      <p>Contains 127 large feature models with only simple constraints in the FeatureIDE file format.</p>
+                                      <p><code>Source/ExpressivePowerFM/</code></p>
+                                      <p>Java Eclipse project for calculating the number of software product lines that can be represented with <b>n</b> features.</p>
+                                      <p><code>Source/EmpericalEval/</code></p>
+                                      <p>Java Eclipse project for generating all statistics that are presented in the paper.</p>
+                                      <p><code>Source/KConfigTranslator/</code></p>
+                                      <p>Extended LVAT project by Steven She for converting KConfig (exconfig) files to the FeatureIDe file format.</p>
                                       <p><code>Documentation/</code></p>
                                       <p>Assets and subpages for this documentation.</p>
                                 </div>
@@ -153,7 +155,7 @@ for two features plus the root feature, the expressive power of basic feauture m
         <i class="fa fa-info-circle"></i>
     </div><!--//icon-holder-->
     <div class="content">
-        <h4 class="callout-title">Timing</h4>
+        <h4 class="callout-title">Running time</h4>
         <p>Be aware that for <b>n&gt;6</b>, this procedure may consume a large amout of time and memory (multiple features map may map to the same product line and with <b>n=6</b>, we are already regarding
           4294642034 theoretical product lines).</p>
     </div><!--//content-->
@@ -328,11 +330,22 @@ Remove the options you don't want to generate from the config field. Output and 
 <p>This program takes a feature model as input and tries to produce a generalized version of it such that the resulting feature models has no redundant constraints and is valid. This is necessary
 for the translation from KConfig models to the FeatureIDE file format, since both languages are not fully compatible (e.g., KConfig relies on a tristate logic: compiled, not integrated, and compiled, but dynamically loaded on demand).</p>
 <p>Hence, the usual workflow for exporting a KConfig model to FeatureIDE is to first use the export script explained below (under Models), and second, to run this program on the model.</p>
+<div class="callout-block callout-info">
+    <div class="icon-holder">
+        <i class="fa fa-info-circle"></i>
+    </div><!--//icon-holder-->
+    <div class="content">
+        <h4 class="callout-title">Running time</h4>
+        <p>Again, depending on your machine and the regarded feature models, <code>main.Evaluation</code> and <code>main.RemoveRedundantConstraints</code> can take several hours to terminate.
+        </p>
+    </div><!--//content-->
+</div><!--//callout-block-->
+
                                     </div><!--//code-block-->
                                 </div><!--//section-block-->
                             </section><!--//doc-section-->
                             <section id="models-section" class="doc-section">
-                                <h2 class="section-title">Models</h2>
+                                <h2 class="section-title">Feature Models</h2>
                                 <div class="section-block">
                                   <p>CDL is the variability format of the eCos kernel. Each platform using eCos has a slightly different variability model (based on its capabilities).
                                     KConfig is the variability model of the linux kernel and is nowadays used for other software projects as well. We used the CDL and KConfig models provided by Thorsten Berger on his personal BitBucket repository:
@@ -384,7 +397,7 @@ for the translation from KConfig models to the FeatureIDE file format, since bot
                                         <li><a class="scrollto" href="#ee">EmpiricalEval </a></li>
                                     </ul><!--//nav-->
                                 </li>
-                                <li><a class="scrollto" href="#models-section">Models</a></li>
+                                <li><a class="scrollto" href="#models-section">Feature Models</a></li>
                             </ul><!--//doc-menu-->
                         </nav>
                     </div><!--//doc-sidebar-->
