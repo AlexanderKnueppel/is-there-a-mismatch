@@ -1,7 +1,7 @@
-# is-there-a-mismatch
+# Is There a Mismatch Between Real-World Feature Models and Product-Line Research?
 
 Artifact repository for the FSE2017 accepted paper "Is There a Mismatch Between Real-World Feature Models and Product-Line Research?".
-Authors: Alexander Knüppel, Thomas Thüm, Stephan Mennicke, Jens Meinicke, Ina Schafer
+Authors: Alexander Knüppel, Thomas Thüm, Stephan Mennicke, Jens Meinicke, Ina Schaefer
 
 Included are various tools for the analysis of real-world feature models with respect to their cross-tree constraints.
 See index.html for further details.
