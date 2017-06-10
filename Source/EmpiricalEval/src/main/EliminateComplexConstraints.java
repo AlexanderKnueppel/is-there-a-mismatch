@@ -18,7 +18,7 @@ import util.Utils.ConstraintType;
 public class EliminateComplexConstraints {
 	
 	/** The Constant OUTPUT_DIR. */
-	final static String OUTPUT_DIR = "output/";
+	final static String OUTPUT_DIR = "./output/";
 
 	/**
 	 * The main method.

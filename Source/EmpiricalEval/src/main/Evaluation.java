@@ -9,9 +9,14 @@ import util.output.RBoxplot;
 import util.output.StdOut;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Stream;
 
 import org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset;
 
@@ -45,10 +50,10 @@ public class Evaluation {
 	private static int Config = XLS | CSV | TeX | BoxPlotR | StdOut; 	// Generate everything...
 
 	/** The output folder. */
-	private static String outputFolder = "./Output/";
+	private static String outputFolder = "./output/";
 	
 	/** The models folder. */
-	private static String modelsFolder = "../Models/";
+	private static String modelsFolder = "../../Data/LargeFeatureModels/";
 
 	/** The dataset. */
 	public static DefaultBoxAndWhiskerCategoryDataset dataset;
@@ -66,7 +71,7 @@ public class Evaluation {
 		File folder = new File(modelsFolder);
 		File[] listOfFiles = folder.listFiles();
 
-		if ((Config & CSV) == 0)
+		if ((Config & CSV) != 0)
 			RBoxplot.generateRCode(listOfFiles, true);
 
 		String[][] output = calcDefaultOutput(listOfFiles);
@@ -75,20 +80,20 @@ public class Evaluation {
 		System.out.println("\nCalculationTime: " + elapsed + " min.");
 		System.out.println("--------------------------------------------------------------------\n\n");
 
-		if ((Config & StdOut) == 0) {
+		if ((Config & StdOut) != 0) {
 			ITableWriter stdOut = new StdOut();
 			stdOut.write(output);
 		}
-		if ((Config & XLS) == 0) {
+		if ((Config & XLS) != 0) {
 			ITableWriter jxl = new ExcelWriter(outputFolder + "eval.xls");
 			jxl.write(output);
 			jxl.close();
 		}
-		if ((Config & CSV) == 0) {
-			ITableWriter csv = new CSVWriter(outputFolder + "eval.xls");
+		if ((Config & CSV) != 0) {
+			ITableWriter csv = new CSVWriter(outputFolder + "eval.csv");
 			csv.write(output);
 		}
-		if ((Config & TeX) == 0) {
+		if ((Config & TeX) != 0) {
 			ITableWriter latex = new LatexWriter(outputFolder + "eval.tex", listOfFiles.length);
 			latex.write(output);
 		}
@@ -176,8 +181,8 @@ public class Evaluation {
 						continue;
 					}
 					FMStatistics stats = new FMStatistics(inFm);
-					pseudo.add(Math.round(stats.numPseudoComplex() * 100f) / 100f);
-					strict.add(Math.round(stats.numStrictComplex() * 100f) / 100f);
+					pseudo.add(Math.round(stats.numPseudoComplex() * 100f) / (float)inFm.getConstraintCount());
+					strict.add(Math.round(stats.numStrictComplex() * 100f) / (float)inFm.getConstraintCount());
 				}
 				Collections.sort(pseudo);
 				Collections.sort(strict);
@@ -190,9 +195,9 @@ public class Evaluation {
 						+ (strict.get(strict.size() - 1) + pseudo.get(pseudo.size() - 1)) + "%";
 			} else {
 				FMStatistics stats = new FMStatistics(fm);
-				row[3] = "" + Math.round(stats.numPseudoComplex() * 100f) / 100f + "%";
-				row[4] = "" + Math.round(stats.numStrictComplex() * 100f) / 100f + "%";
-				row[5] = "" + Math.round((stats.numPseudoComplex() + stats.numStrictComplex()) * 100f) / 100f + "%";
+				row[3] = "" + Math.round(stats.numPseudoComplex() * 100f) / (float)fm.getConstraintCount() + "%";
+				row[4] = "" + Math.round(stats.numStrictComplex() * 100f) / (float)fm.getConstraintCount()  + "%";
+				row[5] = "" + Math.round((stats.numPseudoComplex() + stats.numStrictComplex()) * 100f) / (float)fm.getConstraintCount()+ "%";
 			}
 			// increase of features & constraints
 			System.out.println("... calculating percent of feature- & constraint-increase.");

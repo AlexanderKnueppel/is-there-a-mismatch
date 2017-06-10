@@ -16,7 +16,7 @@ import util.Utils;
 public class RBoxplot {
 
 	/** The default path. */
-	private static String _defaultPath = "eval.r";
+	private static String _defaultPath = "output/eval.r";
 	
 	/** The default log axis. */
 	private static boolean _defaultLogAxis = false;

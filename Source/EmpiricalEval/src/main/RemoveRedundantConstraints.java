@@ -119,7 +119,7 @@ public class RemoveRedundantConstraints {
 	 * @param fm the fm
 	 * @return the i feature model
 	 */
-	protected static IFeatureModel removeRedundant3(IFeatureModel fm) {
+	protected static IFeatureModel removeRedundant(IFeatureModel fm) {
 		IFeatureModel clone = fm.clone();
 		while (clone.getConstraintCount() > 0) {
 			clone.removeConstraint(0);
@@ -146,77 +146,6 @@ public class RemoveRedundantConstraints {
 	}
 
 	/**
-	 * Removes the redundant 1.
-	 *
-	 * @param fm the fm
-	 * @return the i feature model
-	 */
-	protected static IFeatureModel removeRedundant1(IFeatureModel fm) {
-		FeatureModelAnalyzer analyzer = fm.getAnalyser();
-
-		analyzer.calculateFeatures = true;
-		analyzer.calculateConstraints = false;
-		analyzer.calculateRedundantConstraints = true;
-		analyzer.calculateTautologyConstraints = false;
-
-		analyzer.analyzeFeatureModel(null);
-		List<IConstraint> toRemove = new LinkedList<IConstraint>();
-		int index = 0, i = 0;
-		for (IConstraint c : fm.getConstraints()) {
-			ConstraintAttribute attribute = c.getConstraintAttribute();
-
-			if (attribute == ConstraintAttribute.REDUNDANT || attribute == ConstraintAttribute.TAUTOLOGY) {
-				toRemove.add(c);
-			}
-			System.out.println((++i) + "/" + fm.getConstraintCount());
-		}
-
-		for (IConstraint c : toRemove) {
-			fm.removeConstraint(c);
-		}
-
-		System.out.println(toRemove.size() + " removed!");
-		return fm;
-	}
-
-	/**
-	 * Removes the redundant 2.
-	 *
-	 * @param fm the fm
-	 * @return the i feature model
-	 */
-	protected static IFeatureModel removeRedundant2(IFeatureModel fm) {
-		IFeatureModel clone = fm.clone();
-		int removed = 0;
-		int index = 0, i = 0;
-		while (index < fm.getConstraintCount()) {
-			IConstraint c = fm.getConstraints().get(index);
-			clone.removeConstraint(c);
-			final AdvancedNodeCreator nodeCreator = new AdvancedNodeCreator(clone);
-
-			Node cnf = c.getNode().toCNF();
-			Node check = new Implies(nodeCreator.createNodes(), cnf);
-
-			SatSolver satsolver = new SatSolver(new Not(check), 10000);
-
-			try {
-				if (!satsolver.isSatisfiable()) {
-					removed++;
-				} else {
-					clone.addConstraint(c, index);
-				}
-			} catch (TimeoutException e) {
-				System.err.println(">Timeout: " + c + "\n" + e.getMessage());
-			}
-			System.out.println((++i) + "/" + fm.getConstraintCount());
-			index++;
-		}
-
-		System.out.println(removed + " constraints removed.");
-		return fm;
-	}
-
-	/**
 	 * The main method.
 	 *
 	 * @param args the arguments
@@ -232,7 +161,7 @@ public class RemoveRedundantConstraints {
 			for (File file : listOfFiles) {
 				System.out.println("Converting " + file.getName());
 				IFeatureModel fm1 = util.Utils.loadFeatureModel(file.getAbsolutePath());
-				IFeatureModel result = removeRedundant1(removeVoid(fm1));
+				IFeatureModel result = removeRedundant(removeVoid(fm1));
 				util.Utils.writeFeatureModel(result, "models.clean/" + file.getName());
 			}
 

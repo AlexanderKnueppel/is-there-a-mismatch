@@ -31,11 +31,12 @@ public class CSVWriter implements ITableWriter {
 		String result = "";
 		for (int i = 0; i < output.length; i++) {
 			for (int j = 0; j < output[i].length; j++) {
-				result = output[i][j] + ",";
+				result += output[i][j] + ",";
 			}
 			result = result.substring(0, result.length() - 1) + "\n";
+			
 		}
-
+		System.out.println(result);
 		try {
 			Files.write(Paths.get(outputFile), result.getBytes(), StandardOpenOption.CREATE);
 		} catch (IOException e) {
