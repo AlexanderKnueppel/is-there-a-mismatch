@@ -8,30 +8,37 @@
 			\setbox0\hbox{\tabular{@{}l}Size\endtabular} 
 			\setbox1\hbox{\tabular{@{}l}Complex \\ Constraints\endtabular} 
 			\setbox2\hbox{\tabular{@{}l}Increase\endtabular} 
-			\begin{tabular}{lrrrrrc} 
+			\begin{tabular}{lrrrrrrrrrrrrc} 
 				& 
-				& \rot{automotive2\_4\tnote{1}} 
-				& \rot{automotive2\_2\tnote{1}} 
 				& \rot{automotive2\_1\tnote{1}} 
+				& \rot{automotive2\_2\tnote{1}} 
 				& \rot{automotive2\_3\tnote{1}} 
-				& \rot{all\_cdl\tnote{1}} 
-				\\ \cline{2-7} 
+				& \rot{automotive2\_4\tnote{1}} 
+				& \rot{axTLS\tnote{1}} 
+				& \rot{busybox-1.18.0\tnote{1}} 
+				& \rot{embtoolkit\tnote{1}} 
+				& \rot{linux-2.6.33.3\tnote{1}} 
+				& \rot{uClibc\tnote{1}} 
+				& \rot{uClinux-base\tnote{1}} 
+				& \rot{uClinux-distribution\tnote{1}} 
+				& \rot{CDL\tnote{1}} 
+				\\ \cline{2-14} 
 
 				\multirow{2}{*}{\usebox0} 
-				& Features  & 18616 & 17742 & 14010 & 18434 & 1178 $\leq$ 1262 $\leq$ 1408\\ 
-				& Constraints  & 1369 & 914 & 666 & 1300 & 816 $\leq$ 878 $\leq$ 956\\
-				\cline{2-7} 
+				& Features  & 14010 & 17742 & 18434 & 18616 & 96 & 854 & 1179 & 6467 & 313 & 380 & 1580 & 1178 $\leq$ 1262 $\leq$ 1408\\ 
+				& Constraints  & 666 & 914 & 1300 & 1369 & 14 & 123 & 323 & 3545 & 56 & 3455 & 197 & 816 $\leq$ 878 $\leq$ 956\\
+				\cline{2-14} 
 
 				\multirow{3}{*}{\usebox1} 
-				& Strict  & 190.0\% & 113.0\% & 99.0\% & 198.0\% & 96.0\% $\leq$ 102.0\% $\leq$ 123.0\%\\ 
-				& Pseudo & 77.0\% & 36.0\% & 17.0\% & 50.0\% & 80.0\% $\leq$ 92.0\% $\leq$ 117.0\%\\ \cline{3-7} 
-				& Sum & 267.0\% & 149.0\% & 116.0\% & 248.0\% & 176.0\% $\leq$ 194.0\% $\leq$ 240.0\%\\
-				\cline{2-7} 
+				& Strict  & 14.864865\% & 12.363238\% & 15.230769\% & 13.878743\% & 21.428572\% & 13.00813\% & 10.526316\% & 60.70522\% & 10.714286\% & 0.0\% & 26.395939\% & 10.948081\% $\leq$ 11.777535\% $\leq$ 13.402061\%\\ 
+				& Pseudo & 2.5525525\% & 3.938731\% & 3.8461537\% & 5.6245437\% & 71.42857\% & 73.98374\% & 68.11146\% & 32.29901\% & 64.28571\% & 0.9551375\% & 21.319798\% & 9.501739\% $\leq$ 10.6358385\% $\leq$ 12.5\%\\ \cline{3-14} 
+				& Sum & 17.417418\% & 16.30197\% & 19.076923\% & 19.503286\% & 92.85714\% & 86.99187\% & 78.63777\% & 93.004234\% & 75.0\% & 0.9551375\% & 47.715736\% & 20.44982\% $\leq$ 22.413374\% $\leq$ 25.902061\%\\
+				\cline{2-14} 
 
 				\multirow{2}{*}{\usebox2} 
-				& Features  & 2.59\% & 0.85\% & 0.63\% & 1.3\% & 44.84\% $\leq$ 51.28\% $\leq$ 80.51\%\\ 
-				& Constraints  & 43.9\% & 22.43\% & 25.08\% & 37.38\% & 65.81\% $\leq$ 71.33\% $\leq$ 88.14\%\\
-				\cline{2-7} 
+				& Features  & 0.63\% & 0.85\% & 1.3\% & 2.59\% & 115.63\% & 125.64\% & 1403.14\% & 581.6\% & 237.38\% & 85.53\% & 32.91\% & 44.84\% $\leq$ 51.28\% $\leq$ 80.51\%\\ 
+				& Constraints  & 25.08\% & 22.43\% & 37.38\% & 43.9\% & 621.43\% & 578.86\% & 4648.3\% & 713.0\% & 841.07\% & 7.47\% & 190.36\% & 65.81\% $\leq$ 71.33\% $\leq$ 88.14\%\\
+				\cline{2-14} 
 			\end{tabular} 
 
 			\begin{tablenotes} 
