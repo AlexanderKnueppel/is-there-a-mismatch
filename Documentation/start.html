@@ -323,13 +323,23 @@ private static int StdOut = 1 << 5;
 
 // Generate all
 private static int Config = XLS | CSV | TeX | BoxPlotR | StdOut;</code></pre>
-<p>This default configuration generates the data of the table in various forms (i.e., Excel, CSV, a latex snippet, console output) and also produces an R script for the box plot.
-Remove the options you don't want to generate from the config field. Output and input folder can also be changed by modifying the corresponding fields.</p>
+<p>The same applies to the input and output files. Currently, you need to adjust them manually in the source code. This is due to the fact that this program only exists for generating
+the data sets for our publication based on the 127 feature models, but can be modified very easily:</p>
+<pre><code>/** The output folder. */
+private static String outputFolder = "./output/";
+
+/** The models folder. */
+private static String modelsFolder = "../../Data/LargeFeatureModels/";</code></pre>
+<p>The default configuration generates the data of the table in various forms (i.e., Excel, CSV, a latex snippet, console output) and also produces an R script for the box plot.
+Remove the options you don't want to generate from the config field.</p>
 
 <h6>main.RemoveRedundantConstraints</h6>
 <p>This program takes a feature model as input and tries to produce a generalized version of it such that the resulting feature models has no redundant constraints and is valid. This is necessary
 for the translation from KConfig models to the FeatureIDE file format, since both languages are not fully compatible (e.g., KConfig relies on a tristate logic: compiled, not integrated, and compiled, but dynamically loaded on demand).</p>
 <p>Hence, the usual workflow for exporting a KConfig model to FeatureIDE is to first use the export script explained below (under Models), and second, to run this program on the model.</p>
+<p>We do not provide any command line arguments for this program. Input folder and output folder must be adjusted in the source code:</p>
+<pre><code>String path = "../../Data/LargeFeatureModels/";
+String output = "output.clean/";</code></pre>
 <div class="callout-block callout-info">
     <div class="icon-holder">
         <i class="fa fa-info-circle"></i>
@@ -378,6 +388,57 @@ for the translation from KConfig models to the FeatureIDE file format, since bot
                                   </p>
                                 </div>
                             </section><!--//doc-section-->
+                            <section id="execution-section" class="doc-section">
+                                <h2 class="section-title">Measured Execution Time</h2>
+                                <div class="section-block">
+                                  <p>
+The execution time of our provided programs can be very long depending on the input. In the following, we provide
+a table of estimated execution times with respect to specific inputs for most delivered programs. The computation
+time has been measured using an Intel(R) Core(TM) i7-6600U CPU with 2.6 GHz and 12-GB RAM.
+
+                                  </p>
+                                  <h6>Table</h6>
+                                  <div class="table-responsive">
+                                      <table class="table table-striped">
+                                          <thead>
+                                              <tr>
+                                                  <th>Program</th>
+                                                  <th>Input</th>
+                                                  <th>Time</th>
+                                                  <th>Comment</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody>
+                                              <tr>
+                                                  <th scope="row">ExpressivePowerFM.main.Generator</th>
+                                                  <td>n = 6</td>
+                                                  <td>~47 hours</td>
+                                                  <td>n = 5 can take a couple of hours. n < 5 takes only seconds to minutes.</td>
+                                              </tr>
+                                              <tr>
+                                                  <th scope="row">EmpiricalEval..main.EliminateComplexConstraints</th>
+                                                  <td>All 127 models</td>
+                                                  <td>~49 min</td>
+                                                  <td>Linux kernels takes approx. 90% of the time.</td>
+                                              </tr>
+                                              <tr>
+                                                  <th scope="row">EmpiricalEval.main.Evaluation</th>
+                                                  <td>All options + all 127 models</td>
+                                                  <td>~54 min</td>
+                                                  <td>Linux kernels takes approx. 90% of the time.</td>
+                                              </tr>
+                                              <tr>
+                                                  <th scope="row">EmpiricalEval.main.RemoveRedundantConstraints</th>
+                                                  <td>Automotive1.xml (666 constraints to check)</td>
+                                                  <td>~3 min</td>
+                                                  <td>Linux kernel consumes too much memory. We had to do it partially.</td>
+                                              </tr>
+                                          </tbody>
+                                      </table>
+
+                                      <p>Based on its complexity, removing the linux kernel helps for speeding up the process a lot.</p>
+                                </div>
+                            </section><!--//doc-section-->
                         </div><!--//content-inner-->
                     </div><!--//doc-content-->
                     <div class="doc-sidebar hidden-xs">
@@ -398,6 +459,7 @@ for the translation from KConfig models to the FeatureIDE file format, since bot
                                     </ul><!--//nav-->
                                 </li>
                                 <li><a class="scrollto" href="#models-section">Feature Models</a></li>
+                                <li><a class="scrollto" href="#execution-section">Measured Execution Time</a></li>
                             </ul><!--//doc-menu-->
                         </nav>
                     </div><!--//doc-sidebar-->
