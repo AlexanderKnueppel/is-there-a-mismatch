@@ -73,7 +73,7 @@ public class Generator {
 	/**
 	 * The number of features with root included (default).
 	 */
-	private static int COUNT_FEATURES = 3;
+	private static int COUNT_FEATURES = 4;
 
 	/**
 	 * Output file (default).

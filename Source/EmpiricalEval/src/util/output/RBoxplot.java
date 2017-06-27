@@ -7,6 +7,7 @@ import java.util.List;
 
 import de.ovgu.featureide.fm.core.base.IConstraint;
 import de.ovgu.featureide.fm.core.base.IFeatureModel;
+import de.ovgu.featureide.fm.core.conversion.ComplexConstraintConverter;
 import util.Utils;
 
 // TODO: Auto-generated Javadoc
@@ -17,7 +18,7 @@ public class RBoxplot {
 
 	/** The default path. */
 	private static String _defaultPath = "output/eval.r";
-	
+
 	/** The default log axis. */
 	private static boolean _defaultLogAxis = false;
 
@@ -142,9 +143,12 @@ public class RBoxplot {
 			}
 			for (int i = 0; i < fm.getConstraintCount(); i++) {
 				IConstraint constraint = fm.getConstraints().get(i);
-				ret += Utils.numberOfLiterals(constraint.getNode()) + ", ";
-				if (i % 100 == 0 && i != 0)
-					ret += "\n ";
+				if(!ComplexConstraintConverter.isSimple(constraint.getNode())) {
+					ret += Utils.numberOfLiterals(constraint.getNode()) + ", ";
+					if (i % 100 == 0 && i != 0)
+						ret += "\n ";
+				}
+
 			}
 		}
 
