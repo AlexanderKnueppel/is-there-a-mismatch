@@ -1,8 +1,12 @@
 package main;
 
 import java.io.File;
+import java.io.FilenameFilter;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 import de.ovgu.featureide.fm.core.ExtensionManager.NoSuchExtensionException;
 import de.ovgu.featureide.fm.core.base.IFeatureModel;
@@ -18,7 +22,7 @@ import util.Utils.ConstraintType;
 public class EliminateComplexConstraints {
 	
 	/** The Constant OUTPUT_DIR. */
-	final static String OUTPUT_DIR = "./output/";
+	private static String OUTPUT_DIR = "./output/"; //default
 
 	/**
 	 * The main method.
@@ -35,24 +39,54 @@ public class EliminateComplexConstraints {
 					.println("You need to provide either files or folders of files that you would like to transform.");
 			return;
 		}
+		
+		int idx = -1;
+		if((idx = Arrays.asList(args).indexOf(new String("-o"))) != -1) {
+			try {
+				OUTPUT_DIR = args[idx+1] + "/";
+				args[idx] = "";
+				args[idx+1] = "";
+			} catch(Exception e) {
+				System.err.println("No output folder specified!");
+				return;
+			}
+			if(!(new File(OUTPUT_DIR).exists())) {
+					new File(OUTPUT_DIR).mkdirs();
+			}
+		}
 
 		for (String fileName : args) {
+			
+			if(fileName.isEmpty())
+				continue;
 
 			File folder = new File(fileName);
-			File[] listOfFiles = folder.listFiles();
+			
+			if(!folder.exists()) {
+				System.err.println(fileName + " does not exist.");
+				continue;
+			}
+			
+			List<File> files = new ArrayList<File>();
+			
+			if(folder.isFile())
+				files.add(folder);
+			else { // Directory
+				files.addAll(Arrays.asList(folder.listFiles(new FilenameFilter() {
+					public boolean accept(File dir, String name) {
+						return name.endsWith("xml");
+					}
+				})));
+			}
 
-			for (File file : listOfFiles) {
-
-				if (file.isDirectory()) {
-					continue;
-				}
-
+			for (File file : files) {
 				IFeatureModel fm = null;
 
 				try {
 					fm = Utils.loadFeatureModel(file.getAbsolutePath());
 				} catch (Exception e) {
-					e.printStackTrace();
+					System.err.println(file.getName() + " is not a valid feature model.");
+					//e.printStackTrace();
 				}
 
 				System.out.println("Convert " + file.getName() + "... ");
