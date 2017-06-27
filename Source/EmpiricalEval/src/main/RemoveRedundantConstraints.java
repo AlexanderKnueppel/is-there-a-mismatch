@@ -1,6 +1,7 @@
 package main;
 
 import java.io.File;
+import java.io.FilenameFilter;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -152,17 +153,27 @@ public class RemoveRedundantConstraints {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String path = "models/";
+		String path = "../../Data/LargeFeatureModels/";
+		String output = "output.clean/";
 
 		File folder = new File(path);
-		File[] listOfFiles = folder.listFiles();
+		File[] listOfFiles = folder.listFiles(new FilenameFilter() {
+			public boolean accept(File dir, String name) {
+				return name.endsWith("xml");
+			}
+		});
 
 		try {
 			for (File file : listOfFiles) {
 				System.out.println("Converting " + file.getName());
 				IFeatureModel fm1 = util.Utils.loadFeatureModel(file.getAbsolutePath());
 				IFeatureModel result = removeRedundant(removeVoid(fm1));
-				util.Utils.writeFeatureModel(result, "models.clean/" + file.getName());
+				
+				if(!(new File(output).exists())) {
+					new File(output).mkdirs();
+				}
+				
+				util.Utils.writeFeatureModel(result, output + file.getName());
 			}
 
 		} catch (Exception e) {
